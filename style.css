@@ -172,7 +172,7 @@ a:hover{color:var(--gold)}
 }
 
 .panel{
-  grid-column:span 12;
+  grid-column:auto;
   background:linear-gradient(180deg, rgba(200,168,90,.06), transparent 55%), var(--panel);
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -259,92 +259,22 @@ a:hover{color:var(--gold)}
   background-position:0 0, 0 0;
 }
 
-/* Devotions card grid */
-.devotion-grid{
-  display:grid;
-  gap:18px;
-  grid-template-columns:repeat(12, 1fr);
-  width:100%;
-  max-width:100%;
-  min-width:0;
-  overflow:hidden;
-}
+/* Devotion and Story cards behave the same */
 
-.devotion-card{
-  grid-column:span 12;
+.devotion-card,
+.story-card{
   background:var(--panel2);
   border:1px solid var(--line);
   border-radius:14px;
-  padding:16px;
+  padding:18px;
   box-shadow:0 10px 26px rgba(0,0,0,.35);
-  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
-  max-width:100%;
-  min-width:0;
-  overflow:hidden;
+  transition:transform .35s ease, box-shadow .35s ease;
 }
 
-.devotion-card:hover{
+.devotion-card:hover,
+.story-card:hover{
   transform:translateY(-3px);
   box-shadow:0 12px 35px rgba(200,168,90,.14);
-  border-color:rgba(200,168,90,.40);
-}
-
-.devotion-card *{
-  max-width:100%;
-  min-width:0;
-}
-
-.devotion-meta{
-  font-size:.92rem;
-  color:var(--muted);
-  margin:0 0 8px;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-.devotion-card h3{
-  margin:0 0 8px;
-  font-size:1.15rem;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-.devotion-card p{
-  margin:0 0 12px;
-  color:var(--muted);
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-.devotion-actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  max-width:100%;
-}
-
-.devotion-actions a{
-  max-width:100%;
-  white-space:normal;
-}
-
-/* Story Time card styling */
-
-.story-card{
-  padding:22px;
-  background:var(--panel2);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-}
-
-.story-card h2{
-  margin-top:0;
-}
-
-.story-card h3{
-  color:var(--gold);
-  margin-top:6px;
 }
 
 /* Media safety */
