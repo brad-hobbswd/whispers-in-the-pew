@@ -327,6 +327,33 @@ a:hover{color:var(--gold)}
   white-space:normal;
 }
 
+/* Story Time card styling */
+
+.story-card{
+  margin-top:22px;
+  padding:22px;
+  background:var(--panel2);
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.story-card h2{
+  margin-top:0;
+}
+
+.story-card h3{
+  color:var(--gold);
+  margin-top:6px;
+}
+
+/* Media safety */
+img, svg{
+  max-width:100%;
+  height:auto;
+}
+
 /* Breakpoints for devotion cards */
 @media (min-width:640px){
   .devotion-card{ grid-column:span 6; }
