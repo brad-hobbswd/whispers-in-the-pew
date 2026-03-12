@@ -165,14 +165,13 @@ a:hover{color:var(--gold)}
 
 .grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-  align-items:start;
+  gap:18px;
+  grid-template-columns:repeat(12, 1fr);
   padding:24px 0 70px;
 }
 
 .panel{
-  grid-column:auto;
+  grid-column:span 12;
   background:linear-gradient(180deg, rgba(200,168,90,.06), transparent 55%), var(--panel);
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -390,29 +389,9 @@ img, svg{
   color:var(--muted);
   font-size:.95rem;
 }
-
 @media (min-width:900px){
   .store-cover{ grid-column:span 5; }
   .store-details{ grid-column:span 7; }
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-  align-items:start;
-  padding:24px 0 70px;
-}
-.grid .panel{
-  grid-column:auto;
-}
-@media (max-width:768px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-}
-.grid .panel{
-  grid-column:auto;
 }
 
 /* Devotions index grid only */
