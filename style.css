@@ -290,6 +290,16 @@ a:hover{color:var(--gold)}
   line-height:1.35;
 }
 
+.devotion-card{
+  cursor:pointer;
+}
+
+.devotion-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
 /* Tablet */
 @media (min-width:600px){
   .devotion-index .devotion-grid{
