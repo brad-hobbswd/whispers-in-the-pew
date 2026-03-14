@@ -300,6 +300,10 @@ a:hover{color:var(--gold)}
   justify-content:space-between;
 }
 
+.devotion-index{
+  padding-bottom:60px;
+}
+
 /* Tablet */
 @media (min-width:600px){
   .devotion-index .devotion-grid{
