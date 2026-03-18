@@ -453,3 +453,18 @@ img{
   color: #111;
   box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
+
+body[style*="background: #ffffff"] .hero-small {
+  background: none !important;
+  padding: 0;
+  text-align: center;
+}
+
+body[style*="background: #ffffff"] .hero-inner h1 {
+  color: #111;
+  font-size: 32px;
+}
+
+body[style*="background: #ffffff"] .tagline {
+  color: #555;
+}
