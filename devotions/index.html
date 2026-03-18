@@ -197,7 +197,15 @@
 
 
   </div>
-<div id="bookSection" style="display:none; margin-top:40px;">
+<div id="bookSection" style="
+  display:none;
+  min-height:80vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin-top:40px;
+">
   <div id="book"></div>
 
   <div style="text-align:center; margin-top:20px;">
@@ -312,8 +320,13 @@ function createPage(c){
 content.forEach(x=>book.appendChild(createPage(x)));
 
 const pageFlip = new St.PageFlip(book,{
-  width:450,
-  height:600,
+  width:700,
+  height:900,
+  size:"stretch",
+  minWidth:315,
+  maxWidth:1000,
+  minHeight:420,
+  maxHeight:1200,
   showCover:true
 });
 
