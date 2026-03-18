@@ -457,6 +457,34 @@ img{
   border-radius: 8px;
 }
 
+.page:nth-child(odd){
+  box-shadow:
+    -10px 30px 60px rgba(0,0,0,0.9),
+    inset 0 0 50px rgba(200,168,90,.06);
+}
+
+.page:nth-child(even){
+  box-shadow:
+    10px 30px 60px rgba(0,0,0,0.9),
+    inset 0 0 50px rgba(200,168,90,.06);
+}
+
+.page::after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  width:6px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(200,168,90,.15),
+    rgba(200,168,90,.35)
+  );
+  pointer-events:none;
+}
+
 body[style*="background: #ffffff"] .hero-small {
   background: none !important;
   padding: 0;
