@@ -293,10 +293,13 @@ function createPage(c){
 
   if(c.type==="cover"){
   p.innerHTML=`
-    <div style="text-align:center;">
-      <h1 style="font-size:42px; margin-bottom:10px;">Whispers in the Pew</h1>
-      <p style="color:var(--muted); margin-bottom:20px;">Bradley Hobbs</p>
-      <button onclick="flip()" class="btn">Open Book</button>
+    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+      <img src="../assets/images/book-cover.jpg" style="
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:8px;
+      ">
     </div>
   `;
 }
