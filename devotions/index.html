@@ -34,12 +34,16 @@
   <div class="hero-inner">
     <h1 class="h1">Devotions</h1>
     <p class="tagline">Quiet readings for candlelit moments.</p>
+    <div style="margin-top:20px;">
+  <button onclick="openBook()" class="btn">📖 Read as Book</button>
+  <button onclick="closeBook()" class="btn" style="display:none;" id="closeBtn">← Back</button>
+</div>
   </div>
 </section>
 
 <main class="container devotion-index">
 
-  <div class="devotion-grid">
+ <div class="devotion-grid" id="devotionsGrid">
 
     <article class="devotion-card">
       <p class="devotion-meta">John 14:18</p>
@@ -193,7 +197,15 @@
 
 
   </div>
+<div id="bookSection" style="display:none; margin-top:40px;">
+  <div id="book"></div>
 
+  <div style="text-align:center; margin-top:20px;">
+    <button onclick="prevPage()">◀</button>
+    <span id="pageNum"></span>
+    <button onclick="nextPage()">▶</button>
+  </div>
+</div>
 </main>
   
 <footer class="footer">
@@ -220,6 +232,75 @@ document.addEventListener("keydown", function(e) {
   }
 });
 </script>
-  
+  <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+
+<script>
+function openBook(){
+  document.getElementById("devotionsGrid").style.display="none";
+  document.getElementById("bookSection").style.display="block";
+  document.getElementById("closeBtn").style.display="inline-block";
+}
+
+function closeBook(){
+  document.getElementById("devotionsGrid").style.display="grid";
+  document.getElementById("bookSection").style.display="none";
+  document.getElementById("closeBtn").style.display="none";
+}
+
+/* YOUR BOOK CONTENT */
+const content = [
+  {type:"cover"},
+  {type:"title",title:"Whispers in the Pew",author:"Bradley Hobbs"},
+  {type:"section",title:"Faith & Trust"},
+  {type:"devotion",title:"The Road I Know",body:"God meets those who seek Him sincerely."},
+  {type:"devotion",title:"Trusting the Process",body:"Even when unseen, God is working."},
+  {type:"section",title:"Healing & Wholeness"},
+  {type:"devotion",title:"The Strength to Be Broken",body:"Brokenness becomes healing in God's hands."},
+  {type:"cover"}
+];
+
+const book = document.getElementById("book");
+
+function createPage(c){
+  const p=document.createElement("div");
+  p.classList.add("page");
+
+  if(c.type==="cover"){
+    p.innerHTML=`<h1>Whispers in the Pew</h1><button onclick="flip()">Open Book</button>`;
+  }
+
+  if(c.type==="title"){
+    p.innerHTML=`<h1>${c.title}</h1><h3>${c.author}</h3>`;
+  }
+
+  if(c.type==="section"){
+    p.innerHTML=`<h2>${c.title}</h2>`;
+  }
+
+  if(c.type==="devotion"){
+    p.innerHTML=`<h2>${c.title}</h2><p>${c.body}</p>`;
+  }
+
+  return p;
+}
+
+content.forEach(x=>book.appendChild(createPage(x)));
+
+const pageFlip = new St.PageFlip(book,{
+  width:450,
+  height:600,
+  showCover:true
+});
+
+pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+
+function nextPage(){pageFlip.flipNext();}
+function prevPage(){pageFlip.flipPrev();}
+function flip(){pageFlip.flipNext();}
+
+pageFlip.on("flip",(e)=>{
+  document.getElementById("pageNum").innerText="Page "+(e.data+1);
+});
+</script>
 </body>
 </html>
