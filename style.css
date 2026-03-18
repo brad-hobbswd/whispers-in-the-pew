@@ -442,3 +442,14 @@ img{
   .store-details{ grid-column:span 7; }
 }
 
+#book {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page {
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
