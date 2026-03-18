@@ -292,8 +292,14 @@ function createPage(c){
   p.classList.add("page");
 
   if(c.type==="cover"){
-    p.innerHTML=`<h1>Whispers in the Pew</h1><button onclick="flip()">Open Book</button>`;
-  }
+  p.innerHTML=`
+    <div style="text-align:center;">
+      <h1 style="font-size:42px; margin-bottom:10px;">Whispers in the Pew</h1>
+      <p style="color:var(--muted); margin-bottom:20px;">Bradley Hobbs</p>
+      <button onclick="flip()" class="btn">Open Book</button>
+    </div>
+  `;
+}
 
   if(c.type==="title"){
     p.innerHTML=`<h1>${c.title}</h1><h3>${c.author}</h3>`;
