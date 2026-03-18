@@ -305,7 +305,7 @@ function createPage(c){
 
   if(c.type==="page"){
   p.innerHTML = `
-    <iframe src="${c.iframe}" style="
+    <iframe src="${c.iframe}?book=true&v=${Date.now()}" style="
       width:100%;
       height:100%;
       border:none;
