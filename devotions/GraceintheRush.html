@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace in the Rush  | Whispers in the Pew</title>
+<meta name="description" content="A quiet hunger to know Jesus personally.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <img src="../assets/images/logo-256.png" alt="Whispers in the Pew">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="hero-small" style="background:
+  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
+  url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Grace in the Rush </h1>
+    <p class="tagline">2 Corinthians 12:9</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="grid">
+    <article class="panel prose">
+      <p><b>Devotion:</b></p>
+      <p>Some mornings begin with peace. Other mornings arrive with panic. The alarm fails. Clothes sit unready. Coffee feels weak. The only prayer available sounds like, Lord, help.</p>
+      <p>Here is the beautiful truth. God does not require perfection in order to meet us. A willing heart is enough. His presence fills the rush just as surely as the quiet. Grace is not reserved for calm, devotional starts. It remains alive and available even in chaos.</p>
+      <p>Today, plans may feel scattered. A steady heart is still possible. His strength shows itself most clearly when our own feels thin. The morning may have begun in a scramble. The day can still unfold in peace.</p>
+        <p>Pause for a breath. Take that sip of coffee. Know that He is walking with you every step.</p>
+    
+      
+      <p><b>Prayer:</b></p>
+<p>Lord, I’m thankful that even when I’m hurried, You’re still present. Help me to lean on Your strength today and not my own. Fill every gap I missed this morning with Your grace. In Jesus’ name, amen.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+  <script>
+(function(){
+
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+
+})();
+</script>
+</body>
+</html>
