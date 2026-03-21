@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embracing a Fresh Start | Whispers in the Pew</title>
+<meta name="description" content="God creates new beginnings in places that once felt dry, leading with grace into a restored life.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <img src="../assets/images/logo-256.png" alt="Whispers in the Pew">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
+  url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Embracing a Fresh Start</h1>
+    <p class="tagline">Isaiah 43:18-19</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="grid">
+
+    <!-- DEVOTION CARD -->
+    <article class="panel prose">
+      <p><b>Scripture:</b></p>
+      <p>“Remember ye not the former things, neither consider the things of old. Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert.” Isaiah 43:18-19</p>
+
+      <p><b>Devotion:</b></p>
+      <p>Starting over feels unfamiliar after brokenness, since renewal rarely resembles a sudden shift or a clearly defined path. Restoration unfolds more like learning to walk again, marked by careful steps taken while wounds remain tender and trust slowly rebuilds through patience rather than urgency.</p>
+
+      <p>Change carries purpose rather than loss. God does not call anyone back to a former version of life, since that season required interruption and never held the complete picture. His invitation leads forward into something new and honest, away from performance and into identity shaped by grace.</p>
+
+      <p>New beginnings often arrive quietly, forming through ordinary choices repeated with faithfulness. Growth may begin with rising from bed when heaviness lingers, offering prayer when silence feels weighty, allowing joy to return in small moments, and trusting that healing belongs even when emotions hesitate.</p>
+
+      <p>Every step holds meaning. Every effort carries sacred value, though progress may seem small while forming beneath the surface. God remains present throughout the process, not waiting at a distant finish, walking closely through wilderness places where streams begin to flow.</p>
+
+      <p>Life ahead will not mirror what came before. A gentler pace will emerge, shaped by honesty and sustained by divine presence. This unfolding future will belong fully to the one walking through it, marked not by perfection, though by the steady work of God.</p>
+
+      <p><b>Prayer:</b></p>
+      <p>God, uncertainty surrounds this new beginning, and clarity has not yet fully formed, though willingness rises within me. Guidance is needed, so teach me to walk again with steady trust instead of fear. Open my awareness to recognize Your presence in quiet ways along this path.</p>
+
+      <p>Direction feels fragile in moments of hesitation, so reveal each step as courage grows through trust. Movement forward matters, leaving behind cycles that once brought pain. Hope is already forming through Your work, even when growth feels small.</p>
+
+      <p>Beginning again feels sacred, grounded not in confidence, though in surrender shaped by Your faithfulness. This prayer is lifted in the name of Jesus. Amen.</p>
+    </article>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
