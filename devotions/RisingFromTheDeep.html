@@ -1,1 +1,121 @@
-RisingFromTheDeep
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rising From the Deep | Whispers in the Pew</title>
+<meta name="description" content="Even in the deepest pain, God remains present, carrying you through and restoring what feels overwhelmed.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <img src="../assets/images/logo-256.png" alt="Whispers in the Pew">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
+  url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Rising From the Deep</h1>
+    <p class="tagline">Isaiah 43:2</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="grid">
+
+    <!-- DEVOTION CARD -->
+    <article class="panel prose">
+      <p><b>Scripture:</b></p>
+      <p>“When you pass through the waters, I will be with you, and through the rivers, they will not overwhelm you. When you walk through the fire, you will not be burned or scorched, nor will the flame kindle upon you.” Isaiah 43:2</p>
+
+      <p><b>Devotion:</b></p>
+      <p>Some hurts reach deep enough to shake a person’s foundation, carrying a weight that steals breath, quiets the voice, and raises questions about whether healing can still unfold. Pain of this depth often hides behind practiced smiles, unspoken tears, and exhaustion formed through trying to explain what caused such inner fracture.</p>
+
+      <p>Assurance speaks clearly into this space, since God has never lost sight of you. Awareness of every moment has always remained with Him, including the instant everything unraveled, the long nights marked by weeping, and the places within your heart that felt misplaced or forgotten. His presence never withdrew during those seasons, choosing instead to remain steady and near, offering quiet constancy when no one else understood how to hold you.</p>
+
+      <p>Depth once felt overwhelming, though His love has always exceeded it. Pain once cut sharply, though His power to restore continues to reach further. What shattered you does not hold authority over your future identity or your unfolding story.</p>
+
+      <p>Acknowledging pain does not diminish strength, since survival itself reveals courage. Living after loss requires bravery, and belovedness remains anchored in who you are now, including the places that still carry tenderness.</p>
+
+      <p>This moment holds no requirement for denial or revision of the past. Today invites a different posture, defined by standing even while trembling and speaking truth with quiet resolve.</p>
+
+      <p>“I remain present, and that presence means healing still holds possibility.”</p>
+
+      <p><b>Prayer:</b></p>
+      <p>God, this season has led me into a deep place where language feels insufficient and easy answers fail to reach the weight I carry. Weariness has settled into my spirit from holding pain as though it were meant to remain forever, so I place this burden before You with honesty and surrender.</p>
+
+      <p>Reach into the hidden places of my heart and begin Your healing work with patience and care, speaking peace over memories that still ache and restoring calm where unrest has lingered. Breath feels necessary where numbness has taken root, so breathe life into places that have grown quiet.</p>
+
+      <p>Presence is needed along this path, so walk with me one step at a time until joy becomes possible again, gently restored through Your nearness. Trust rises in the assurance that You remain here, faithful and steady, committed to carrying me forward through every stage of healing. In Jesus’ name, amen.</p>
+    </article>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
