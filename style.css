@@ -284,6 +284,54 @@ a:hover{color:var(--gold)}
   box-shadow:0 12px 35px rgba(200,168,90,.14);
 }
 
+/* CATEGORY CARDS (visually distinct from devotions) */
+
+.category-card{
+  background: linear-gradient(
+    135deg,
+    rgba(200,168,90,.10),
+    rgba(200,168,90,.02)
+  ), var(--panel2);
+
+  border:1px solid rgba(200,168,90,.35);
+  border-radius:14px;
+  padding:20px;
+
+  box-shadow:0 12px 30px rgba(200,168,90,.18);
+
+  transform:scale(1.03);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  cursor:pointer;
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.category-card:hover{
+  transform:scale(1.05);
+  border-color:rgba(200,168,90,.75);
+  box-shadow:0 16px 40px rgba(200,168,90,.25);
+}
+
+.category-badge{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.category-desc{
+  color:var(--muted);
+  margin-bottom:14px;
+}
+
+.category-actions .btn{
+  border-color:rgba(200,168,90,.9);
+}
+
 /* Devotion index layout */
 
 .devotion-index .devotion-grid{
