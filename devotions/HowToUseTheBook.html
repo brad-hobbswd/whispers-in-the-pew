@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to Use the Book | Whispers in the Pew</title>
-<meta name="description" content="A simple guide for how to read, reflect, and engage with these devotions through every season of life.">
+<meta name="description" content="A simple guide to walk through each devotion with intention and reflection.">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
@@ -20,7 +20,7 @@
       <span>Whispers in the Pew</span>
     </a>
     <nav class="links" aria-label="Primary">
-      <a href="../devotions/index.html">Devotions</a>
+      <a href="index.html">Devotions</a>
       <a href="../prayer-room.html">Prayer Room</a>
       <a href="../about.html">About</a>
       <a href="../store.html">Store</a>
@@ -34,27 +34,22 @@
   url('../assets/images/appalachian-hero.jpg');">
   <div class="hero-inner">
     <h1 class="h1">How to Use the Book</h1>
-    <p class="tagline">A guide for walking through each page with intention</p>
+    <p class="tagline">A guide for your journey</p>
   </div>
 </section>
 
 <main class="container">
   <div class="grid">
 
-    <!-- GUIDE PANEL -->
     <article class="panel prose">
 
-      <p>This devotional is meant to be more than words on a page. Think of each reading as sitting with someone who has walked through silence, tears, and struggle, yet discovered hope and strength through God’s Word.</p>
+      <p>This devotional is meant to be more than words on a page. Think of it as sitting down with a friend who has walked through silence, tears, and struggles, yet found hope and strength by turning to God’s Word.</p>
 
-      <p>Every devotion carries a life lesson, something you can return to whenever encouragement, clarity, or reassurance is needed. These pages are not designed to rush you forward, though to walk beside you through whatever season you find yourself in.</p>
+      <p>Each devotion is a life lesson, something you can return to whenever you need encouragement, guidance, or a reminder that you’re not alone.</p>
 
-      <p>You may choose to read daily, moving one devotion at a time, allowing each message to settle deeply. You may also return whenever life feels heavy, opening to a place where truth meets your current moment.</p>
+      <p>You can read it daily, one devotion at a time, or you can open it whenever life feels heavy and you need to hear truth. The Bible says, “Seek, and you will find” (Matthew 7:7). That’s exactly what this devotional is for: helping you search for yourself, your healing, and God’s direction, through the lens of His Word.</p>
 
-      <p>Scripture reminds us, “Seek, and you will find” (Matthew 7:7). These pages exist to help you search, not only for answers, though for healing, direction, and a deeper understanding of God’s presence in your life.</p>
-
-      <p>Move slowly. Pause when needed. Reflect on what speaks to your heart. Allow each page to become more than something read, allowing it to become something lived.</p>
-
-      <p>Even in the hardest seasons, you are never alone. God is present, steady, and near, walking with you through every word and every step forward.</p>
+      <p>Take your time. Pause to reflect. Let each page remind you that even in the hardest seasons, God is with you.</p>
 
     </article>
 
@@ -66,6 +61,47 @@
     <p>© 2026 Whispers in the Pew</p>
   </div>
 </footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
 
 </body>
 </html>
