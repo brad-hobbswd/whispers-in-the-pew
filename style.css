@@ -287,6 +287,8 @@ a:hover{color:var(--gold)}
 /* CATEGORY CARDS (visually distinct from devotions) */
 
 .category-card{
+  grid-column: 1 / -1;
+  
   background: linear-gradient(
     135deg,
     rgba(200,168,90,.10),
@@ -307,6 +309,11 @@ a:hover{color:var(--gold)}
 
   cursor:pointer;
   transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.category-card{
+  margin-top:10px;
+  margin-bottom:10px;
 }
 
 .category-card{
