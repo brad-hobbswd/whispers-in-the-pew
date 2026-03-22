@@ -1,1 +1,120 @@
-GodsHealingWord.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>God’s Healing Word | Whispers in the Pew</title>
+<meta name="description" content="God’s Word brings healing, direction, and restoration, reaching deep into the heart with truth and care.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <img src="../assets/images/logo-256.png" alt="Whispers in the Pew">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
+  url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">God’s Healing Word</h1>
+    <p class="tagline">Psalm 107:20</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="grid">
+
+    <!-- DEVOTION CARD -->
+    <article class="panel prose">
+      <p><b>Scripture:</b></p>
+      <p>“He sends forth His word and heals them and rescues them from the pit and destruction.” Psalm 107:20</p>
+
+      <p><b>Devotion:</b></p>
+      <p>Just as a physician provides a prescription to address physical illness, God has given His Word as a means of healing and restoring the heart and mind. Seasons of overwhelm, confusion, or lingering hopelessness often leave the soul searching for direction. Scripture meets that need with care that reaches beyond symptoms and speaks to the root of unrest within.</p>
+
+      <p>God’s prescription does not arrive in a bottle or through a label. His Word carries calm into anxious thoughts, breath into weary spirits, correction into wandering hearts, and strength into places that feel depleted. Each passage carries intention, meeting the reader with wisdom formed through love and truth.</p>
+
+      <p>Moments of anxiety find reassurance through Philippians 4:6-7, where peace replaces fear through prayer and trust. Seasons of exhaustion find rest through Matthew 11:28-30, offering relief shaped by gentleness. Times of uncertainty draw guidance from Proverbs 3:5-6, where trust replaces confusion and direction unfolds through surrender.</p>
+
+      <p>Scripture remains present and attentive, meeting every condition of the heart with precision and care, offering healing that reaches deeper than circumstance and restores from within.</p>
+
+      <p><b>Application:</b></p>
+      <p>Take time today to reflect on an area of life that feels unwell beneath the surface, touching emotional, spiritual, or mental patterns that need attention. Honest reflection opens space for clarity and prepares the heart to receive what God is speaking into that place.</p>
+
+      <p>Search the Scriptures for one verse that speaks directly to your situation. Write that verse down and carry it with you throughout the day. Return to it in the morning, revisit it at midday, and allow it to settle into your thoughts at night, creating rhythm and familiarity.</p>
+
+      <p>This verse becomes a spiritual prescription, offering strength through repetition and reflection. Consistent engagement with God’s Word nurtures healing, reinforcing peace and wisdom as His truth continues its work within you.</p>
+
+      <p><b>Prayer:</b></p>
+      <p>Lord, thank You for the healing and guidance found in Your Word. Help me to seek You first in every need, trusting that Your truth is the medicine my soul requires. Write Your Word upon my heart so that I carry it with me wherever I go, allowing it to shape my thoughts, restore my peace, and guide my steps. In Jesus’ name, amen.</p>
+    </article>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
