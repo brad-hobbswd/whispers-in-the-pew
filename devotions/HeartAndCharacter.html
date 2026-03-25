@@ -59,17 +59,25 @@ url('../assets/images/appalachian-hero.jpg');">
   <!-- DEVOTIONS GRID (ADD TO THIS AS YOU BUILD) -->
   <div class="devotion-grid">
 
-    <!-- Example placeholders (remove or replace as needed) -->
-    <!--
     <article class="devotion-card">
-      <p class="devotion-meta">Scripture</p>
-      <h3>Title</h3>
-      <p>Short description</p>
-      <div class="devotion-actions">
-        <a class="btn" href="file.html">Read</a>
-      </div>
-    </article>
-    -->
+  <p class="devotion-meta">Proverbs 16:18</p>
+  <h3>The Subtle Danger of Pride</h3>
+  <p>Pride whispers quietly, but humility keeps the heart safe and close to God.</p>
+  <div class="devotion-actions">
+    <a class="btn" href="TheSubtleDangerOfPride.html">Read</a>
+  </div>
+</article>
+
+    <article class="devotion-card">
+  <p class="devotion-meta">Ephesians 4:15</p>
+  <h3>Confrontation Without Pride</h3>
+  <p>Speak truth with humility, letting love shape every hard conversation.</p>
+  <div class="devotion-actions">
+    <a class="btn" href="ConfrontationWithoutPride.html">Read</a>
+  </div>
+</article>
+
+    
 
   </div>
 
@@ -80,6 +88,47 @@ url('../assets/images/appalachian-hero.jpg');">
     <p>© 2026 Whispers in the Pew</p>
   </div>
 </footer>
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
 
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+  <script>
+(function(){
+
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+
+})();
+</script>
 </body>
 </html>
