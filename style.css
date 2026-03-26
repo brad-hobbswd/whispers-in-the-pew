@@ -684,3 +684,24 @@ main.container{
 #end{
   color:var(--muted);
 }
+
+/* Contact page button fix */
+button.btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(200,168,90,.60);
+  border-radius: 999px;
+
+  padding: 10px 14px;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+button.btn:hover {
+  color: var(--gold);
+  border-color: rgba(200,168,90,.92);
+  box-shadow: 0 0 14px rgba(200,168,90,.30);
+}
+
