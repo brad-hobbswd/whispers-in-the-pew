@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About the Author | Whispers in the Pew</title>
+<meta name="description" content="Learn more about Bradley Hobbs and his journey of faith, teaching, and writing.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/logo-256.png">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">About the Author</h1>
+  </div>
+</section>
+
+<main class="container">
+
+  <article class="panel prose">
+
+    <p>
+      Bradley Hobbs is a devoted follower of Christ who has walked through seasons of silence, tears, and deep searching. His journey has been marked by personal trials, spiritual challenges, and a relentless pursuit of God’s truth. Through it all, he has learned the power of listening to the Holy Spirit and allowing God to shape his life, even in the most difficult seasons.
+    </p>
+
+    <p>
+      Brad’s heart is to encourage others who feel silenced, overlooked, or uncertain, reminding them that God’s voice is always near and His Word is a lamp to guide each step. This devotional reflects his personal walk with the Lord, a journey of reflection, honesty, and hope.
+    </p>
+
+    <p>
+      In addition to this devotional, Brad is writing a more intimate book on his personal walk with God, as well as a devotional for children, building on his previous works for infants and toddlers. His mission is to help readers of all ages encounter the life-changing truth of God’s Word and experience His love in every season of life.
+    </p>
+
+    <p>
+      Brad holds a degree in Computer Information Technology and Business Management and is currently pursuing a master’s in education, specializing in Preschool through 5th Grade, along with a Director’s Credential in Early Childhood settings. He is the proud father of his son Gabriel, an energetic 11-year-old currently in sixth grade. Gabriel’s life and joy inspired Brad to step into teaching six years ago, first in Early Childhood Development and later within the local school district, where he cared for and taught young children with compassion and patience.
+    </p>
+
+    <p>
+      Brad was married for six and a half years, a season with both blessings and hardships. When the relationship grew too toxic to continue, he made the difficult but necessary decision to walk away. In that painful season of heartbreak, combined with wounds from church hurt, Brad turned to God for healing and restoration. Out of that journey of surrender and renewal came the inspiration to write this book.
+    </p>
+
+    <p>
+      Brad lives with a deep conviction that even the smallest steps of obedience, prayer, and listening can lead to profound spiritual growth. Through his writing, he hopes others will find courage to seek God, hear His voice, and walk boldly in His truth.
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
