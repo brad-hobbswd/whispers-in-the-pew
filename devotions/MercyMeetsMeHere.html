@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercy Meets Me Here | Whispers in the Pew</title>
+<meta name="description" content="A devotion on the fresh mercy of God that meets you each new morning.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/logo-256.png">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Mercy Meets Me Here</h1>
+  </div>
+</section>
+
+<main class="container">
+
+  <article class="panel prose">
+
+    <h3>Scripture</h3>
+    <p>
+      “It is because of the Lord’s mercy and loving-kindness that we are not consumed, because His [tender] compassions fail not. They are new every morning; great and abundant is Your stability and faithfulness.” Lamentations 3:22–23
+    </p>
+
+    <h3>Devotion</h3>
+    <p>
+      Some mornings feel heavier than others. The weight of yesterday’s failures, last week’s regrets, or even this morning’s anxiety can press down before our feet ever hit the floor. Into that heaviness comes a sacred promise: God’s mercy meets us again.
+    </p>
+
+    <p>
+      Not recycled mercy. Not leftover grace. New. Every. Morning.
+    </p>
+
+    <p>
+      That means you don’t wake up to condemnation, you wake up to compassion. God doesn’t hold yesterday’s mess over your head.
+    </p>
+
+    <p>
+      He’s already offering you a fresh start, simply because that’s who He is: faithful, unchanging, and overflowing with love.
+      Even when you’ve fallen short. Even when you feel distant. Even when shame whispers that you’re not worthy. His mercy says, “You are mine.”
+    </p>
+
+    <p>
+      So, breathe deep. You are not starting this day alone or defeated. You're beginning it fully seen, fully loved, and fully held by a God who says, “Let’s begin again, together.”
+    </p>
+
+    <h3>Prayer</h3>
+    <p>
+      Lord, thank You that Your mercy is new this morning. I don’t have to drag yesterday’s weight into today, because You meet me here with love, compassion, and a fresh start. Help me walk in the freedom of Your grace. In Jesus’ name, Amen.
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<!-- 🔒 CONTENT PROTECTION + 📖 BOOK MODE -->
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
