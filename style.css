@@ -592,4 +592,6 @@ main.container .panel{
 
 main.container{
   min-height:70vh;
+  padding-top:30px;
+  padding-bottom:60px;
 }
