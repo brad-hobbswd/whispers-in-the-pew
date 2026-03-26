@@ -587,11 +587,11 @@ body[style*="background: #ffffff"] .tagline {
 
 /* Fix spacing for single devotion pages */
 main.container .panel{
-  margin-bottom:60px;
+  margin-bottom:30px;
 }
 
 main.container{
   min-height:70vh;
   padding-top:30px;
-  padding-bottom:60px;
+  padding-bottom:30px;
 }
