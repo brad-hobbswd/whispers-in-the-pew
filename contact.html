@@ -58,12 +58,14 @@
 
   <textarea name="message" id="messageBox" placeholder="Share what is on your heart..." required></textarea>
 
-  <input type="hidden" name="type" id="messageType">
+  <input type="hidden" name="Request Type" id="messageType">
+
+  <!-- 👇 THIS is the redirect -->
+  <input type="hidden" name="_next" value="thank-you.html">
 
   <br><br>
 
   <button class="btn" type="submit">Send</button>
-  <input type="hidden" name="_next" value="thank-you.html">
 
 </form>
 
