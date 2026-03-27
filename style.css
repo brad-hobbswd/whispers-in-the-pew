@@ -730,3 +730,9 @@ textarea::placeholder {
   color: var(--muted);
   opacity: .7;
 }
+
+textarea:focus {
+  outline: none;
+  border-color: rgba(200,168,90,.7);
+  box-shadow: 0 0 10px rgba(200,168,90,.25);
+}
