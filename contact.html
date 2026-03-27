@@ -107,6 +107,9 @@ function setMode(mode) {
   currentMode = mode;
 
   const box = document.getElementById("messageBox");
+  const typeField = document.getElementById("messageType");
+
+  if (typeField) typeField.value = mode;
 
   if (mode === "prayer") {
     box.placeholder = "Share your prayer request...";
