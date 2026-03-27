@@ -58,11 +58,7 @@
 
   <textarea name="message" id="messageBox" placeholder="Share what is on your heart..." required></textarea>
 
-  <input type="hidden" name="Request Type" id="messageType">
-
-  <!-- 👇 THIS is the redirect -->
-  <input type="hidden" name="_next" value="https://brad-hobbswd.github.io/whispers-in-the-pew/thank-you.html">
-    <input type="hidden" name="_redirect" value="https://brad-hobbswd.github.io/whispers-in-the-pew/thank-you.html">
+  <input type="hidden" name="Request Type" id="messageType" value="not specified">
 
   <br><br>
 
@@ -105,15 +101,17 @@ document.addEventListener("keydown", function(e) {
 });
 </script>
   <script>
-let currentMode = "";
-
 function setMode(mode) {
   currentMode = mode;
 
   const box = document.getElementById("messageBox");
   const typeField = document.getElementById("messageType");
 
-  if (typeField) typeField.value = mode;
+  if (typeField) {
+    if (mode === "prayer") typeField.value = "I need prayer";
+    if (mode === "talk") typeField.value = "I need to talk";
+    if (mode === "question") typeField.value = "I have a question";
+  }
 
   if (mode === "prayer") {
     box.placeholder = "Share your prayer request...";
