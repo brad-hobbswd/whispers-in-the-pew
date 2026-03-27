@@ -54,11 +54,17 @@
     <button class="btn" onclick="setMode('question')">I have a question</button>
   </div>
 
-  <textarea id="messageBox" placeholder="Share what is on your heart..."></textarea>
+  <form action="https://formspree.io/f/mzdajjkb" method="POST">
+
+  <textarea name="message" id="messageBox" placeholder="Share what is on your heart..." required></textarea>
+
+  <input type="hidden" name="type" id="messageType">
 
   <br><br>
 
-  <button class="btn" onclick="sendMessage()">Send</button>
+  <button class="btn" type="submit">Send</button>
+
+</form>
 
   <p style="color:var(--muted); font-size:.85rem; margin-top:12px;">
     Share only what you feel comfortable sharing.
