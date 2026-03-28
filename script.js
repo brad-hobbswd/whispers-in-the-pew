@@ -29,6 +29,9 @@ function navigateTo(page) {
     case 'devotions':
       window.location.href = '/whispers-in-the-pew/devotions/';
       break;
+    case 'prayer':
+      window.location.href = '/whispers-in-the-pew/prayer-room.html';
+      break;
     case 'store':
       window.location.href = '/whispers-in-the-pew/store.html';
       break;
@@ -53,6 +56,8 @@ function setActiveNav() {
     document.getElementById('nav-store')?.classList.add('active');
   } else if (path.includes('about')) {
     document.getElementById('nav-about')?.classList.add('active');
+  }  else if (path.includes('prayer')) {
+    document.getElementById('nav-prayer')?.classList.add('active');
   } else if (path.includes('contact')) {
     document.getElementById('nav-contact')?.classList.add('active');
   } else {
