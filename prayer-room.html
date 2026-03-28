@@ -12,21 +12,7 @@
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Home">
-      <img src="assets/images/logo-256.png" alt="Whispers in the Pew">
-      <span>Whispers in the Pew</span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="devotions/index.html">Devotions</a>
-      <a href="prayer-room.html">Prayer Room</a>
-      <a href="about.html">About</a>
-      <a href="store.html">Store</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div id="header"></div>
 <section class="hero-small" style="background:
   linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
   url('assets/images/prayer-hero.jpg');">
@@ -77,123 +63,7 @@
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 Whispers in the Pew</p>
-  </div>
-</footer>
-
- <script>
-document.addEventListener("contextmenu", function(e){
-  e.preventDefault();
-});
-</script>
-
-<script>
-document.addEventListener("keydown", function(e) {
-  if (
-    (e.ctrlKey && e.key === "c") ||
-    (e.ctrlKey && e.key === "x") ||
-    (e.ctrlKey && e.key === "u") ||
-    (e.ctrlKey && e.key === "s")
-  ) {
-    e.preventDefault();
-  }
-});
-</script>
-  <script>
-let timerRunning = false;
-
-function startPrayerFlow() {
-  const startBtn = document.querySelector("#start button");
-  if (startBtn) startBtn.style.display = "none";
-
-  document.getElementById("step1").classList.remove("hidden");
-
-  setTimeout(() => {
-    document.getElementById("step2").classList.remove("hidden");
-  }, 2000);
-
-  setTimeout(() => {
-    document.getElementById("step3").classList.remove("hidden");
-  }, 4000);
-}
-
-function savePrayer(text) {
-  let prayers = JSON.parse(localStorage.getItem("prayers")) || [];
-
-  prayers.unshift({
-    text: text,
-    time: new Date().toLocaleString()
-  });
-
-  localStorage.setItem("prayers", JSON.stringify(prayers));
-}
-
-function loadPrayers() {
-  const container = document.getElementById("savedPrayers");
-  if (!container) return;
-
-  let prayers = JSON.parse(localStorage.getItem("prayers")) || [];
-
-  container.innerHTML = "";
-
-  prayers.slice(0, 5).forEach(p => {
-    let div = document.createElement("div");
-    div.style.marginBottom = "12px";
-    div.style.padding = "10px";
-    div.style.border = "1px solid rgba(200,168,90,.2)";
-    div.style.borderRadius = "8px";
-    div.style.color = "var(--muted)";
-
-    div.innerHTML = `
-      <div style="font-size:.85rem; opacity:.6;">${p.time}</div>
-      <div>${p.text}</div>
-    `;
-
-    container.appendChild(div);
-  });
-}
-
-function releasePrayer() {
-  const box = document.getElementById("prayerBox");
-
-  if (!box.value.trim()) return;
-
-  savePrayer(box.value);
-
-  box.classList.add("fade-out");
-
-  setTimeout(() => {
-    box.value = "";
-    box.classList.remove("fade-out");
-    document.getElementById("step4").classList.remove("hidden");
-
-    loadPrayers();
-  }, 2000);
-}
-
-function startSilence(seconds) {
-  if (timerRunning) return;
-  timerRunning = true;
-
-  let timerDisplay = document.getElementById("timer");
-  let time = seconds;
-
-  let interval = setInterval(() => {
-    timerDisplay.textContent = time + " seconds remaining";
-    time--;
-
-    if (time < 0) {
-      clearInterval(interval);
-      timerDisplay.textContent = "Time complete.";
-      document.getElementById("end").classList.remove("hidden");
-      timerRunning = false;
-    }
-  }, 1000);
-}
-
-document.addEventListener("DOMContentLoaded", loadPrayers);
-</script>
+<div id="footer"></div>
+<script src="/whispers-in-the-pew/script.js"></script>
 </body>
 </html>
