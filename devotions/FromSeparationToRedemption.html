@@ -13,21 +13,7 @@
 </head>
 <body>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="../index.html" aria-label="Home">
-      <img src="../assets/images/logo-256.png" alt="Whispers in the Pew">
-      <span>Whispers in the Pew</span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="index.html">Devotions</a>
-      <a href="../prayer-room.html">Prayer Room</a>
-      <a href="../about.html">About</a>
-      <a href="../store.html">Store</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div id="header"></div>
 
 <section class="hero-small" style="background:
   linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
@@ -67,52 +53,9 @@
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 Whispers in the Pew</p>
-  </div>
-</footer>
+<div id="footer"></div>
 
-<script>
-document.addEventListener("contextmenu", function(e){
-  e.preventDefault();
-});
-</script>
-
-<script>
-document.addEventListener("keydown", function(e) {
-  if (
-    (e.ctrlKey && e.key === "c") ||
-    (e.ctrlKey && e.key === "x") ||
-    (e.ctrlKey && e.key === "u") ||
-    (e.ctrlKey && e.key === "s")
-  ) {
-    e.preventDefault();
-  }
-});
-</script>
-
-<script>
-(function(){
-  function enableBookMode(){
-    document.querySelectorAll("header, footer, .nav")
-      .forEach(el => el.remove());
-
-    document.body.style.background = "#080604";
-    document.body.style.color = "#f4e7cf";
-    document.body.style.margin = "0";
-    document.body.style.padding = "40px 30px";
-    document.body.style.maxWidth = "700px";
-    document.body.style.margin = "0 auto";
-  }
-
-  const params = new URLSearchParams(window.location.search);
-
-  if(params.get("book") === "true"){
-    enableBookMode();
-  }
-})();
-</script>
+<script src="/whispers-in-the-pew/script.js"></script>
 
 </body>
 </html>
