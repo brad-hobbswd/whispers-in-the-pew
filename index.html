@@ -4,48 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Whispers in the Pew</title>
+
 <meta name="description" content="Candlelit devotions for quiet faith and deeper knowledge of Jesus.">
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 </head>
+
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Home">
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-container">
+
+    <div class="brand">
       <img src="assets/images/logo-256.png" alt="Whispers in the Pew">
       <span>Whispers in the Pew</span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="devotions/index.html">Devotions</a>
-      <a href="prayer-room.html">Prayer Room</a>
-      <a href="about.html">About</a>
-      <a href="store.html">Store</a>
-      <a href="contact.html">Contact</a>
+    </div>
+
+    <nav class="nav">
+      <button onclick="navigateTo('home')" id="nav-home">Home</button>
+      <button onclick="navigateTo('devotions')" id="nav-devotions">Devotions</button>
+      <button onclick="navigateTo('store')" id="nav-store">Store</button>
+      <button onclick="navigateTo('about')" id="nav-about">About</button>
+      <button onclick="navigateTo('contact')" id="nav-contact">Contact</button>
     </nav>
+
   </div>
 </header>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <img class="logo-hero" src="assets/images/logo-seal.png" alt="Whispers in the Pew">
     <h1 class="h1">Whispers in the Pew</h1>
     <p class="tagline">Candlelit devotions for quiet faith and deeper knowledge of Jesus.</p>
     <div class="divider"></div>
-    <a class="btn" href="devotions/index.html">Read devotions</a>
+    <button class="btn" onclick="navigateTo('devotions')">Read devotions</button>
   </div>
 </section>
 
+<!-- MAIN -->
 <main class="container">
   <div class="grid">
+
     <section class="panel">
       <h2>Featured devotion</h2>
       <p class="meta">Faith that became mine</p>
+
       <div class="card">
         <h3>Faith That Became Mine</h3>
         <p>A quiet hunger to know Jesus personally.</p>
-        <a class="btn" href="devotions/faith-that-became-mine.html">Open devotion</a>
+        <button class="btn" onclick="window.location.href='devotions/faith-that-became-mine.html'">
+          Open devotion
+        </button>
       </div>
     </section>
 
@@ -54,33 +69,18 @@
       <blockquote>John 14:18</blockquote>
       <p>Quiet moments can become sacred moments.</p>
     </section>
+
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <p>© 2026 Whispers in the Pew</p>
   </div>
 </footer>
 
-<script>
-document.addEventListener("contextmenu", function(e){
-  e.preventDefault();
-});
-</script>
+<script src="script.js"></script>
 
-<script>
-document.addEventListener("keydown", function(e) {
-  if (
-    (e.ctrlKey && e.key === "c") ||
-    (e.ctrlKey && e.key === "x") ||
-    (e.ctrlKey && e.key === "u") ||
-    (e.ctrlKey && e.key === "s")
-  ) {
-    e.preventDefault();
-  }
-});
-</script>
-  
 </body>
 </html>
