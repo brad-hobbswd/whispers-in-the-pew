@@ -6,6 +6,120 @@
   <title>Resources | Brad Hobbs</title>
   <meta name="description" content="Explore books, writing, web design, and ministry connections by Brad Hobbs.">
   <link rel="stylesheet" href="/whispers-in-the-pew/style.css">
+
+<style>
+
+/* ===== INTRO ===== */
+.intro{
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.intro p{
+  max-width:700px;
+  color:var(--muted);
+  line-height:1.6;
+  font-size:1rem;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+/* ===== CARD ===== */
+.store-card{
+  background:var(--glass);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:180px;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:transform .25s ease, box-shadow .25s ease, border .25s ease;
+}
+
+/* ===== ACCENT LINE ===== */
+.store-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height:3px;
+  width:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  opacity:.8;
+}
+
+/* ===== HOVER ===== */
+.store-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  border:1px solid rgba(255,255,255,.25);
+}
+
+/* ===== CONTENT ===== */
+.card-content{
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===== TITLE ===== */
+.card-title{
+  font-size:1.15rem;
+  font-weight:600;
+  margin-bottom:8px;
+  color:var(--text);
+}
+
+/* ===== DESCRIPTION ===== */
+.card-desc{
+  font-size:.95rem;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* ===== FOOTER ===== */
+.card-footer{
+  margin-top:18px;
+}
+
+/* ===== BUTTON ===== */
+.card-btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#001428;
+  font-weight:600;
+  text-decoration:none;
+  font-size:.85rem;
+
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+/* ===== BUTTON HOVER ===== */
+.card-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(47,179,255,.35);
+}
+
+/* ===== COMING SOON STYLE ===== */
+.card-btn[style]{
+  background:rgba(255,255,255,.1);
+  color:var(--muted);
+  box-shadow:none;
+}
+
+</style>
+  
   <link rel="icon" href="/whispers-in-the-pew/favicon.ico">
 </head>
 
