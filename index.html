@@ -1,64 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Whispers in the Pew</title>
 
-<meta name="description" content="Candlelit devotions for quiet faith and deeper knowledge of Jesus.">
+<title>Whispers in the Pew | Bradley Hobbs</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
-<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+line-height:1.8;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 24px;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.78), rgba(15,13,11,0.92)),
+url('images/pew.jpg') center/cover no-repeat;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+}
+
+.eyebrow{
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:0.75rem;
+color:#c7b9a5;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,7rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:28px;
+}
+
+.subtitle{
+font-size:1.15rem;
+max-width:760px;
+margin:0 auto 40px;
+color:#ddd4c7;
+font-weight:300;
+}
+
+.quote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.8rem;
+font-style:italic;
+max-width:720px;
+margin:0 auto 50px;
+color:#efe5d7;
+line-height:1.5;
+}
+
+.author{
+margin-top:10px;
+font-size:0.95rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#bda98d;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.primary-btn{
+padding:16px 34px;
+background:#efe5d7;
+color:#15120f;
+border-radius:999px;
+font-weight:600;
+transition:0.3s ease;
+}
+
+.primary-btn:hover{
+transform:translateY(-2px);
+background:#ffffff;
+}
+
+.secondary-btn{
+padding:16px 34px;
+border:1px solid rgba(255,255,255,0.2);
+border-radius:999px;
+color:#f5f1ea;
+transition:0.3s ease;
+}
+
+.secondary-btn:hover{
+background:rgba(255,255,255,0.08);
+}
+
+.scroll-text{
+position:absolute;
+bottom:32px;
+left:50%;
+transform:translateX(-50%);
+font-size:0.8rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#bcae9d;
+opacity:0.7;
+}
+
+.intro{
+padding:120px 24px;
+background:#16120f;
+}
+
+.intro-inner{
+max-width:850px;
+margin:auto;
+text-align:center;
+}
+
+.intro h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:30px;
+}
+
+.intro p{
+font-size:1.08rem;
+color:#d8d0c5;
+margin-bottom:28px;
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+color:#f5f1ea;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+align-items:flex-start;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:980px){
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:60px 20px;
+}
+
+.quote{
+font-size:1.45rem;
+}
+
+.intro{
+padding:90px 20px;
+}
+
+.intro h2{
+font-size:2.3rem;
+}
+
+.subtitle{
+font-size:1rem;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
 </head>
-
 <body>
 
-<div id="header"></div>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <img class="logo-hero" src="assets/images/logo-seal.png" alt="Whispers in the Pew">
-    <h1 class="h1">Whispers in the Pew</h1>
-    <p class="tagline">Candlelit devotions for quiet faith and deeper knowledge of Jesus.</p>
-    <div class="divider"></div>
-    <button class="btn" onclick="navigateTo('devotions')">Read devotions</button>
-  </div>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<div class="eyebrow">
+A Devotional Journey Through Healing, Truth, and Grace
+</div>
+
+<h1>
+Whispers in the Pew
+</h1>
+
+<p class="subtitle">
+A deeply personal devotional journey through silence, church hurt, healing, surrender, and discovering the nearness of Jesus in the places no one else could see.
+</p>
+
+<div class="quote">
+“To every soul who sat in the sanctuary but still felt unseen.”
+</div>
+
+<div class="author">
+Bradley Hobbs
+</div>
+
+<div class="buttons">
+
+<a href="contents.html" class="primary-btn">
+Begin the Journey
+</a>
+
+<a href="about.html" class="secondary-btn">
+About the Author
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll-text">
+Whispers Still Reach the Heart
+</div>
+
 </section>
 
-<!-- MAIN -->
-<main class="container">
-  <div class="grid">
+<section class="intro">
 
-    <section class="panel">
-      <h2>Featured devotion</h2>
-      <p class="meta">Faith that became mine</p>
+<div class="intro-inner">
 
-      <div class="card">
-        <h3>Faith That Became Mine</h3>
-        <p>A quiet hunger to know Jesus personally.</p>
-        <button class="btn" onclick="window.location.href='devotions/faith-that-became-mine.html'">
-          Open devotion
-        </button>
-      </div>
-    </section>
+<h2>
+Some journeys begin in silence.
+</h2>
 
-    <section class="panel prose">
-      <h2>Scripture light</h2>
-      <blockquote>John 14:18</blockquote>
-      <p>Quiet moments can become sacred moments.</p>
-    </section>
+<p>
+Not every wound leaves visible scars. Some are carried quietly through church pews, late-night prayers, unanswered questions, and the exhausting ache of trying to belong while feeling unseen.
+</p>
 
-  </div>
-</main>
+<p>
+Whispers in the Pew was written for the weary heart searching for truth, healing, peace, and the gentle voice of Jesus beneath the noise of fear, shame, rejection, and performance.
+</p>
 
-<!-- FOOTER -->
-<div id="footer"></div>
+<p>
+These pages invite readers into honest reflections on faith, trust, brokenness, redemption, spiritual growth, courage, and the transforming presence of God through every season of life.
+</p>
 
-<script src="/whispers-in-the-pew/script.js"></script>
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="preface.html">Preface</a>
+<a href="about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="faithandtrust.html">Faith & Trust</a>
+<a href="healingandwholeness.html">Healing & Wholeness</a>
+<a href="forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="courageandcalling.html">Courage & Calling</a>
+<a href="heartandcharacter.html">Heart & Character</a>
+<a href="quotes.html">Quotes</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
 
 </body>
 </html>
