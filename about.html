@@ -1,77 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About | Whispers in the Pew</title>
-<meta name="description" content="About Whispers in the Pew.">
-<link rel="stylesheet" href="style.css">
+
+<meta name="description" content="The story and heart behind Whispers in the Pew.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('assets/images/about-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,6.5rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:26px;
+}
+
+.subtitle{
+max-width:760px;
+margin:auto;
+font-size:1.08rem;
+font-weight:300;
+color:#d7cfc4;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:1280px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+.panel{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:32px;
+padding:50px;
+position:relative;
+overflow:hidden;
+}
+
+.panel::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.panel h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.7rem;
+font-weight:500;
+line-height:1.1;
+margin-bottom:30px;
+}
+
+.panel p{
+font-size:1rem;
+color:#d6cdc0;
+margin-bottom:26px;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.55rem;
+font-style:italic;
+line-height:1.7;
+color:#efe4d5;
+margin:42px 0;
+padding-left:26px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:1100px){
+
+.content-inner{
+grid-template-columns:1fr;
+}
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.panel{
+padding:38px;
+}
+
+.panel h2{
+font-size:2.2rem;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
 </head>
 <body>
-<div id="header"></div>
-<section class="hero-small" style="background:
-  linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
-  url('assets/images/about-hero.jpg');">
-  <div class="hero-inner">
-    <h1 class="h1">About</h1>
-    <p class="tagline">A quiet space for steady faith and deeper knowledge of Jesus.</p>
-  </div>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+The Story Behind the Journey
+</div>
+
+<h1>
+About
+</h1>
+
+<p class="subtitle">
+A quiet space shaped through grief, faith, healing, reflection, and the steady pursuit of Jesus.
+</p>
+
+</div>
+
 </section>
 
-<main class="container">
-  <div class="grid">
-    <section class="panel prose">
-      <h2>The heart behind this space</h2>
-      <p>Whispers in the Pew was born from a journey that began in early loss and grew into steady pursuit. 
-        A young boy lost his mother at thirteen and continued walking into a small church where wooden pews, 
-        familiar faces, and extended family became shelter. Two younger sisters watched closely, 
-        and faith slowly moved from surrounding influence to personal conviction. Grief could have closed the heart. 
-        Hunger opened the heart instead.</p>
-      <blockquote>A humble mother once prayed faithfully. A father walked a different road. 
-        Church became more than a building during those years. Church became family. 
-        Aunts, cousins, and friends formed a covering that carried three children through seasons no child should face alone. Within that covering, 
-        a deeper question began to form. Who is Jesus to me?</blockquote>
-      <p>Whispers in the Pew exists for calm worship and focused listening.</p>
-      <p>Whispers in the Pew exists to honor quiet pursuit. Calm worship and focused listening grew from wooden benches, 
-        soft hymns, and long moments of reflection after services ended. Faith that once felt inherited became embraced through seeking. 
-        Scripture moved from familiarity into revelation. John 14:18 became more than words on a page. 
-        “I will not leave you comfortless: I will come to you” settled deeply and personally. Comfort was not described as an idea. 
-        Comfort was described as His presence. That promise carried weight through every season.</p>
-      <p>This book exists to serve those who sit quietly in sanctuaries and hunger for something deeper than routine. 
-        Devotions here aim for warmth without weakness, clarity without harshness, 
-        and reverence anchored in the truth that God is one and His name is Jesus. Each reflection flows from lived experience, 
-        not theory. Each page reflects a life shaped by family, loss, responsibility, and steady pursuit of the Lord.</p>
-      <p>Whispers in the Pew stands as testimony that faith can grow strong in humble places. 
-        Faith can become personal even when childhood changes quickly. Faith can remain steady when revelation takes root. 
-        A borrowed flame flickers. A chosen flame burns steady.</p>
-      <p>This work exists to guide readers toward that steady flame.</p>
-     
-    </section>
+<section class="content">
 
-    <section class="panel prose">
-      <h2>Why this page matters</h2>
-      <p>This page exists in reference to the book because Whispers in the Pew is more than a collection of devotions. 
-        The book carries a lived testimony shaped by early loss, steady community, and a personal pursuit of Jesus. 
-        What began in wooden pews among familiar faces grew into a faith that moved from inheritance to ownership.</p>
-      <p>Community can feel like family inside a small church, and that reality shaped the heart of this work. 
-        Aunts, cousins, and faithful believers formed a covering that provided strength when childhood shifted unexpectedly. 
-        Within that covering, hunger for deeper understanding grew. 
-        The book reflects that journey from surrounding faith to personal revelation.</p>
-       <p>Quiet pursuit of Jesus can grow through steady reading and prayer. 
-         The pages of this book were written with that rhythm in mind. 
-         Each devotion invites readers into consistent communion, thoughtful reflection, and reverent attention to Scripture.</p>
-      <p>This page matters because it connects the digital space to the printed testimony. 
-        The same warmth, clarity, and reverence found in the book guide this online presence, 
-        offering readers a continued place to sit, reflect, and seek the Lord with sincerity.</p>
-    </section>
-  </div>
-</main>
+<div class="content-inner">
 
-<div id="footer"></div>
-  <script src="/whispers-in-the-pew/script.js"></script>
+<section class="panel">
+
+<h2>
+The heart behind this space
+</h2>
+
+<p>
+Whispers in the Pew was born through a journey marked by loss, searching, healing, and a steady pursuit of Jesus. A young boy lost his mother at thirteen and continued walking into a small church where wooden pews, familiar faces, and extended family slowly became shelter.
+</p>
+
+<p>
+Two younger sisters watched closely while faith transformed from surrounding influence into personal conviction. Grief could have hardened the heart. Hunger for God opened the heart instead.
+</p>
+
+<blockquote>
+Church became more than a building during those years. Church became family. Aunts, cousins, and faithful believers formed a covering that carried three children through seasons no child should have walked alone.
+</blockquote>
+
+<p>
+Within that covering, a deeper question slowly emerged. Who is Jesus to me?
+</p>
+
+<p>
+Whispers in the Pew exists to honor quiet pursuit. Faith once inherited became embraced personally through searching, prayer, Scripture, reflection, and revelation. John 14:18 settled deeply into the heart: “I will not leave you comfortless: I will come to you.”
+</p>
+
+<p>
+Comfort was never merely described as an idea. Comfort became His presence.
+</p>
+
+<p>
+This work exists for readers who sit quietly in sanctuaries longing for something deeper than routine religion. These reflections aim for warmth without weakness, reverence without performance, and truth centered completely on Jesus.
+</p>
+
+</section>
+
+<section class="panel">
+
+<h2>
+Why this page matters
+</h2>
+
+<p>
+Whispers in the Pew is more than a collection of devotional writings. The book carries lived testimony shaped through grief, family, church community, spiritual searching, healing, and personal revelation.
+</p>
+
+<p>
+Small churches often become places where faith grows quietly through ordinary moments. Wooden pews, soft hymns, altar prayers, familiar voices, and faithful people leave lasting marks upon the soul.
+</p>
+
+<p>
+Community became strength during seasons when life changed suddenly. Extended family and steady believers formed a spiritual covering that carried hope through uncertainty. Within that atmosphere, hunger for Jesus continued growing deeper.
+</p>
+
+<p>
+This page connects the online experience with the same spirit carried throughout the book itself. The atmosphere here was built intentionally for reflection, stillness, sincerity, and quiet pursuit of God.
+</p>
+
+<blockquote>
+A borrowed flame flickers. A chosen flame burns steadily.
+</blockquote>
+
+<p>
+Whispers in the Pew stands as testimony that faith can remain steady through hardship, healing, searching, revelation, and surrender. These pages exist to guide readers toward that steady flame through the presence of Jesus.
+</p>
+
+</section>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="preface.html">Preface</a>
+<a href="about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="categories/faithandtrust.html">Faith & Trust</a>
+<a href="categories/healingandwholeness.html">Healing & Wholeness</a>
+<a href="categories/forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="categories/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="categories/courageandcalling.html">Courage & Calling</a>
+<a href="categories/heartandcharacter.html">Heart & Character</a>
+<a href="quotes.html">Quotes</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
 </body>
 </html>
