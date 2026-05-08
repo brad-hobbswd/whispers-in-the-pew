@@ -1,0 +1,521 @@
+# contents.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contents | Whispers in the Pew</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.8;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:140px 24px 100px;
+text-align:center;
+background:
+linear-gradient(rgba(15,13,11,0.82), rgba(15,13,11,0.94)),
+url('images/book-bg.jpg') center/cover no-repeat;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bba78e;
+margin-bottom:20px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,9vw,6rem);
+font-weight:500;
+line-height:1;
+margin-bottom:28px;
+}
+
+.subtitle{
+max-width:720px;
+margin:auto;
+font-size:1.08rem;
+font-weight:300;
+color:#d8d0c5;
+}
+
+.categories{
+padding:110px 24px;
+background:#16120f;
+}
+
+.categories-grid{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:34px;
+}
+
+.category-card{
+background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:42px;
+transition:0.35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.category-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.category-card:hover{
+transform:translateY(-6px);
+border-color:rgba(255,255,255,0.16);
+background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+}
+
+.category-number{
+font-size:0.8rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#b8a38a;
+margin-bottom:20px;
+}
+
+.category-card h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+font-weight:500;
+margin-bottom:18px;
+line-height:1.1;
+}
+
+.category-card p{
+color:#d2c8bb;
+font-size:1rem;
+margin-bottom:28px;
+max-width:520px;
+}
+
+.category-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.92rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#efe5d7;
+}
+
+.category-link span{
+transition:0.3s ease;
+}
+
+.category-card:hover .category-link span{
+transform:translateX(4px);
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+color:#f5f1ea;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+align-items:flex-start;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:980px){
+
+.categories-grid{
+grid-template-columns:1fr;
+}
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:120px 20px 80px;
+}
+
+.categories{
+padding:80px 20px;
+}
+
+.category-card{
+padding:34px;
+}
+
+.category-card h2{
+font-size:2.1rem;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+The Journey Within the Pages
+</div>
+
+<h1>
+Contents
+</h1>
+
+<p class="subtitle">
+Each section of Whispers in the Pew explores a different part of the spiritual journey through faith, healing, surrender, truth, growth, courage, and the quiet work of Jesus within the heart.
+</p>
+
+</div>
+
+</section>
+
+<section class="categories">
+
+<div class="categories-grid">
+
+<a href="faithandtrust.html" class="category-card">
+
+<div class="category-number">
+Section One
+</div>
+
+<h2>
+Faith & Trust
+</h2>
+
+<p>
+Reflections on surrender, fear, waiting, perseverance, and learning to trust God through uncertainty, silence, and the refining process of faith.
+</p>
+
+<div class="category-link">
+Enter Section <span>→</span>
+</div>
+
+</a>
+
+<a href="healingandwholeness.html" class="category-card">
+
+<div class="category-number">
+Section Two
+</div>
+
+<h2>
+Healing & Wholeness
+</h2>
+
+<p>
+Devotions centered on brokenness, restoration, emotional healing, renewal, and the gentle work of God rebuilding wounded hearts.
+</p>
+
+<div class="category-link">
+Enter Section <span>→</span>
+</div>
+
+</a>
+
+<a href="forgivenessandredemption.html" class="category-card">
+
+<div class="category-number">
+Section Three
+</div>
+
+<h2>
+Forgiveness & Redemption
+</h2>
+
+<p>
+Stories and reflections about grace, mercy, second chances, spiritual freedom, and the transforming power of redemption through Jesus.
+</p>
+
+<div class="category-link">
+Enter Section <span>→</span>
+</div>
+
+</a>
+
+<a href="spiritualgrowthanddiscipleship.html" class="category-card">
+
+<div class="category-number">
+Section Four
+</div>
+
+<h2>
+Spiritual Growth & Discipleship
+</h2>
+
+<p>
+Exploring obedience, truth, spiritual maturity, discipleship, prayer, wisdom, and learning to walk closely with God each day.
+</p>
+
+<div class="category-link">
+Enter Section <span>→</span>
+</div>
+
+</a>
+
+<a href="courageandcalling.html" class="category-card">
+
+<div class="category-number">
+Section Five
+</div>
+
+<h2>
+Courage & Calling
+</h2>
+
+<p>
+Encouragement for standing firm in faith, living boldly for Jesus, embracing purpose, and walking faithfully through challenge and resistance.
+</p>
+
+<div class="category-link">
+Enter Section <span>→</span>
+</div>
+
+</a>
+
+<a href="heartandcharacter.html" class="category-card">
+
+<div class="category-number">
+Section Six
+</div>
+
+<h2>
+Heart & Character
+</h2>
+
+<p>
+Reflections on humility, integrity, compassion, emotional honesty, spiritual identity, and allowing God to shape the inner life.
+</p>
+
+<div class="category-link">
+Enter Section <span>→</span>
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="preface.html">Preface</a>
+<a href="about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="faithandtrust.html">Faith & Trust</a>
+<a href="healingandwholeness.html">Healing & Wholeness</a>
+<a href="forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="courageandcalling.html">Courage & Calling</a>
+<a href="heartandcharacter.html">Heart & Character</a>
+<a href="quotes.html">Quotes</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
+```
