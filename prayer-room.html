@@ -1,69 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Prayer Room | Whispers in the Pew</title>
-<meta name="description" content="A quiet prayer room for candlelit moments.">
-<link rel="stylesheet" href="style.css">
+
+<meta name="description" content="A quiet prayer room for reflection, stillness, prayer, and moments with Jesus.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:160px 24px 120px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.82), rgba(15,13,11,0.94)),
+url('assets/images/prayer-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.4rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+max-width:760px;
+margin:auto;
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.prayer-card{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+text-align:center;
+}
+
+.prayer-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.prayer-card h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:24px;
+color:#f4e8d9;
+}
+
+.prayer-card p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:22px;
+}
+
+.hidden{
+display:none;
+}
+
+textarea{
+width:100%;
+min-height:180px;
+padding:22px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.03);
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+font-size:1rem;
+line-height:1.8;
+resize:vertical;
+outline:none;
+margin-top:20px;
+}
+
+textarea::placeholder{
+color:#9f9284;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 28px;
+border-radius:999px;
+background:#e8dccd;
+color:#16120f;
+font-size:0.82rem;
+letter-spacing:2px;
+text-transform:uppercase;
+font-weight:600;
+transition:0.3s ease;
+border:none;
+cursor:pointer;
+margin-top:20px;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+background:#ffffff;
+}
+
+.scripture-box{
+margin:35px 0;
+padding:34px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture-box h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin-bottom:18px;
+color:#f2e6d8;
+}
+
+.scripture-box p{
+margin-bottom:0;
+font-size:1.05rem;
+}
+
+#timer{
+margin-top:24px;
+font-size:1.2rem;
+letter-spacing:2px;
+color:#e5d7c7;
+}
+
+.saved-prayer{
+margin-top:30px;
+padding:24px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
+text-align:left;
+}
+
+.saved-prayer p{
+margin-bottom:0;
+white-space:pre-wrap;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.prayer-card{
+padding:40px 28px;
+}
+
+.prayer-card h2{
+font-size:2.3rem;
+}
+
+textarea{
+min-height:160px;
+}
+
+}
+
+</style>
+
 </head>
 <body>
-<div id="header"></div>
-<section class="hero-small" style="background:
-  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
-  url('assets/images/prayer-hero.jpg');">
-  <div class="hero-inner">
-    <h1 class="h1">Prayer Room</h1>
-    <p class="tagline">A quiet place to sit, breathe, and pray in the Name of Jesus.</p>
-  </div>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Whispers in the Pew
+</div>
+
+<h1>
+Prayer Room
+</h1>
+
+<p class="subtitle">
+A quiet place to sit, breathe, reflect, and pray in the name of Jesus.
+</p>
+
+</div>
+
 </section>
 
-<main class="container">
-  <div class="grid">
-    <section class="panel prose" id="prayer-experience">
-  <h2>Begin Prayer</h2>
-  <p>You are welcome here. Jesus is near.</p>
+<section class="content">
 
-  <div id="start">
-    <button onclick="startPrayerFlow()">Begin</button>
-  </div>
+<div class="content-inner">
 
-  <div id="step1" class="hidden">
-    <p>Take a slow breath. Let your thoughts settle.</p>
-  </div>
+<div class="prayer-card" id="prayer-experience">
 
-  <div id="step2" class="hidden">
-    <p><strong>Matthew 7:8</strong></p>
-    <p>For every one that asketh receiveth.</p>
-    <p>Speak honestly to Jesus right now.</p>
-  </div>
+<h2>
+Begin Prayer
+</h2>
 
-  <div id="step3" class="hidden">
-    <textarea id="prayerBox" placeholder="Write your prayer here..."></textarea>
-    <br><br>
-    <button onclick="releasePrayer()">Release Prayer</button>
-  </div>
+<p>
+You are welcome here. Jesus is near.
+</p>
 
-  <div id="step4" class="hidden">
-    <p>Remain here for a moment with Jesus.</p>
-    <button onclick="startSilence(60)">Sit quietly for 1 minute</button>
-    <p id="timer"></p>
-  </div>
+<div id="start">
 
-  <div id="end" class="hidden">
-    <p>Your prayer was heard.</p>
-    <p>You can return here anytime.</p>
-  </div>
-  <div id="savedPrayers" style="margin-top:20px;"></div>
+<button class="btn" onclick="startPrayerFlow()">
+Begin
+</button>
+
+</div>
+
+<div id="step1" class="hidden">
+
+<p>
+Take a slow breath and allow your thoughts to settle quietly before Jesus.
+</p>
+
+</div>
+
+<div id="step2" class="hidden">
+
+<div class="scripture-box">
+
+<h3>
+Matthew 7:8
+</h3>
+
+<p>
+“For every one that asketh receiveth.”
+</p>
+
+</div>
+
+<p>
+Speak honestly to Jesus right now.
+</p>
+
+</div>
+
+<div id="step3" class="hidden">
+
+<textarea id="prayerBox" placeholder="Write your prayer here..."></textarea>
+
+<button class="btn" onclick="releasePrayer()">
+Release Prayer
+</button>
+
+</div>
+
+<div id="step4" class="hidden">
+
+<p>
+Remain here quietly for a moment with Jesus.
+</p>
+
+<button class="btn" onclick="startSilence(60)">
+Sit Quietly for 1 Minute
+</button>
+
+<p id="timer"></p>
+
+</div>
+
+<div id="end" class="hidden">
+
+<p>
+Your prayer was heard.
+</p>
+
+<p>
+You can return here anytime.
+</p>
+
+</div>
+
+<div id="savedPrayers"></div>
+
+</div>
+
+</div>
+
 </section>
-  </div>
-</main>
 
 <div id="footer"></div>
-<script src="/whispers-in-the-pew/script.js"></script>
+
+<script>
+
+function startPrayerFlow(){
+
+document.getElementById('start').classList.add('hidden');
+
+setTimeout(() => {
+document.getElementById('step1').classList.remove('hidden');
+}, 400);
+
+setTimeout(() => {
+document.getElementById('step2').classList.remove('hidden');
+}, 2500);
+
+setTimeout(() => {
+document.getElementById('step3').classList.remove('hidden');
+}, 4500);
+
+}
+
+function releasePrayer(){
+
+const prayerText = document.getElementById('prayerBox').value.trim();
+
+if(prayerText === ''){
+alert('Please write your prayer first.');
+return;
+}
+
+const prayerContainer = document.getElementById('savedPrayers');
+
+const prayerElement = document.createElement('div');
+
+prayerElement.classList.add('saved-prayer');
+
+prayerElement.innerHTML = `<p>${prayerText}</p>`;
+
+prayerContainer.prepend(prayerElement);
+
+document.getElementById('step4').classList.remove('hidden');
+
+document.getElementById('prayerBox').value = '';
+
+}
+
+function startSilence(seconds){
+
+let timeLeft = seconds;
+
+const timer = document.getElementById('timer');
+
+timer.innerText = `${timeLeft} seconds remaining`;
+
+const countdown = setInterval(() => {
+
+timeLeft--;
+
+timer.innerText = `${timeLeft} seconds remaining`;
+
+if(timeLeft <= 0){
+
+clearInterval(countdown);
+
+timer.innerText = 'Quiet time completed';
+
+document.getElementById('end').classList.remove('hidden');
+
+}
+
+}, 1000);
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
