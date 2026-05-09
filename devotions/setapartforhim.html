@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set Apart for Him | Whispers in the Pew</title>
+
+<meta name="description" content="A call to holiness through being set apart, transformed, and shaped by the presence of Jesus.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article strong{
+color:#f4e8d9;
+font-weight:600;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:60px 0 20px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.7rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:55px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:36px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:1100px){
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.4rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Spiritual Growth & Discipleship
+</div>
+
+<h1>
+Set Apart for Him
+</h1>
+
+<p class="subtitle">
+1 Peter 1:15-16
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html" class="back-link">
+← Return to Spiritual Growth & Discipleship
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“But as the One Who called you is holy, you yourselves also be holy in all your conduct and manner of living. For it is written, You shall be holy, for I am holy.” 1 Peter 1:15-16
+</p>
+
+</div>
+
+<p>
+Holiness often sounds intimidating to people, almost unreachable or reserved only for spiritual giants.
+</p>
+
+<p>
+Scripture presents holiness differently.
+</p>
+
+<p>
+Holiness begins through belonging fully to God and allowing His presence to shape every area of life.
+</p>
+
+<blockquote>
+Holiness is not about becoming untouchable. Holiness is about becoming fully His.
+</blockquote>
+
+<p>
+God calls His people to live set apart from darkness, compromise, and spiritual numbness while growing closer to His character daily.
+</p>
+
+<p>
+This invitation does not come through human perfection or religious performance.
+</p>
+
+<p>
+Transformation happens through surrender and the ongoing work of His Spirit.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Called to Reflect Jesus
+</h2>
+
+<p>
+God is holy completely, perfectly, and eternally.
+</p>
+
+<p>
+His nature carries purity, truth, goodness, mercy, and righteousness untouched through sin.
+</p>
+
+<p>
+When Scripture says:
+</p>
+
+<div class="scripture">
+
+<p>
+“Be holy, for I am holy.”
+</p>
+
+</div>
+
+<p>
+The invitation centers upon becoming shaped through His presence rather than remaining shaped through the world.
+</p>
+
+<p>
+Holiness influences thoughts, relationships, choices, desires, speech, priorities, and spiritual direction.
+</p>
+
+<p>
+Following Jesus gradually changes what the heart loves and what the heart refuses.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+More Than Rules
+</h2>
+
+<p>
+Holiness cannot be measured merely through rule keeping.
+</p>
+
+<p>
+External appearance alone never reveals true spiritual transformation.
+</p>
+
+<p>
+A surrendered heart produces genuine obedience flowing from love rather than fear.
+</p>
+
+<blockquote>
+The closer people grow to Jesus, the more their lives begin reflecting His heart naturally.
+</blockquote>
+
+<p>
+God does not desire cold religion lacking compassion, humility, and authenticity.
+</p>
+
+<p>
+He desires hearts burning with love for truth, purity, mercy, and closeness with Him.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+The Closet Floor
+</h2>
+
+<p>
+Rachel sat quietly on the floor inside her bedroom closet after another exhausting day.
+</p>
+
+<p>
+Noise surrounded nearly every part of life lately.
+</p>
+
+<p>
+Social pressure pulled constantly. Temptation felt relentless. Compromise seemed easier than conviction.
+</p>
+
+<p>
+Deep within, exhaustion had begun replacing spiritual passion.
+</p>
+
+<p>
+That night she opened Scripture and read:
+</p>
+
+<blockquote>
+“You shall be holy, for I am holy.”
+</blockquote>
+
+<p>
+The verse did not feel condemning.
+</p>
+
+<p>
+The words felt personal.
+</p>
+
+<p>
+God was not demanding flawless performance.
+</p>
+
+<p>
+God was inviting her closer.
+</p>
+
+<div class="scripture">
+
+<p>
+Holiness grows wherever surrender becomes more important than compromise.
+</p>
+
+</div>
+
+<p>
+Rachel prayed honestly for the first time in weeks.
+</p>
+
+<p>
+No dramatic emotional moment followed.
+</p>
+
+<p>
+Peace simply settled quietly as the desire to belong completely to Jesus began rising once more.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Holy Jesus, gratitude rises because You continue calling people closer rather than pushing them away through shame.
+</p>
+
+<p>
+Shape my life so my thoughts, desires, choices, and relationships reflect Your character more clearly each day.
+</p>
+
+<p>
+Teach me to walk set apart from compromise while remaining filled with love, humility, truth, and compassion.
+</p>
+
+<p>
+Create within me a heart fully surrendered to Your presence and willing to follow wherever You lead. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/theplaceoftheheart.html">
+← The Place of the Heart
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/livingtruthfullybeforegodandothers.html">
+Living Truthfully Before God and Others →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/index.html">Home</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html">Contents</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/preface.html">Preface</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html">Faith & Trust</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html">Healing & Wholeness</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/courageandcalling.html">Courage & Calling</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">Heart & Character</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/quotes.html">Quotes</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
