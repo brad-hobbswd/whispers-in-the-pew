@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About the Author | Whispers in the Pew</title>
+<title>Store | Whispers in the Pew</title>
 
-<meta name="description" content="Learn more about Bradley Hobbs, his journey of faith, teaching, healing, and the inspiration behind Whispers in the Pew.">
+<meta name="description" content="Books, devotionals, and upcoming releases from Whispers in the Pew by Bradley Hobbs.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,38 +95,28 @@ background:#16120f;
 }
 
 .content-inner{
-max-width:980px;
+max-width:1200px;
 margin:auto;
 }
 
-.back-link{
-display:inline-flex;
+.store-grid{
+display:grid;
+grid-template-columns:420px 1fr;
+gap:60px;
 align-items:center;
-gap:10px;
-font-size:0.88rem;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#c8b49a;
-margin-bottom:70px;
-transition:0.3s ease;
 }
 
-.back-link:hover{
-color:#ffffff;
-transform:translateX(-2px);
-}
-
-.article{
+.store-card{
 background:
 linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
 border:1px solid rgba(255,255,255,0.08);
 border-radius:34px;
-padding:60px;
+padding:40px;
 position:relative;
 overflow:hidden;
 }
 
-.article::before{
+.store-card::before{
 content:'';
 position:absolute;
 top:0;
@@ -136,30 +126,80 @@ height:1px;
 background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
 }
 
-.article p{
+.store-cover{
+width:100%;
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+background:#120f0d;
+}
+
+.store-cover img{
+width:100%;
+display:block;
+}
+
+.store-details h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3.1rem;
+font-weight:500;
+line-height:1.05;
+margin-bottom:26px;
+color:#f4e8d9;
+}
+
+.store-details p{
 font-size:1.03rem;
 color:#d6cdc0;
-margin-bottom:30px;
+margin-bottom:24px;
 }
 
-.article strong{
-color:#f4e8d9;
+.store-badges{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+margin:34px 0;
+}
+
+.store-badge{
+padding:12px 18px;
+border-radius:999px;
+font-size:0.8rem;
+letter-spacing:2px;
+text-transform:uppercase;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+color:#e8dccd;
+}
+
+.store-actions{
+margin-top:34px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 28px;
+border-radius:999px;
+background:#e8dccd;
+color:#16120f;
+font-size:0.82rem;
+letter-spacing:2px;
+text-transform:uppercase;
 font-weight:600;
+transition:0.3s ease;
 }
 
-.quote{
-margin:55px 0;
-padding-left:30px;
-border-left:1px solid rgba(255,255,255,0.16);
+.btn:hover{
+transform:translateY(-2px);
+background:#ffffff;
 }
 
-.quote p{
-font-family:'Cormorant Garamond',serif;
-font-size:1.7rem;
-font-style:italic;
-line-height:1.7;
-color:#efe4d5;
-margin:0;
+.store-note{
+margin-top:22px;
+font-size:0.94rem;
+color:#bfae99;
 }
 
 .footer{
@@ -232,6 +272,11 @@ color:#85796d;
 
 @media(max-width:980px){
 
+.store-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
 .footer-inner{
 grid-template-columns:1fr;
 gap:60px;
@@ -253,12 +298,12 @@ padding:140px 20px 100px;
 padding:90px 20px;
 }
 
-.article{
-padding:38px;
+.store-card{
+padding:30px;
 }
 
-.quote p{
-font-size:1.4rem;
+.store-details h2{
+font-size:2.4rem;
 }
 
 }
@@ -298,11 +343,11 @@ Whispers in the Pew
 </div>
 
 <h1>
-About the Author
+Store
 </h1>
 
 <p class="subtitle">
-A journey through faith, healing, teaching, restoration, and the quiet voice of Jesus through every season of life.
+Books, devotionals, future releases, and upcoming resources from Bradley Hobbs.
 </p>
 
 </div>
@@ -313,133 +358,69 @@ A journey through faith, healing, teaching, restoration, and the quiet voice of 
 
 <div class="content-inner">
 
-<a href="index.html" class="back-link">
-← Return Home
+<div class="store-grid">
+
+<div class="store-card">
+
+<div class="store-cover">
+
+<img src="assets/images/whispersinthepewbookcover.jpeg" alt="Whispers in the Pew Book Cover">
+
+</div>
+
+</div>
+
+<div class="store-details">
+
+<h2>
+Whispers in the Pew
+</h2>
+
+<p>
+A devotional journey through healing, truth, grace, restoration, and the quiet voice of Jesus found within places many people carry hidden pain.
+</p>
+
+<p>
+Print availability, direct links, pricing, and additional devotional releases will appear here soon.
+</p>
+
+<div class="store-badges">
+
+<div class="store-badge">
+Coming Soon
+</div>
+
+<div class="store-badge">
+Amazon Release
+</div>
+
+<div class="store-badge">
+Devotional Collection
+</div>
+
+</div>
+
+<div class="store-actions">
+
+<a href="#" class="btn">
+Amazon Link Coming Soon
 </a>
 
-<article class="article">
+</div>
 
-<p>
-Bradley Hobbs is a devoted follower of Jesus whose journey has been shaped through seasons of silence, heartbreak, searching, restoration, and deep spiritual reflection. Through personal trials, church hurt, healing, and surrender, he discovered the importance of listening closely for the voice of God even within life’s most painful moments.
-</p>
-
-<p>
-His heart for writing began through the desire to encourage people who feel overlooked, silenced, uncertain, wounded, or spiritually exhausted. Whispers in the Pew was born from that place of honesty and restoration, offering devotional reflections centered on healing, grace, truth, conviction, hope, and the quiet nearness of Jesus.
-</p>
-
-<div class="quote">
-
-<p>
-“God often speaks most clearly within the places people try hardest to hide.”
+<p class="store-note">
+Bookmark this page for future releases, publication updates, and launch announcements.
 </p>
 
 </div>
 
-<p>
-Bradley’s passion for helping others extends beyond writing. He holds a degree in Computer Information Technology and Business Management and continues pursuing graduate studies in education with specialization in Preschool through 5th Grade along with a Director’s Credential in Early Childhood settings.
-</p>
-
-<p>
-His son Gabriel became one of the greatest inspirations behind both teaching and writing. Watching Gabriel grow encouraged Bradley to begin working with children professionally, first within Early Childhood Development and later within the local school district where he cared for and taught young learners with patience, compassion, and encouragement.
-</p>
-
-<p>
-Life experiences involving heartbreak, toxic environments, personal struggles, and spiritual rebuilding deeply shaped the themes found throughout his devotional work. Rather than allowing pain to silence purpose, Bradley chose to bring those experiences before God and allow healing to become part of the message shared with others.
-</p>
-
-<p>
-Alongside Whispers in the Pew, Bradley continues developing additional devotional projects, children’s books, reflective writings, and more personal works centered around spiritual healing, identity, grace, and growth through Jesus.
-</p>
-
-<p>
-His prayer remains simple:
-</p>
-
-<div class="quote">
-
-<p>
-That every reader would discover that Jesus still heals, still restores, still speaks, and still walks beside people through every hidden place of life.
-</p>
-
 </div>
-
-</article>
 
 </div>
 
 </section>
 
-<footer class="footer">
-
-<div class="footer-inner">
-
-<div class="footer-brand">
-
-<h3>
-Whispers in the Pew
-</h3>
-
-<p>
-A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
-</p>
-
-</div>
-
-<div class="footer-links">
-
-<div class="footer-column">
-
-<h4>
-Explore
-</h4>
-
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/index.html">Home</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html">Contents</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/preface.html">Preface</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/about.html">About</a>
-
-</div>
-
-<div class="footer-column">
-
-<h4>
-Categories
-</h4>
-
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html">Faith & Trust</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html">Healing & Wholeness</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">Forgiveness & Redemption</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
-
-</div>
-
-<div class="footer-column">
-
-<h4>
-More
-</h4>
-
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">Heart & Character</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/quotes.html">Quotes</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/publications.html">Publications</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/abouttheauthor.html">About the Author</a>
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contact.html">Contact</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<p>
-© 2026 Bradley Hobbs · All Rights Reserved
-</p>
-
-</div>
-
-</footer>
+<div id="footer"></div>
 
 </body>
 </html>
