@@ -14,6 +14,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
 <style>
 
 *{
@@ -36,12 +41,12 @@ color:inherit;
 }
 
 .hero{
-padding:160px 24px 120px;
+padding:170px 24px 130px;
 text-align:center;
 position:relative;
 background:
 linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
-url('../assets/images/discipleship-bg.jpg') center/cover no-repeat;
+url('assets/images/discipleship-bg.jpg') center/cover no-repeat;
 }
 
 .hero::after{
@@ -55,7 +60,7 @@ pointer-events:none;
 .hero-content{
 position:relative;
 z-index:2;
-max-width:850px;
+max-width:860px;
 margin:auto;
 }
 
@@ -69,18 +74,19 @@ margin-bottom:22px;
 
 h1{
 font-family:'Cormorant Garamond',serif;
-font-size:clamp(4rem,10vw,6.5rem);
+font-size:clamp(3.8rem,10vw,6.6rem);
 font-weight:500;
 line-height:0.95;
-margin-bottom:26px;
+margin-bottom:24px;
 }
 
 .subtitle{
 max-width:760px;
 margin:auto;
-font-size:1.08rem;
+font-size:1.05rem;
 font-weight:300;
-color:#d7cfc4;
+color:#d8d0c5;
+letter-spacing:1px;
 }
 
 .content{
@@ -89,7 +95,7 @@ background:#16120f;
 }
 
 .content-inner{
-max-width:1280px;
+max-width:1320px;
 margin:auto;
 }
 
@@ -111,7 +117,7 @@ transform:translateX(-2px);
 }
 
 .intro{
-max-width:850px;
+max-width:900px;
 margin-bottom:90px;
 }
 
@@ -121,40 +127,47 @@ font-size:3rem;
 font-weight:500;
 margin-bottom:26px;
 line-height:1.1;
+color:#f2e6d8;
 }
 
 .intro p{
 font-size:1.05rem;
 color:#d4cbbe;
 margin-bottom:24px;
+line-height:1.9;
 }
 
 .section-quote{
 margin-top:50px;
-padding-left:28px;
+padding-left:30px;
 border-left:1px solid rgba(255,255,255,0.14);
 }
 
 .section-quote p{
 font-family:'Cormorant Garamond',serif;
-font-size:1.7rem;
+font-size:1.8rem;
 font-style:italic;
-line-height:1.6;
+line-height:1.7;
 color:#efe4d5;
 }
 
 .devotion-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:28px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+align-items:stretch;
 }
 
 .devotion-card{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:280px;
 background:
 linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
 border:1px solid rgba(255,255,255,0.08);
-border-radius:28px;
-padding:36px;
+border-radius:32px;
+padding:40px;
 transition:0.35s ease;
 position:relative;
 overflow:hidden;
@@ -190,7 +203,8 @@ font-family:'Cormorant Garamond',serif;
 font-size:2rem;
 font-weight:500;
 line-height:1.2;
-margin-bottom:26px;
+margin-bottom:34px;
+color:#f3e8da;
 }
 
 .read-link{
@@ -201,6 +215,7 @@ font-size:0.85rem;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#f2e6d8;
+margin-top:auto;
 }
 
 .read-link span{
@@ -303,10 +318,6 @@ color:#85796d;
 
 @media(max-width:1100px){
 
-.devotion-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
 .footer-inner{
 grid-template-columns:1fr;
 gap:60px;
@@ -321,7 +332,7 @@ grid-template-columns:1fr 1fr;
 @media(max-width:768px){
 
 .hero{
-padding:130px 20px 90px;
+padding:140px 20px 100px;
 }
 
 .content{
@@ -337,11 +348,12 @@ grid-template-columns:1fr;
 }
 
 .devotion-card{
-padding:32px;
+padding:34px;
+min-height:auto;
 }
 
 .section-quote p{
-font-size:1.4rem;
+font-size:1.45rem;
 }
 
 .bottom-navigation{
@@ -401,7 +413,7 @@ Reflections on transformation, obedience, truth, spiritual maturity, discipleshi
 
 <div class="content-inner">
 
-<a href="contents.html" class="back-link">
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html" class="back-link">
 ← Return to Contents
 </a>
 
@@ -432,97 +444,121 @@ These reflections explore discipleship, maturity, wisdom, conviction, spiritual 
 <div class="devotion-grid">
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Proverbs 4:23</p>
 <h3>The Place of the Heart</h3>
-<a class="read-link" href="../devotions/theplaceoftheheart.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/theplaceoftheheart.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">1 Peter 1:15-16</p>
 <h3>Set Apart for Him</h3>
-<a class="read-link" href="../devotions/setapartforhim.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/setapartforhim.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Ephesians 4:25</p>
 <h3>Living Truthfully Before God and Others</h3>
-<a class="read-link" href="../devotions/livingtruthfullybeforegodandothers.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/livingtruthfullybeforegodandothers.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Mark 1:40-41</p>
 <h3>If You Are Willing</h3>
-<a class="read-link" href="../devotions/ifyouarewilling.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/ifyouarewilling.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Proverbs 27:5-6</p>
 <h3>Truth Behind Closed Doors</h3>
-<a class="read-link" href="../devotions/truthbehindcloseddoors.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/truthbehindcloseddoors.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Isaiah 55:8-9</p>
 <h3>When the Answer Doesn’t Come</h3>
-<a class="read-link" href="../devotions/whentheanswerdoesntcome.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whentheanswerdoesntcome.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Romans 8:1</p>
 <h3>Conviction Leads to Life, Condemnation Leads to Shame</h3>
-<a class="read-link" href="../devotions/convictionleadstolife.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/convictionleadstolife.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">Titus 1:15</p>
 <h3>Stop Finding the Cloud in All of the Silver Linings</h3>
-<a class="read-link" href="../devotions/stopfindingthecloud.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/stopfindingthecloud.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">James 3:6-8</p>
 <h3>Power Over Your Tongue</h3>
-<a class="read-link" href="../devotions/poweroveryourtongue.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/poweroveryourtongue.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">1 Thessalonians 5:21</p>
 <h3>Don’t Amen a Lie</h3>
-<a class="read-link" href="../devotions/dontamenalie.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/dontamenalie.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">1 John 5:14</p>
 <h3>Power Tools</h3>
-<a class="read-link" href="../devotions/powertools.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/powertools.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
+<div>
 <p class="devotion-meta">James 3:9-10</p>
 <h3>One Mouth, One Message</h3>
-<a class="read-link" href="../devotions/onemouthonemessage.html">
+</div>
+<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/onemouthonemessage.html">
 Read Reflection <span>→</span>
 </a>
 </article>
@@ -531,11 +567,11 @@ Read Reflection <span>→</span>
 
 <div class="bottom-navigation">
 
-<a href="forgivenessandredemption.html">
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">
 ← Forgiveness & Redemption
 </a>
 
-<a href="courageandcalling.html">
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/courageandcalling.html">
 Courage & Calling →
 </a>
 
@@ -569,10 +605,10 @@ A devotional journey through healing, truth, grace, and the quiet voice of Jesus
 Explore
 </h4>
 
-<a href="index.html">Home</a>
-<a href="contents.html">Contents</a>
-<a href="preface.html">Preface</a>
-<a href="about.html">About</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/index.html">Home</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html">Contents</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/preface.html">Preface</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/about.html">About</a>
 
 </div>
 
@@ -582,10 +618,10 @@ Explore
 Categories
 </h4>
 
-<a href="faithandtrust.html">Faith & Trust</a>
-<a href="healingandwholeness.html">Healing & Wholeness</a>
-<a href="forgivenessandredemption.html">Forgiveness & Redemption</a>
-<a href="spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html">Faith & Trust</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html">Healing & Wholeness</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
 
 </div>
 
@@ -595,10 +631,10 @@ Categories
 More
 </h4>
 
-<a href="courageandcalling.html">Courage & Calling</a>
-<a href="heartandcharacter.html">Heart & Character</a>
-<a href="quotes.html">Quotes</a>
-<a href="contact.html">Contact</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/courageandcalling.html">Courage & Calling</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">Heart & Character</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/quotes.html">Quotes</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contact.html">Contact</a>
 
 </div>
 
