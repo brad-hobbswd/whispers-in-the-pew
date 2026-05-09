@@ -1,50 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You | Whispers in the Pew</title>
-<meta name="description" content="Your message has been received.">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
-</head>
 
+<title>Thank You | Whispers in the Pew</title>
+
+<meta name="description" content="Your message has been received.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:160px 24px 120px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:26px;
+}
+
+.subtitle{
+max-width:720px;
+margin:auto;
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:760px;
+margin:auto;
+}
+
+.thank-you-card{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:70px 50px;
+position:relative;
+overflow:hidden;
+text-align:center;
+}
+
+.thank-you-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.thank-you-card h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:26px;
+color:#f4e8d9;
+}
+
+.thank-you-card p{
+font-size:1.05rem;
+color:#d6cdc0;
+margin-bottom:24px;
+}
+
+.muted{
+color:#bba992;
+}
+
+.button-group{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+margin-top:40px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 28px;
+border-radius:999px;
+background:#e8dccd;
+color:#16120f;
+font-size:0.82rem;
+letter-spacing:2px;
+text-transform:uppercase;
+font-weight:600;
+transition:0.3s ease;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+background:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.thank-you-card{
+padding:50px 30px;
+}
+
+.thank-you-card h2{
+font-size:2.3rem;
+}
+
+.button-group{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
 <body>
 
-<div id="header"></div>
+<section class="hero">
 
-<section class="hero-small" style="background:
-  linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
-  url('assets/images/appalachian-hero.jpg');">
-  <div class="hero-inner">
-    <h1 class="h1">Thank You</h1>
-    <p class="tagline">Your message has been received.</p>
-  </div>
+<div class="hero-content">
+
+<div class="eyebrow">
+Whispers in the Pew
+</div>
+
+<h1>
+Thank You
+</h1>
+
+<p class="subtitle">
+Your message has been received with care.
+</p>
+
+</div>
+
 </section>
 
-<main class="container">
-  <div class="grid">
-    <section class="panel prose" style="max-width:600px; margin:0 auto; text-align:center;">
+<section class="content">
 
-      <h2>You were heard</h2>
+<div class="content-inner">
 
-      <p>Your message has been received with care.</p>
+<div class="thank-you-card">
 
-      <p style="color:var(--muted);">
-        You are not alone. Thank you for trusting this space.
-      </p>
+<h2>
+You Were Heard
+</h2>
 
-      <br>
+<p>
+Your message has been received with care and compassion.
+</p>
 
-      <a href="prayer-room.html" class="btn">Go to Prayer Room</a>
+<p class="muted">
+Thank you for trusting this space and sharing your heart.
+</p>
 
-      <br><br>
+<div class="button-group">
 
-      <a href="index.html" class="btn">Return Home</a>
+<a href="prayer-room.html" class="btn">
+Prayer Room
+</a>
 
-    </section>
-  </div>
-</main>
+<a href="index.html" class="btn">
+Return Home
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <div id="footer"></div>
 
