@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Power Over Your Tongue | Whispers in the Pew</title>
+
+<meta name="description" content="Understanding the power of words and allowing the Holy Spirit to shape speech toward healing, wisdom, and grace.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.4rem);
+font-weight:500;
+line-height:0.96;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:980px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:60px 0 20px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.7rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:55px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:40px 0;
+padding:36px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.35rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:1100px){
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.4rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Heart & Character
+</div>
+
+<h1>
+Power Over Your Tongue
+</h1>
+
+<p class="subtitle">
+Psalm 52:2 • James 3:6-8 • Proverbs 12:18
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html" class="back-link">
+← Return to Heart & Character
+</a>
+
+<div class="grid">
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“Your tongue devises wickedness: it is like a sharp razor, working deceitfully.” Psalm 52:2
+</p>
+
+</div>
+
+<div class="scripture">
+
+<p>
+“The tongue is like a fire. It is full of evil and can corrupt the whole body. It can set a person’s life on fire, and it is set on fire by hell itself.” James 3:6-8
+</p>
+
+</div>
+
+<div class="scripture">
+
+<p>
+“There are those who speak rashly, like the piercing of a sword, but the tongue of the wise brings healing.” Proverbs 12:18
+</p>
+
+</div>
+
+<p>
+Words carry tremendous power.
+</p>
+
+<p>
+Speech can heal wounded hearts, restore relationships, strengthen faith, and encourage weary people.
+</p>
+
+<p>
+Words can also wound deeply, spread destruction, create division, and leave scars lasting for years.
+</p>
+
+<blockquote>
+What flows from the mouth often reveals what is growing within the heart.
+</blockquote>
+
+<p>
+Scripture compares the tongue to both fire and a sharpened blade because careless speech spreads quickly and cuts deeply.
+</p>
+
+<p>
+One sentence spoken recklessly can damage trust, relationships, and confidence in moments.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Words Shape Atmospheres
+</h2>
+
+<p>
+Speech influences homes, friendships, churches, workplaces, and online spaces every day.
+</p>
+
+<p>
+Modern communication extends far beyond spoken conversations.
+</p>
+
+<p>
+Messages typed online, comments posted publicly, sarcastic jokes, and private texts all carry spiritual weight.
+</p>
+
+<div class="scripture">
+
+<p>
+Wise words bring healing while reckless words leave wounds behind.
+</p>
+
+</div>
+
+<p>
+Followers of Jesus are called toward speech shaped through wisdom, compassion, honesty, and grace.
+</p>
+
+<p>
+The Holy Spirit transforms hearts so words begin reflecting God’s character more clearly.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Learning Restraint
+</h2>
+
+<p>
+Many people regret words spoken during anger far more than moments where silence was chosen wisely.
+</p>
+
+<p>
+Strength is not proven through speaking louder or reacting faster.
+</p>
+
+<p>
+True maturity learns when to speak, when to remain quiet, and how to respond without causing unnecessary harm.
+</p>
+
+<blockquote>
+A surrendered tongue becomes a source of healing rather than destruction.
+</blockquote>
+
+<p>
+God desires speech bringing life rather than fear, gossip, shame, criticism, or division.
+</p>
+
+<p>
+Transformation begins internally before becoming visible through conversation externally.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+The Comment Section
+</h2>
+
+<p>
+Nathan stared at his phone while frustration burned internally.
+</p>
+
+<p>
+A heated argument online had quickly turned personal.
+</p>
+
+<p>
+Several people mocked his beliefs publicly, and sharp responses filled his mind immediately.
+</p>
+
+<p>
+His fingers hovered above the keyboard ready to strike back harder than before.
+</p>
+
+<blockquote>
+“Will these words heal anything once they are sent?”
+</blockquote>
+
+<p>
+The question stopped him unexpectedly.
+</p>
+
+<p>
+After several quiet moments, Nathan deleted the message entirely.
+</p>
+
+<p>
+Peace replaced the anger little by little.
+</p>
+
+<div class="scripture">
+
+<p>
+Sometimes wisdom appears through restraint rather than reaction.
+</p>
+
+</div>
+
+<p>
+Later that evening, Nathan realized spiritual maturity often grows strongest during moments where pride is surrendered before words leave the mouth.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Jesus, shape my speech so every word reflects wisdom, grace, truth, and compassion rather than anger or destruction.
+</p>
+
+<p>
+Guard my heart from gossip, bitterness, sarcasm, pride, and careless reactions harming others unnecessarily.
+</p>
+
+<p>
+Teach me when to speak, when to remain silent, and how to bring healing through conversations both public and private.
+</p>
+
+<p>
+Let my words reveal Your character within every relationship and every space I enter. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/theweightofgrace.html">
+← The Weight of Grace
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/guardingtheinnerlife.html">
+Guarding the Inner Life →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/index.html">Home</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html">Contents</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/preface.html">Preface</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html">Faith & Trust</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html">Healing & Wholeness</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/courageandcalling.html">Courage & Calling</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">Heart & Character</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/quotes.html">Quotes</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
