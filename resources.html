@@ -1,280 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources | Brad Hobbs</title>
-  <meta name="description" content="Explore books, writing, web design, and ministry connections by Brad Hobbs.">
-  <link rel="stylesheet" href="/whispers-in-the-pew/style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resources | Whispers in the Pew</title>
+
+<meta name="description" content="Explore books, writing, ministry connections, and creative projects by Bradley Hobbs.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
 <style>
 
-  :root{
-  --accent:#2fb3ff;
-  --accent2:#7dd3ff;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* ===== INTRO ===== */
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:160px 24px 120px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.2rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:26px;
+}
+
+.subtitle{
+max-width:760px;
+margin:auto;
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:1280px;
+margin:auto;
+}
+
 .intro{
-  margin-top:20px;
-  margin-bottom:10px;
+max-width:850px;
+margin-bottom:80px;
+}
+
+.intro h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:24px;
+line-height:1.1;
 }
 
 .intro p{
-  max-width:700px;
-  color:var(--muted);
-  line-height:1.6;
-  font-size:1rem;
+font-size:1.05rem;
+color:#d4cbbe;
 }
 
-/* ===== GRID ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+.resource-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
 }
 
-/* ===== CARD ===== */
-.store-card{
-  background:var(--glass);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  min-height:180px;
-
-  position:relative;
-  overflow:hidden;
-
-  transition:transform .25s ease, box-shadow .25s ease, border .25s ease;
+.resource-card{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:36px;
+transition:0.35s ease;
+position:relative;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:260px;
 }
 
-/* ===== ACCENT LINE ===== */
-.store-card{
-  background:var(--panel2);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:18px;
-
-  transition:transform .35s ease, box-shadow .35s ease;
+.resource-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
 }
 
-.store-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 35px rgba(200,168,90,.14);
+.resource-card:hover{
+transform:translateY(-6px);
+border-color:rgba(255,255,255,0.16);
+background:
+linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
 }
 
-/* ===== CONTENT ===== */
-.card-content{
-  display:flex;
-  flex-direction:column;
+.resource-meta{
+font-size:0.78rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#b9a38a;
+margin-bottom:18px;
 }
 
-/* ===== TITLE ===== */
-.card-title{
-  font-size:1.15rem;
-  font-weight:600;
-  margin-bottom:8px;
-  color:var(--text);
+.resource-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+line-height:1.2;
+margin-bottom:20px;
+color:#f2e6d8;
 }
 
-/* ===== DESCRIPTION ===== */
-.card-desc{
-  font-size:.95rem;
-  color:var(--muted);
-  line-height:1.5;
+.resource-card p{
+font-size:0.98rem;
+color:#d4cbbe;
+margin-bottom:28px;
+line-height:1.7;
 }
 
-/* ===== FOOTER ===== */
-.card-footer{
-  margin-top:18px;
+.resource-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.85rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#f2e6d8;
+margin-top:auto;
 }
 
-/* ===== BUTTON ===== */
-.card-btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:999px;
-
-  background:linear-gradient(135deg, var(--accent), var(--accent2));
-
-  color:#001428;
-  font-weight:600;
-  text-decoration:none;
-  font-size:.85rem;
-
-  transition:transform .2s ease, box-shadow .2s ease;
+.resource-link span{
+transition:0.3s ease;
 }
 
-/* ===== BUTTON HOVER ===== */
-.card-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(47,179,255,.35);
+.resource-card:hover .resource-link span{
+transform:translateX(4px);
 }
 
-/* ===== COMING SOON STYLE ===== */
-.card-btn[style]{
-  background:rgba(255,255,255,.1);
-  color:var(--muted);
-  box-shadow:none;
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
 }
 
-  .hero-small{
-  margin-bottom:10px;
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
 }
-  
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:1100px){
+
+.resource-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.intro h2{
+font-size:2.3rem;
+}
+
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+.resource-card{
+padding:32px;
+min-height:auto;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
 </style>
-  
-  <link rel="icon" href="/whispers-in-the-pew/favicon.ico">
-</head>
 
+</head>
 <body>
 
-<div id="header"></div>
+<section class="hero">
 
-<!-- HERO -->
-<section class="hero-small">
-  <div class="hero-inner">
-    <h1 class="h1">Resources</h1>
-    <p class="tagline">Work, Writing, and Ministry Connections</p>
-  </div>
+<div class="hero-content">
+
+<div class="eyebrow">
+Whispers in the Pew
+</div>
+
+<h1>
+Resources
+</h1>
+
+<p class="subtitle">
+Writing, ministry connections, creative projects, web design, and additional works connected to the journey behind Whispers in the Pew.
+</p>
+
+</div>
+
 </section>
 
-<!-- INTRO -->
-<section class="intro container">
-  <p>
-    This space gathers the work, writing, and connections that reflect my journey, my calling, and the message I carry.
-  </p>
+<section class="content">
+
+<div class="content-inner">
+
+<div class="intro">
+
+<h2>
+Work, Writing, and Ministry Connections
+</h2>
+
+<p>
+This space gathers the work, writing, ministry connections, and creative projects that reflect the journey, calling, and message behind everything being built and shared.
+</p>
+
+</div>
+
+<div class="resource-grid">
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Book Project
+</p>
+
+<h3>
+Love That Covers
+</h3>
+
+<p>
+Healing, identity, grace, and the covering love of Jesus through devotional reflection and restoration.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank" rel="noopener noreferrer">
+Explore Book <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Affirming Edition
+</p>
+
+<h3>
+Love That Covers LGBTQIA+ Edition
+</h3>
+
+<p>
+An affirming devotional space centered on identity, dignity, healing, compassion, and love.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank" rel="noopener noreferrer">
+Affirm & Read <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Memoir
+</p>
+
+<h3>
+Jason’s Awakening Memoir
+</h3>
+
+<p>
+A reflective journey through emotional overwhelm, awakening, growth, and rediscovery.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/" target="_blank" rel="noopener noreferrer">
+Read Journey <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Writing Space
+</p>
+
+<h3>
+Personal Writing Space
+</h3>
+
+<p>
+Personal reflections, devotional thoughts, and ongoing written expressions from daily life and faith.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://brad-hobbswd.github.io/about-me/" target="_blank" rel="noopener noreferrer">
+Read Reflections <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Creative Work
+</p>
+
+<h3>
+Brad Hobbs Web Design
+</h3>
+
+<p>
+Creative web design projects built with clarity, visual storytelling, purpose, and thoughtful structure.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" rel="noopener noreferrer">
+View Portfolio <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Bible Institute
+</p>
+
+<h3>
+BAPBI
+</h3>
+
+<p>
+Bethesda Apostolic Pentecostal Bible Institute website and design work developed and maintained by Bradley Hobbs.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://www.bapbi.net" target="_blank" rel="noopener noreferrer">
+Visit Website <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Ministry Connection
+</p>
+
+<h3>
+Bethesda Tabernacle
+</h3>
+
+<p>
+A place of worship, spiritual growth, prayer, and ministry deeply connected to daily life and faith.
+</p>
+
+</div>
+
+<a class="resource-link" href="https://www.mercyforyou.org" target="_blank" rel="noopener noreferrer">
+Visit Church <span>→</span>
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<div>
+
+<p class="resource-meta">
+Coming Soon
+</p>
+
+<h3>
+More Resources
+</h3>
+
+<p>
+Additional books, devotionals, creative projects, and ministry resources will continue being added over time.
+</p>
+
+</div>
+
+<div class="resource-link">
+Coming Soon
+</div>
+
+</article>
+
+</div>
+
+</div>
+
 </section>
-
-<!-- MAIN -->
-<main class="container">
-  <div class="grid">
-
-    <!-- ===================== -->
-    <!-- MY WORK -->
-    <!-- ===================== -->
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">Love That Covers</h3>
-        <p class="card-desc">
-          Healing, identity, and the covering love of Jesus.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank" rel="noopener noreferrer">
-          Explore Book
-        </a>
-      </div>
-    </div>
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">Love That Covers LGBTQIA+ Edition</h3>
-        <p class="card-desc">
-          Affirming identity, worth, and love.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank" rel="noopener noreferrer">
-          Affirm & Read
-        </a>
-      </div>
-    </div>
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">Jason’s Awakening Memoir</h3>
-        <p class="card-desc">
-          A journey through overwhelm and awakening.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/" target="_blank" rel="noopener noreferrer">
-          Read Journey
-        </a>
-      </div>
-    </div>
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">Personal Writing Space</h3>
-        <p class="card-desc">
-          Reflections and ongoing expressions.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://brad-hobbswd.github.io/about-me/" target="_blank" rel="noopener noreferrer">
-          Read Reflections
-        </a>
-      </div>
-    </div>
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">Brad Hobbs Web Design</h3>
-        <p class="card-desc">
-          Creative web design built with clarity and purpose.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" rel="noopener noreferrer">
-          View Portfolio
-        </a>
-      </div>
-    </div>
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">BAPBI</h3>
-        <p class="card-desc">
-          Bethesda Apostolic Pentecostal Bible Institute. Website and design built by me.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://www.bapbi.net" target="_blank" rel="noopener noreferrer">
-          Visit Website
-        </a>
-      </div>
-    </div>
-
-    <!-- ===================== -->
-    <!-- MINISTRY -->
-    <!-- ===================== -->
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">Bethesda Tabernacle</h3>
-        <p class="card-desc">
-          A place of worship that is part of my life.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a class="btn" href="https://www.mercyforyou.org" target="_blank" rel="noopener noreferrer">
-          Visit Church
-        </a>
-      </div>
-    </div>
-
-    <div class="store-card">
-      <div class="card-content">
-        <h3 class="card-title">More Coming</h3>
-        <p class="card-desc">
-          Additional resources will be added soon.
-        </p>
-      </div>
-      <div class="card-footer">
-        <span class="card-btn" style="opacity:.6; cursor:default;">
-          Coming Soon
-        </span>
-      </div>
-    </div>
-
-  </div>
-</main>
 
 <div id="footer"></div>
 
