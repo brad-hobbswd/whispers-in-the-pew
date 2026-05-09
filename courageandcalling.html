@@ -150,9 +150,9 @@ color:#efe4d5;
 
 .devotion-grid{
 display:grid;
-grid-template-columns:1fr;
-gap:28px;
-max-width:980px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:34px;
+align-items:stretch;
 }
 
 .devotion-card{
@@ -164,6 +164,10 @@ padding:42px;
 transition:0.35s ease;
 position:relative;
 overflow:hidden;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .devotion-card::before{
@@ -193,11 +197,10 @@ margin-bottom:18px;
 
 .devotion-card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:2.2rem;
+font-size:2.1rem;
 font-weight:500;
 line-height:1.2;
-margin-bottom:26px;
-max-width:720px;
+margin-bottom:28px;
 }
 
 .read-link{
@@ -208,6 +211,7 @@ font-size:0.85rem;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#f2e6d8;
+margin-top:auto;
 }
 
 .read-link span{
@@ -335,12 +339,16 @@ padding:90px 20px;
 font-size:2.3rem;
 }
 
+.devotion-grid{
+grid-template-columns:1fr;
+}
+
 .devotion-card{
 padding:32px;
 }
 
 .devotion-card h3{
-font-size:1.9rem;
+font-size:1.8rem;
 }
 
 .section-quote p{
@@ -405,7 +413,7 @@ Reflections on courage, purpose, perseverance, obedience, and following the voic
 
 <div class="content-inner">
 
-<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html" class="back-link">
+<a href="contents.html" class="back-link">
 ← Return to Contents
 </a>
 
@@ -436,43 +444,182 @@ These reflections explore perseverance, surrender, boldness, purpose, trust, and
 <div class="devotion-grid">
 
 <article class="devotion-card">
-<p class="devotion-meta">Joshua 1:9</p>
-<h3>Strength for the Unknown Road</h3>
-<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/strengthfortheunknownroad.html">
+<p class="devotion-meta">1 Samuel 17:40</p>
+<h3>Stones in Your Pockets</h3>
+<a class="read-link" href="devotions/stonesinyourpockets.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
-<p class="devotion-meta">Isaiah 6:8</p>
-<h3>Here Am I, Send Me</h3>
-<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/hereamisendme.html">
+<p class="devotion-meta">Psalm 37:23</p>
+<h3>Ordered Steps, Unshakable Grace</h3>
+<a class="read-link" href="devotions/orderedstepsunshakablegrace.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
-<p class="devotion-meta">2 Timothy 1:7</p>
-<h3>Courage in the Fire</h3>
-<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/courageinthefire.html">
+<p class="devotion-meta">Isaiah 41:10</p>
+<h3>Courage in the Face of Crisis</h3>
+<a class="read-link" href="devotions/courageinthefaceofcrisis.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 <article class="devotion-card">
-<p class="devotion-meta">Galatians 6:9</p>
-<h3>Do Not Grow Weary</h3>
-<a class="read-link" href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/donotgrowweary.html">
+<p class="devotion-meta">Matthew 18:3</p>
+<h3>The Heart of a Child</h3>
+<a class="read-link" href="devotions/theheartofachild.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">1 Peter 1:15–16</p>
+<h3>Holiness, A Gift, not a Burden</h3>
+<a class="read-link" href="devotions/holinessagiftnotaburden.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+  
+
+<article class="devotion-card">
+<p class="devotion-meta">Luke 19:10</p>
+<h3>Catching the Outsider – The Jesus Way</h3>
+<a class="read-link" href="devotions/catchingtheoutsiderthejesusway.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Matthew 5:1–12</p>
+<h3>The Blessed Life – Walking in the Beatitudes</h3>
+<a class="read-link" href="devotions/theblessedlifewalkinginthebeatitudes.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">2 Timothy 2:24</p>
+<h3>Faithful, Not Forceful</h3>
+<a class="read-link" href="devotions/faithfulnotforceful.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Ephesians 6:13</p>
+<h3>Stand Up and Be Counted</h3>
+<a class="read-link" href="devotions/standupandbecounted.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">1 Corinthians 16:13</p>
+<h3>Stand for Something, or You’ll Fall for Anything</h3>
+<a class="read-link" href="devotions/standforsomethingoryoullfallforanything.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Daniel 3:17–18</p>
+<h3>Boldness in Christ – No Fear in the Fire</h3>
+<a class="read-link" href="devotions/boldnessinchristnofearinthefire.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">1 Corinthians 10:13</p>
+<h3>Addiction Prevention – Standing Strong in Christ</h3>
+<a class="read-link" href="devotions/addictionpreventionstandingstronginchrist.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">2 Timothy 2:2</p>
+<h3>Passing The Torch with Purpose</h3>
+<a class="read-link" href="devotions/passingthetorchwithpurpose.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Luke 9:62</p>
+<h3>Fit for the Kingdom</h3>
+<a class="read-link" href="devotions/fitforthekingdom.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Philippians 4:13</p>
+<h3>Finding Strength Through Surrender</h3>
+<a class="read-link" href="devotions/findingstrengththroughsurrender.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Romans 12:2</p>
+<h3>Radically Living for Jesus</h3>
+<a class="read-link" href="devotions/radicallylivingforjesus.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Galatians 2:20</p>
+<h3>An Addict for Jesus</h3>
+<a class="read-link" href="devotions/anaddictforjesus.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Matthew 7:24–25</p>
+<h3>Stand on the Rock – Even When You Slip</h3>
+<a class="read-link" href="devotions/standontherockevenwhenyouslip.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Ecclesiastes 4:9–10</p>
+<h3>Unbreakable Bond</h3>
+<a class="read-link" href="devotions/unbreakablebond.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Psalm 133:1</p>
+<h3>United for the Kingdom</h3>
+<a class="read-link" href="devotions/unitedforthekingdom.html">
+Read Reflection <span>→</span>
+</a>
+</article>
+
+<article class="devotion-card">
+<p class="devotion-meta">Romans 8:28</p>
+<h3>Your Mess Doesn’t Cancel Your Message</h3>
+<a class="read-link" href="devotions/yourmessdoesntcancelyourmessage.html">
 Read Reflection <span>→</span>
 </a>
 </article>
 
 </div>
 
+</div>
+
 <div class="bottom-navigation">
 
 <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">
-← Spiritual Growth & Discipleship 
+← Spiritual Growth & Discipleship
 </a>
 
 <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">
