@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conviction Leads to Life, Condemnation Leads to Shame | Whispers in the Pew</title>
+
+<meta name="description" content="Understanding the difference between conviction and condemnation through the grace and truth of Jesus.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:980px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin-bottom:26px;
+color:#f2e6d8;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:60px 0 20px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.7rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:55px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:36px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:1100px){
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.4rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Spiritual Growth & Discipleship
+</div>
+
+<h1>
+Conviction Leads to Life, Condemnation Leads to Shame
+</h1>
+
+<p class="subtitle">
+Romans 8:1
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html" class="back-link">
+← Return to Spiritual Growth & Discipleship
+</a>
+
+<div class="grid">
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“Therefore, there is now no condemnation for those who are in Christ Jesus, who live and walk not after the dictates of the flesh, but after the dictates of the Spirit.” Romans 8:1
+</p>
+
+</div>
+
+<p>
+Many people struggle distinguishing between conviction from God and condemnation from shame.
+</p>
+
+<p>
+Both can feel heavy emotionally, yet they lead hearts toward completely different destinations.
+</p>
+
+<blockquote>
+Conviction points people toward restoration. Condemnation pushes people toward hopelessness.
+</blockquote>
+
+<p>
+The Spirit of God corrects gently, truthfully, and lovingly.
+</p>
+
+<p>
+His voice exposes sin without destroying identity.
+</p>
+
+<p>
+Condemnation speaks differently.
+</p>
+
+<p>
+Condemnation whispers lies declaring people too broken, too sinful, too damaged, or too far gone for grace.
+</p>
+
+<section>
+
+<h2 class="section-title">
+The Voice of Conviction
+</h2>
+
+<p>
+God’s conviction always carries an invitation back toward Him.
+</p>
+
+<p>
+Even correction from the Holy Spirit contains hope, mercy, direction, and restoration.
+</p>
+
+<div class="scripture">
+
+<p>
+“There is now no condemnation for those who are in Christ Jesus.”
+</p>
+
+</div>
+
+<p>
+Jesus already carried judgment through the cross so believers could walk freely rather than remain trapped beneath shame.
+</p>
+
+<p>
+Repentance leads toward healing because grace still remains available.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+The Weight of Condemnation
+</h2>
+
+<p>
+Condemnation leaves people spiritually exhausted and emotionally distant from God.
+</p>
+
+<p>
+Instead of leading toward repentance, shame convinces hearts to hide, withdraw, and stop believing restoration remains possible.
+</p>
+
+<p>
+Many wounded people spend years expecting punishment instead of mercy.
+</p>
+
+<blockquote>
+The enemy accuses. Jesus restores.
+</blockquote>
+
+<p>
+Freedom begins whenever people recognize which voice they have been believing.
+</p>
+
+<p>
+God never corrects His children through hopelessness.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+The Woman Who Braced for Rain
+</h2>
+
+<p>
+Alina carried an umbrella everywhere she went.
+</p>
+
+<p>
+Bright skies never changed her expectation that another storm would eventually arrive.
+</p>
+
+<p>
+Pain from earlier seasons had taught her to expect disappointment even during peaceful moments.
+</p>
+
+<p>
+Hope felt dangerous.
+</p>
+
+<p>
+Joy felt temporary.
+</p>
+
+<p>
+One afternoon an invitation arrived from a King welcoming her into His garden.
+</p>
+
+<p>
+Beauty surrounded every part of the place, yet Alina remained tense internally while gripping her umbrella tightly.
+</p>
+
+<blockquote>
+“You don’t have to brace for rain anymore.”
+</blockquote>
+
+<p>
+The King’s voice carried gentleness rather than pressure.
+</p>
+
+<p>
+For the first time in years, she slowly realized goodness was not a trap waiting to disappear suddenly.
+</p>
+
+<div class="scripture">
+
+<p>
+Healing begins when hearts stop expecting punishment from a God offering restoration instead.
+</p>
+
+</div>
+
+<p>
+Alina finally lowered the umbrella.
+</p>
+
+<p>
+Fear loosened its grip little by little while peace quietly settled where anxiety once lived.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Father, gratitude rises because Your voice leads toward life instead of shame.
+</p>
+
+<p>
+Teach my heart to recognize conviction from Your Spirit while rejecting condemnation trying to pull me away from grace.
+</p>
+
+<p>
+Help me run toward You through repentance rather than hiding through fear and guilt.
+</p>
+
+<p>
+Strengthen my faith so truth becomes louder than every accusation trying to define me. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whentheanswerdoesntcome.html">
+← When the Answer Doesn’t Come
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/findingpeaceinthewaiting.html">
+Finding Peace in the Waiting →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/index.html">Home</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html">Contents</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/preface.html">Preface</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html">Faith & Trust</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html">Healing & Wholeness</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/courageandcalling.html">Courage & Calling</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">Heart & Character</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/quotes.html">Quotes</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
