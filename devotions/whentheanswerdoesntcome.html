@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>When the Answer Doesn’t Come | Whispers in the Pew</title>
+
+<meta name="description" content="Trusting God through silence, waiting, unanswered prayer, and seasons where understanding feels distant.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:980px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin-bottom:26px;
+color:#f2e6d8;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:60px 0 20px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.7rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:55px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:36px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+.footer{
+background:#0f0d0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:90px 24px 35px;
+}
+
+.footer-inner{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 2fr;
+gap:80px;
+}
+
+.footer-brand h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+max-width:420px;
+color:#cfc4b6;
+font-size:1rem;
+line-height:1.9;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#b9a792;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:14px;
+color:#e4d9ca;
+font-size:0.96rem;
+transition:0.3s ease;
+}
+
+.footer-column a:hover{
+color:#ffffff;
+transform:translateX(2px);
+}
+
+.footer-bottom{
+margin-top:70px;
+padding-top:24px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.footer-bottom p{
+font-size:0.85rem;
+letter-spacing:1px;
+color:#85796d;
+}
+
+@media(max-width:1100px){
+
+.footer-inner{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.footer-links{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.4rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+@media(max-width:640px){
+
+.footer{
+padding:70px 20px 30px;
+}
+
+.footer-links{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.footer-brand h3{
+font-size:1.9rem;
+}
+
+.footer-brand p{
+font-size:0.96rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Spiritual Growth & Discipleship
+</div>
+
+<h1>
+When the Answer Doesn’t Come
+</h1>
+
+<p class="subtitle">
+Isaiah 55:8-9
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html" class="back-link">
+← Return to Spiritual Growth & Discipleship
+</a>
+
+<div class="grid">
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“For My thoughts are not your thoughts, neither are your ways My ways, says the Lord. For as the heavens are higher than the earth, so are My ways higher than your ways and My thoughts than your thoughts.” Isaiah 55:8-9
+</p>
+
+</div>
+
+<p>
+Few things ache more deeply than prayers seeming to disappear into silence.
+</p>
+
+<p>
+People cry out faithfully, wait patiently, search their hearts honestly, and still find themselves wondering why answers have not arrived.
+</p>
+
+<p>
+Questions begin forming quietly:
+</p>
+
+<blockquote>
+“God, are You listening?”
+</blockquote>
+
+<p>
+Silence can feel lonely, confusing, and painfully personal.
+</p>
+
+<p>
+Still, silence never means abandonment.
+</p>
+
+<section>
+
+<h2 class="section-title">
+God Works Beyond What Can Be Seen
+</h2>
+
+<p>
+Many seasons of waiting carry hidden work happening beneath the surface.
+</p>
+
+<p>
+Unanswered prayer often reveals deeper dependence, exposes hidden pride, reshapes priorities, and teaches trust not built upon immediate results.
+</p>
+
+<p>
+Prayer was never designed only to obtain answers.
+</p>
+
+<p>
+Prayer draws hearts closer toward God Himself.
+</p>
+
+<div class="scripture">
+
+<p>
+God’s silence is not always rejection. Sometimes silence becomes preparation.
+</p>
+
+</div>
+
+<p>
+Certain prayers remain unanswered because God protects people from paths they cannot yet understand fully.
+</p>
+
+<p>
+Other times, waiting develops spiritual maturity impossible to form through comfort alone.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Trusting Higher Ways
+</h2>
+
+<p>
+Isaiah reminds believers that God’s thoughts and ways rise far beyond human understanding.
+</p>
+
+<p>
+People naturally want immediate clarity, visible movement, and direct explanations.
+</p>
+
+<p>
+Faith continues trusting even when understanding feels absent.
+</p>
+
+<blockquote>
+Waiting with God is never wasted time.
+</blockquote>
+
+<p>
+The heart slowly learns how to seek His presence above personal control.
+</p>
+
+<p>
+Deep trust grows strongest during moments where answers remain delayed yet surrender continues anyway.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+The Teacher’s Note
+</h2>
+
+<p>
+Marcus remained seated quietly near the back of the church long after service ended.
+</p>
+
+<p>
+Grace had become difficult to believe personally.
+</p>
+
+<p>
+Years earlier, one mistake spiraled into many others until shame slowly convinced him that distance existed permanently between himself and God.
+</p>
+
+<p>
+Church eventually felt like performance instead of relationship.
+</p>
+
+<p>
+That afternoon an older teacher handed him a folded note while smiling gently.
+</p>
+
+<p>
+Later he opened the paper and read:
+</p>
+
+<blockquote>
+“Conviction is a sign He still loves you. Condemnation is the lie telling you that you are too far gone.”
+</blockquote>
+
+<p>
+Tears filled his eyes immediately.
+</p>
+
+<p>
+For years shame had spoken louder than hope internally.
+</p>
+
+<p>
+Those words pierced differently.
+</p>
+
+<div class="scripture">
+
+<p>
+God still calls people back even after long seasons of silence and distance.
+</p>
+
+</div>
+
+<p>
+Marcus bowed his head quietly for the first time in years.
+</p>
+
+<p>
+No dramatic breakthrough interrupted the sanctuary silence.
+</p>
+
+<p>
+Peace simply began replacing hopelessness little by little.
+</p>
+
+<p>
+Condemnation loosened its grip while conviction slowly led him back toward life again.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Father, understanding does not always come easily during seasons where prayers remain unanswered and silence feels heavy.
+</p>
+
+<p>
+Teach my heart to trust Your wisdom even when clarity feels distant and waiting becomes difficult.
+</p>
+
+<p>
+Strengthen faith within me so disappointment never becomes distance from You.
+</p>
+
+<p>
+Let every unanswered prayer draw me closer toward Your heart, presence, and purpose. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/truthbehindcloseddoors.html">
+← Truth Behind Closed Doors
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/convictionleadstolife.html">
+Conviction Leads to Life, Condemnation Leads to Shame →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+Whispers in the Pew
+</h3>
+
+<p>
+A devotional journey through healing, truth, grace, and the quiet voice of Jesus found in the places many carry hidden pain.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/index.html">Home</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contents.html">Contents</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/preface.html">Preface</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/about.html">About</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+Categories
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html">Faith & Trust</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html">Healing & Wholeness</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+
+</div>
+
+<div class="footer-column">
+
+<h4>
+More
+</h4>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/courageandcalling.html">Courage & Calling</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html">Heart & Character</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/quotes.html">Quotes</a>
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Bradley Hobbs · All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
