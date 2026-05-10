@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Too Big to Sink? | Whispers in the Pew</title>
+
+<meta name="description" content="A reminder that pride can sink us, but humility and dependence on God keep us steady.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:120px 24px 90px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.4rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:60px 24px 90px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:40px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:visible;
+}
+
+.article + .article{
+margin-top:34px;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+.story-card .section-title{
+margin-top:0;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.45rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.questions{
+margin:60px 0;
+}
+
+.question{
+margin-bottom:28px;
+padding-left:24px;
+border-left:1px solid rgba(255,255,255,0.08);
+}
+
+.question h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.8rem;
+font-weight:500;
+margin-bottom:10px;
+color:#f2e6d8;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:110px 20px 75px;
+}
+
+.content{
+padding:55px 20px 80px;
+}
+
+.article{
+padding:30px 24px;
+border-radius:24px;
+}
+
+.article + .article{
+margin-top:28px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.25rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Faith & Trust
+</div>
+
+<h1>
+Too Big to Sink?
+</h1>
+
+<p class="subtitle">
+1 Corinthians 10:12
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="../faithandtrust.html" class="back-link">
+← Return to Faith & Trust
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“Therefore let him that thinketh he standeth take heed lest he fall.”
+</p>
+
+</div>
+
+<p>
+In 1912, the RMS Titanic set sail with big dreams. Engineers called it “unsinkable.” People thought it was the best thing humans had ever done. It was huge, beautiful and sadly, it sank on its first trip.
+</p>
+
+<p>
+What caused it to sink was not just an iceberg. It was pride. People ignored warnings, there were not enough lifeboats, and they did not think danger was a big deal.
+</p>
+
+<p>
+Sometimes, we can be just like that.
+</p>
+
+<p>
+When life is going well, our plans are working, we are strong, and people respect us, it is easy to feel like we are unstoppable. Spiritual danger comes when we stop relying on God and start relying on ourselves.
+</p>
+
+<blockquote>
+Pride says, “You have got this.” Wisdom says, “Stay close to God.”
+</blockquote>
+
+<p>
+God is not trying to scare us into humility. He is trying to protect us from falling. The enemy of our souls would love for you to think you do not need prayer anymore, that church is not important, or that your success is all because of you.
+</p>
+
+<p>
+The truth is this: without God, even the strongest can fall.
+</p>
+
+<p>
+Thankfully, God does not leave us to figure things out alone. He gives us His presence, His wisdom, and His hand to hold us steady. When we walk humbly with Him, no storm can take us under.
+</p>
+
+<section class="questions">
+
+<div class="question">
+
+<h3>
+Are there areas in your life where you are depending more on yourself than on God?
+</h3>
+
+</div>
+
+<div class="question">
+
+<h3>
+Have you been ignoring the warning signs God might be showing you?
+</h3>
+
+</div>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, keep me from the pride that blinds. Remind me every day that I need You in everything, in success and in trouble. Help me walk humbly, listen to Your guidance, and stay rooted in Your truth. May I never believe I am too strong to fall, and always believe You are strong enough to hold me up. In Jesus' name, amen.
+</p>
+
+</section>
+
+</article>
+
+<article class="article story-card">
+
+<h2 class="section-title">
+The Captain Who Forgot the Map
+</h2>
+
+<p>
+Derrick was a trusted youth leader. He was confident, capable, and respected. Over the years, he had built his ministry with care, giving his time and heart to teenagers who felt forgotten or broken.
+</p>
+
+<p>
+People often praised his strength, his leadership, and his anointing. He accepted the words with humility at first. Over time, he began to believe them.
+</p>
+
+<p>
+Prayer slowly became routine. Scripture turned into something he prepared for others instead of something that shaped his own heart. Instead of waiting on the Holy Spirit, he leaned on experience, planning, and his natural ability.
+</p>
+
+<p>
+Outwardly, everything still looked strong. Attendance grew. His team supported him. Invitations to speak increased. The ministry appeared successful, until small fractures began to show.
+</p>
+
+<p>
+A key volunteer stepped away, exhausted. A student he had mentored for years quietly disappeared. Derrick questioned himself, then others. His messages felt flat. Conversations changed. People sensed something was missing.
+</p>
+
+<p>
+Rather than slowing down, he pushed harder. He worked longer hours and skipped time alone with God. He ignored the gentle prompting to stop and seek the Lord. He told himself that he knew what he was doing.
+</p>
+
+<p>
+Midway through one message, his thoughts disappeared. His notes felt empty. His heart felt dry. Words would not come. Standing there, he felt alone in a way he had not felt in years.
+</p>
+
+<p>
+Later, he sat alone in his car in the church parking lot. The engine was off. His phone was silent. The night was still.
+</p>
+
+<p>
+In that quiet moment, a simple thought came to him, calm and clear: You started sailing without the map.
+</p>
+
+<p>
+Tears filled his eyes. He realized he had trusted his skill more than the God who gave it. He had forgotten who carried the weight of the ministry from the beginning.
+</p>
+
+<p>
+That night, he did not plan his next message or rethink his strategy. He simply prayed, God, I miss You and I need You. I forgot that You are the source of all of this. Please forgive me.
+</p>
+
+<p>
+Nothing dramatic happened. No crowd was watching. Yet something in him quietly broke and was gently restored.
+</p>
+
+<p>
+He began rising early again, not to prepare lessons, but to sit with God. His leadership softened. Prayer returned to the center. Pressure loosened its grip. He stopped hiding his weakness and began leading with dependence on Jesus.
+</p>
+
+<p>
+That was when real renewal began.
+</p>
+
+<blockquote>
+Strength and skill are never enough. Stay close to Me.
+</blockquote>
+
+<p>
+Derrick never forgot what he learned in that silent parking lot. From that point forward, he stayed close.
+</p>
+
+<div class="navigation">
+
+<a href="../devotions/trustbeyondunderstanding.html">
+← Trust Beyond Understanding
+</a>
+
+<a href="../devotions/youdonthavetobeg.html">
+You Don't Have to Beg →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
