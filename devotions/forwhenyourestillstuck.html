@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For When You’re Still Stuck | Whispers in the Pew</title>
+
+<meta name="description" content="When healing feels distant, God remains near, patient, compassionate, and present within every quiet ache.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,6.2rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.grid{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:55px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.03rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.card-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2.4rem;
+font-weight:500;
+margin-bottom:30px;
+color:#f2e6d8;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:1.9rem;
+font-weight:500;
+margin:50px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:45px 0;
+padding-left:28px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:40px 0 50px;
+padding:32px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.35rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:60px;
+padding:36px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin-bottom:22px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:80px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.3rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:28px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Healing & Wholeness
+</div>
+
+<h1>
+For When You’re Still Stuck
+</h1>
+
+<p class="subtitle">
+Psalm 34:18
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html" class="back-link">
+← Return to Healing & Wholeness
+</a>
+
+<div class="grid">
+
+<article class="article">
+
+<h2 class="card-title">
+Devotion
+</h2>
+
+<div class="scripture">
+
+<p>
+“The Lord is nigh unto them that are of a broken heart.”
+</p>
+
+</div>
+
+<p>
+God places no demand upon wounded hearts to appear healed immediately.
+</p>
+
+<p>
+Pressure for quick recovery does not come from Him.
+</p>
+
+<p>
+His response toward grief, exhaustion, confusion, numbness, and lingering pain is nearness rather than disappointment.
+</p>
+
+<blockquote>
+God does not abandon broken places. He sits gently within them.
+</blockquote>
+
+<p>
+Human discomfort often causes others to withdraw from pain they cannot understand.
+</p>
+
+<p>
+Though divine compassion moves closer.
+</p>
+
+<p>
+Silence does not repel Him.
+</p>
+
+<p>
+Exhaustion does not frustrate Him.
+</p>
+
+<p>
+Numbness does not weaken His love.
+</p>
+
+<p>
+Even slow healing still matters deeply to God.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Healing Without Pressure
+</h2>
+
+<p>
+Growth does not always happen dramatically.
+</p>
+
+<p>
+Sometimes healing unfolds quietly through patience, breathing again, surviving another day, remaining honest, and continuing forward one small step at a time.
+</p>
+
+<p>
+Pain lingering longer than expected does not make someone weak.
+</p>
+
+<p>
+Deep wounds often require gentler healing.
+</p>
+
+<blockquote>
+Grace moves patiently through places where human strength has grown tired.
+</blockquote>
+
+<p>
+God understands timing differently than people do.
+</p>
+
+<p>
+His compassion remains steady throughout every unfinished season.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+God, exhaustion surrounds places within me that still feel wounded and unfinished. Some days healing feels distant, slow, and uncertain. Thank You for remaining near without pressuring me to pretend strength I do not currently feel. Sit with me gently within this pain and guide me patiently toward healing shaped through truth, grace, and honesty. Teach my heart that slower healing does not mean abandonment. Remind me continually that Your love remains steady through every difficult season ahead. In Jesus’ name, amen.
+</p>
+
+</section>
+
+</article>
+
+<article class="article">
+
+<h2 class="card-title">
+Story Time
+</h2>
+
+<div class="scripture">
+
+<p>
+The Still Place
+</p>
+
+</div>
+
+<p>
+Brad remained seated on the worn church pew long after the final “Amen” faded quietly into silence.
+</p>
+
+<p>
+The sanctuary emptied slowly while stillness settled heavily across the room like something sacred lingering intentionally behind.
+</p>
+
+<p>
+No strength remained within him anymore.
+</p>
+
+<p>
+No worship songs rose naturally.
+</p>
+
+<p>
+No carefully formed prayers followed.
+</p>
+
+<p>
+Only exhaustion remained.
+</p>
+
+<blockquote>
+Sometimes Heaven comes closest during moments where hearts finally stop pretending they are strong.
+</blockquote>
+
+<p>
+Tears arrived silently while stained-glass light filtered softly across the sanctuary floor.
+</p>
+
+<p>
+Brad stared toward the cross quietly, wondering whether healing would ever fully come.
+</p>
+
+<p>
+Though something shifted gently within the silence.
+</p>
+
+<p>
+No thunder shook the room.
+</p>
+
+<p>
+No dramatic voice interrupted the stillness.
+</p>
+
+<p>
+Only presence.
+</p>
+
+<p>
+The Spirit of Jesus drew near softly beside him without correction, shame, pressure, or urgency.
+</p>
+
+<p>
+Understanding formed slowly within his weary heart:
+</p>
+
+<p>
+Being stuck had never meant being abandoned.
+</p>
+
+<p>
+God still inhabited unfinished places compassionately.
+</p>
+
+<p>
+Healing was not always sudden transformation.
+</p>
+
+<p>
+Sometimes healing looked like remaining held together gently while still broken.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Moral
+</h2>
+
+<p>
+Silence never means God's absence.
+</p>
+
+<p>
+Every wounded season becomes another place where His presence quietly draws near to steady weary hearts again.
+</p>
+
+</section>
+
+</article>
+
+</div>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/fullyknownfullyloved.html">
+← Fully Known, Fully Loved
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whenhealedpeopleentertheroom.html">
+When Healed People Enter the Room →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
