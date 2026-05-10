@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Living with Purpose to Share the Good News | Whispers in the Pew</title>
+
+<meta name="description" content="Living with purpose by sharing the hope of Jesus through love, service, and everyday witness.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+line-height:1.7;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.3rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Faith & Trust
+</div>
+
+<h1>
+Living with Purpose to Share the Good News
+</h1>
+
+<p class="subtitle">
+Matthew 28:19–20
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="../faithandtrust.html" class="back-link">
+← Return to Faith & Trust
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“Go ye therefore, and teach all nations...”
+</p>
+
+</div>
+
+<p>
+All who follow Christ are called to share Him. Evangelism is not only for pastors or missionaries. Jesus clearly commanded His followers to take the Good News to others. What God has done in us is meant to reach beyond us.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Everyday Witness
+</h2>
+
+<p>
+Often, sharing our faith does not look like standing on a platform or giving a sermon. Instead, it shows up in everyday life through kindness, patience, listening, and honest conversation.
+</p>
+
+<p>
+A life lived with love and integrity speaks loudly and opens hearts to Christ.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Willing and Attentive
+</h2>
+
+<p>
+Every day, God places people in our path. At home, at work, in our neighborhoods, and even among strangers, opportunities appear.
+</p>
+
+<p>
+Our responsibility is not to have perfect words or deep explanations. Our responsibility is simply to be willing and attentive.
+</p>
+
+<blockquote>
+Only God changes hearts. Our role is to share, to care, and to plant seeds.
+</blockquote>
+
+<p>
+As we live and speak with faith, God does the rest.
+</p>
+
+<p>
+You carry the light of Christ. Allow it to be seen in your words, your actions, and your presence. Your testimony matters, and someone is waiting to hear it.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, thank You for the gift of salvation and the hope I have in You. Give me boldness to share that hope with others. Open my eyes to the opportunities around me. Let my life reflect Your love and let my words point to Your truth. Use me to make disciples, not in my strength, but by the power of Your Spirit. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="../devotions/faithatworkbeingalightinthemarketplace.html">
+← Faith at Work – Being a Light in the Marketplace
+</a>
+
+<a href="../devotions/trustbeyondunderstanding.html">
+Trust Beyond Understanding →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
