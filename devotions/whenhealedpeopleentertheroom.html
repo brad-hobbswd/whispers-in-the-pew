@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>When Healed People Enter the Room | Whispers in the Pew</title>
+
+<meta name="description" content="Healing carries quiet authority, transforming environments and breaking cycles through presence shaped by God.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.grid{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.card-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2.4rem;
+font-weight:500;
+margin-bottom:30px;
+color:#f2e6d8;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Healing & Wholeness
+</div>
+
+<h1>
+When Healed People Enter the Room
+</h1>
+
+<p class="subtitle">
+Romans 12:21
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html" class="back-link">
+← Return to Healing & Wholeness
+</a>
+
+<div class="grid">
+
+<article class="article">
+
+<h2 class="card-title">
+Devotion
+</h2>
+
+<div class="scripture">
+
+<p>
+“Do not be overcome and conquered by evil but overcome evil with good.”
+</p>
+
+</div>
+
+<p>
+Some people carry bruises within their souls that remain invisible to everyone around them.
+</p>
+
+<p>
+Pain shapes how they enter rooms, approach relationships, and respond to kindness.
+</p>
+
+<p>
+Past wounds often teach hearts to expect danger before safety ever arrives.
+</p>
+
+<blockquote>
+Healed people carry peace differently because God reshaped what pain once controlled.
+</blockquote>
+
+<p>
+Healing does not create superiority.
+</p>
+
+<p>
+Healing creates stability.
+</p>
+
+<p>
+God forms quiet authority within people who surrendered honestly, endured faithfully, and allowed grace to restore what brokenness once damaged.
+</p>
+
+<p>
+Reaction no longer controls every moment.
+</p>
+
+<p>
+Discernment replaces impulse.
+</p>
+
+<p>
+Peace steadies environments that once would have triggered defensiveness or fear.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Healing Changes Atmospheres
+</h2>
+
+<p>
+Strength shaped through healing does not ignore truth or excuse harmful behavior.
+</p>
+
+<p>
+Boundaries still matter.
+</p>
+
+<p>
+Accountability still matters.
+</p>
+
+<p>
+Though healed hearts no longer need aggression in order to protect themselves.
+</p>
+
+<blockquote>
+Healing allows truth to remain firm without becoming cruel.
+</blockquote>
+
+<p>
+Freedom carried confidently may unsettle wounds still untreated within others.
+</p>
+
+<p>
+Light often exposes what darkness preferred remaining hidden.
+</p>
+
+<p>
+That discomfort does not mean healing failed.
+</p>
+
+<p>
+Sometimes God uses healed lives to reveal what restoration can become.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, thank You for healing places within me that once felt impossible to restore. Continue shaping my heart through wisdom, gentleness, peace, and discernment. Teach me to walk in healing without pride while remaining steady within truth. Let my life reflect Your restoring power so clearly that others begin believing healing is possible for them too. Use my presence to bring peace rather than fear, understanding rather than reaction, and grace rather than bitterness. In Jesus’ name, amen.
+</p>
+
+</section>
+
+</article>
+
+<article class="article">
+
+<h2 class="card-title">
+Story Time
+</h2>
+
+<div class="scripture">
+
+<p>
+The Quiet Shift
+</p>
+
+</div>
+
+<p>
+Samuel worked at the community outreach center every Thursday evening, leading mentorship groups for teenagers shaped by addiction, violence, abandonment, and chaos.
+</p>
+
+<p>
+The room carried stories he understood deeply because years earlier he had lived inside that same darkness himself.
+</p>
+
+<p>
+Healing had changed him.
+</p>
+
+<p>
+Scars remained, though they no longer controlled him.
+</p>
+
+<blockquote>
+Healed hearts remember pain without surrendering themselves back to it.
+</blockquote>
+
+<p>
+One evening a teenager named Andre entered quietly and sat alone in the corner.
+</p>
+
+<p>
+Arms folded tightly.
+</p>
+
+<p>
+Eyes guarded.
+</p>
+
+<p>
+Silence filled with anger.
+</p>
+
+<p>
+Every week brought tension.
+</p>
+
+<p>
+Questions arrived sharply.
+</p>
+
+<p>
+Authority triggered resistance instantly.
+</p>
+
+<p>
+Samuel recognized the pattern because he once responded exactly the same way.
+</p>
+
+<p>
+One night frustration exploded suddenly.
+</p>
+
+<p>
+Andre threw his notebook across the room while the entire group froze expecting yelling, confrontation, or humiliation.
+</p>
+
+<p>
+Samuel stood calmly, picked up the notebook, returned quietly, and placed the notebook back into Andre’s hands.
+</p>
+
+<p>
+Then he asked gently:
+</p>
+
+<blockquote>
+“Did throwing that help the pain leave?”
+</blockquote>
+
+<p>
+Silence followed.
+</p>
+
+<p>
+Not defensive silence.
+</p>
+
+<p>
+Different silence.
+</p>
+
+<p>
+The kind that happens when anger unexpectedly meets peace instead of more anger.
+</p>
+
+<p>
+Andre returned the following week.
+</p>
+
+<p>
+Then the week after that.
+</p>
+
+<p>
+A month later, he quietly asked Samuel for prayer.
+</p>
+
+<p>
+Samuel never needed force.
+</p>
+
+<p>
+Healing already carried enough authority.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Moral
+</h2>
+
+<p>
+Healed people interrupt cycles quietly.
+</p>
+
+<p>
+God uses restored hearts to create safe places where broken people finally begin believing change is possible.
+</p>
+
+</section>
+
+</article>
+
+</div>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/forwhenyourestillstuck.html">
+← For When You’re Still Stuck
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whenthefiredoesntreachthem.html">
+When the Fire Doesn’t Reach Them →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
