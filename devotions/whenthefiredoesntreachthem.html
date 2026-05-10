@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>When the Fire Doesn’t Reach Them | Whispers in the Pew</title>
+
+<meta name="description" content="When truth feels resisted and hearts remain distant, God still calls you toward faithful love and steady obedience.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.reflection{
+margin:60px 0;
+}
+
+.reflection-block{
+margin-bottom:32px;
+padding-left:24px;
+border-left:1px solid rgba(255,255,255,0.08);
+}
+
+.reflection-block h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.8rem;
+font-weight:500;
+margin-bottom:12px;
+color:#f2e6d8;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Heart & Character
+</div>
+
+<h1>
+When the Fire Doesn’t Reach Them
+</h1>
+
+<p class="subtitle">
+Jeremiah 20:7-9
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/heartandcharacter.html" class="back-link">
+← Return to Heart & Character
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“His word was in mine heart as a burning fire shut up in my bones.”
+</p>
+
+</div>
+
+<section>
+
+<h2 class="section-title">
+Carrying Fire Within
+</h2>
+
+<p>
+There is a particular ache that forms when truth burns deeply within your spirit while people around you continue resisting what you long for them to understand.
+</p>
+
+<p>
+This burden is not rooted in pride.
+</p>
+
+<p>
+It grows from love, responsibility, compassion, and longing for others to experience freedom, healing, peace, and truth.
+</p>
+
+<blockquote>
+Some fires burn painfully because they carry love for people who cannot yet receive what is being offered.
+</blockquote>
+
+<p>
+You soften your words.
+</p>
+
+<p>
+You try patience.
+</p>
+
+<p>
+You explain carefully.
+</p>
+
+<p>
+Though resistance still remains.
+</p>
+
+<p>
+That tension creates exhaustion within the soul.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Jeremiah Understood This Pain
+</h2>
+
+<p>
+Jeremiah carried revelation that others mocked, rejected, and ignored repeatedly.
+</p>
+
+<p>
+Truth isolated him instead of surrounding him with affirmation.
+</p>
+
+<p>
+Weariness overwhelmed him at times.
+</p>
+
+<p>
+Though the fire inside him could not remain silent forever.
+</p>
+
+<p>
+God's truth continued burning deeply within his spirit.
+</p>
+
+<blockquote>
+Faithfulness is not measured by how many people listen. Faithfulness is measured through obedience.
+</blockquote>
+
+<p>
+You are not responsible for controlling outcomes.
+</p>
+
+<p>
+Transformation belongs to Jesus.
+</p>
+
+</section>
+
+<section class="reflection">
+
+<div class="reflection-block">
+
+<h3>
+Not Everyone Is Ready Simultaneously
+</h3>
+
+<p>
+People awaken spiritually within different seasons, different wounds, different timing, and different levels of surrender.
+</p>
+
+<p>
+Growth cannot be forced.
+</p>
+
+</div>
+
+<div class="reflection-block">
+
+<h3>
+You Cannot Carry Every Outcome
+</h3>
+
+<p>
+Your responsibility is faithfulness, love, truth, wisdom, and obedience.
+</p>
+
+<p>
+God carries the burden of changing hearts.
+</p>
+
+</div>
+
+<div class="reflection-block">
+
+<h3>
+Discernment Matters
+</h3>
+
+<p>
+Wisdom teaches when speaking is necessary and when silence serves better temporarily.
+</p>
+
+<p>
+Fire directed by God brings light rather than destruction.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Release the Weight
+</h2>
+
+<p>
+Exhaustion grows heavier when you believe every response depends completely upon your effort.
+</p>
+
+<p>
+Though Scripture reminds us clearly:
+</p>
+
+<p>
+Some plant.
+</p>
+
+<p>
+Some water.
+</p>
+
+<p>
+God gives increase.
+</p>
+
+<p>
+Peace begins returning where striving finally releases outcomes back into His hands again.
+</p>
+
+<blockquote>
+Obedience becomes lighter when hearts remember God never asked them to carry what belongs only to Him.
+</blockquote>
+
+<p>
+Even Jesus grieved over resistant hearts.
+</p>
+
+<p>
+Your sorrow does not weaken your purpose.
+</p>
+
+<p>
+It simply reveals how deeply you care.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+God, this fire within me sometimes feels heavy, exhausting, and lonely. Longing for others to receive truth, healing, peace, and freedom creates weariness when resistance continues standing in the way. Teach me faithfulness without striving for control. Shape my words through wisdom, humility, compassion, and discernment. Help me release outcomes fully into Your hands instead of carrying burdens You never asked me to hold alone. Keep my heart soft, obedient, loving, and steady regardless of response. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whenhealedpeopleentertheroom.html">
+← When Healed People Enter the Room
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/lettinggodforgood.html">
+Letting God for Good →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
