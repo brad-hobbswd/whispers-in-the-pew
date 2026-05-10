@@ -1,48 +1,371 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Faith and Hope — Anchored and Reaching | Whispers in the Pew</title>
-<meta name="description" content="A quiet hunger to know Jesus personally.">
-<link rel="stylesheet" href="../style.css">
+
+<meta name="description" content="Faith anchors the heart in God while hope reaches forward toward His promises.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
 <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article strong{
+color:#f4e8d9;
+font-weight:600;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+line-height:1.7;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.3rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
 </head>
 <body>
-<div id="header"></div>
-<section class="hero-small" style="background:
-  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
-  url('../assets/images/appalachian-hero.jpg');">
-  <div class="hero-inner">
-    <h1 class="h1">Faith and Hope — Anchored and Reaching</h1>
-    <p class="tagline">Hebrew 11:1</p>
-  </div>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Faith & Trust
+</div>
+
+<h1>
+Faith and Hope — Anchored and Reaching
+</h1>
+
+<p class="subtitle">
+Hebrews 11:1
+</p>
+
+</div>
+
 </section>
 
-<main class="container">
-  <div class="grid">
-    <article class="panel prose">
-      <p><b>Devotion:</b></p>
-      <p>Faith and hope are like two hands reaching toward heaven: one holding tightly to God in trust, the other reaching forward in expectation. </p>
-      <p>Faith is the foundation. It anchors us when nothing around us makes sense. It says, “God is with me, even in the storm.” Faith believes now, even without seeing. It’s not based on how we feel or what we see, it’s based on who God is. </p>
-      <p>Hope, on the other hand, lifts our eyes. It reminds us that the pain, the waiting, the uncertainty is not the end of the story. Hope whispers, “There’s more ahead.” It’s the joyful expectation that God’s promises will come to pass. </p>
-      <p>In seasons of waiting, we need both. Without faith, we’ll lose our grip. Without hope, we’ll lose our vision. </p>
-      <p>When we pray, we exercise faith. When we wait for peace, we live in hope. Both are gifts from God, meant to sustain us, not just in the good times, but especially in the hard ones. </p>
-     
-      <p><b>Prayer:</b></p>
-<p>Lord, strengthen my faith so I can trust You even when I cannot see the way. 
-  Fill my heart with hope that I may always look forward to Your promises with joy and peace. 
-  Help me to live each day anchored in Your truth and inspired by the future You have prepared for me. In Jesus’ name, amen.</p>
-    </article>
-  </div>
-</main>
+<section class="content">
+
+<div class="content-inner">
+
+<a href="../faithandtrust.html" class="back-link">
+← Return to Faith & Trust
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“Now faith is the substance of things hoped for, the evidence of things not seen.”
+</p>
+
+</div>
+
+<p>
+Faith and hope are like two hands reaching toward heaven: one holding tightly to God in trust, the other reaching forward in expectation.
+</p>
+
+<section>
+
+<h2 class="section-title">
+Faith Anchors Us
+</h2>
+
+<p>
+Faith is the foundation. It anchors us when nothing around us makes sense. It says, “God is with me, even in the storm.” Faith believes now, even without seeing. It is not based on how we feel or what we see, it is based on who God is.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Hope Lifts Our Eyes
+</h2>
+
+<p>
+Hope lifts our eyes. It reminds us that the pain, the waiting, and the uncertainty are not the end of the story. Hope whispers, “There’s more ahead.” It is the joyful expectation that God’s promises will come to pass.
+</p>
+
+<blockquote>
+Without faith, we lose our grip. Without hope, we lose our vision.
+</blockquote>
+
+<p>
+In seasons of waiting, we need both. When we pray, we exercise faith. When we wait for peace, we live in hope.
+</p>
+
+<p>
+Both are gifts from God, meant to sustain us, not just in the good times, but especially in the hard ones.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, strengthen my faith so I can trust You even when I cannot see the way. Fill my heart with hope that I may always look forward to Your promises with joy and peace. Help me to live each day anchored in Your truth and inspired by the future You have prepared for me. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="../devotions/whentheirfaithfeelsdistant.html">
+← When Their Faith Feels Distant
+</a>
+
+<a href="../devotions/faithatworkbeingalightinthemarketplace.html">
+Faith at Work – Being a Light in the Marketplace →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
 
 <div id="footer"></div>
 
-<script src="/whispers-in-the-pew/script.js"></script>
+<script src="../script.js"></script>
+
 </body>
 </html>
