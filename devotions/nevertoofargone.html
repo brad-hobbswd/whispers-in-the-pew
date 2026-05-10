@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Never Too Far Gone | Whispers in the Pew</title>
+
+<meta name="description" content="No heart is too broken, lost, ashamed, or far away for the grace of Jesus.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,6.5rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.45rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.examples{
+margin:60px 0;
+}
+
+.example{
+margin-bottom:30px;
+padding-left:24px;
+border-left:1px solid rgba(255,255,255,0.08);
+}
+
+.example h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.8rem;
+font-weight:500;
+margin-bottom:12px;
+color:#f2e6d8;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.25rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Faith & Trust
+</div>
+
+<h1>
+Never Too Far Gone
+</h1>
+
+<p class="subtitle">
+Luke 19:10 • Romans 5:8
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/faithandtrust.html" class="back-link">
+← Return to Faith & Trust
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“For the Son of man is come to seek and to save that which was lost.”
+</p>
+
+</div>
+
+<section>
+
+<h2 class="section-title">
+Jesus Came for the Broken
+</h2>
+
+<p>
+Many people quietly believe they have gone too far from God.
+</p>
+
+<p>
+Shame whispers:
+</p>
+
+<p>
+“You have failed too many times.”
+</p>
+
+<p>
+“You are too broken.”
+</p>
+
+<p>
+“You cannot be restored anymore.”
+</p>
+
+<p>
+Though the Gospel was never created for perfect people.
+</p>
+
+<blockquote>
+Jesus did not come merely to tolerate broken people. Jesus came specifically to save them.
+</blockquote>
+
+<p>
+The Gospel reaches the ashamed, addicted, exhausted, angry, overwhelmed, wounded, and lost.
+</p>
+
+<p>
+Grace exists precisely because humanity could never save itself alone.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+The Cross Changed Everything
+</h2>
+
+<p>
+If sin could permanently disqualify someone from salvation, the cross would never have been necessary.
+</p>
+
+<p>
+Jesus already knew every failure, weakness, secret, wound, and mistake before giving His life willingly.
+</p>
+
+<p>
+Still, He chose the cross.
+</p>
+
+<p>
+No darkness remains greater than His mercy.
+</p>
+
+<p>
+No failure remains stronger than His grace.
+</p>
+
+<blockquote>
+The cross stands as proof that God's love reaches farther than human brokenness.
+</blockquote>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+When Words Feel Impossible
+</h2>
+
+<p>
+Some people become so wounded internally they no longer know how to pray clearly.
+</p>
+
+<p>
+Exhaustion replaces words. Shame silences the heart. Fear convinces people to hide from God rather than run toward Him.
+</p>
+
+<p>
+Though Heaven does not require polished prayers.
+</p>
+
+<p>
+You do not need perfect understanding before coming to Jesus.
+</p>
+
+<p>
+Sometimes all faith can manage is whispering:
+</p>
+
+<p>
+“Help me.”
+</p>
+
+<p>
+That whisper still reaches Heaven.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Examples of Grace Throughout Scripture
+</h2>
+
+<div class="examples">
+
+<div class="example">
+
+<h3>
+The Prodigal Son
+</h3>
+
+<p>
+The son expected rejection after wasting everything, though the father ran toward him with restoration, compassion, and celebration.
+</p>
+
+</div>
+
+<div class="example">
+
+<h3>
+The Thief on the Cross
+</h3>
+
+<p>
+A guilty man dying beside Jesus still received mercy and paradise during his final moments.
+</p>
+
+</div>
+
+<div class="example">
+
+<h3>
+Mary Magdalene
+</h3>
+
+<p>
+Jesus delivered her from darkness and honored her as one of the first witnesses of His resurrection.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="scripture">
+
+<p>
+“But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.”
+</p>
+
+</div>
+
+<p>
+Hope still exists.
+</p>
+
+<p>
+Grace still reaches.
+</p>
+
+<p>
+Jesus still saves.
+</p>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Jesus, sometimes I feel broken, ashamed, exhausted, and far away from You. Still, I believe Your mercy reaches farther than my failures. I bring You every wound, fear, mistake, and hidden burden within me. Teach my heart to trust Your grace again. Help me believe that salvation remains possible because of who You are, not because of my own strength. Thank You for seeking lost people like me with compassion and love. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whenthefoolishbecomefavored.html">
+← When the Foolish Become Favored
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whenfearkeepsyouingodstillcomesclose.html">
+When Fear Keeps You In, God Still Comes Close →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
