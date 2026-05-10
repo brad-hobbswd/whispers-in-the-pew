@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Letting Go for Good | Whispers in the Pew</title>
+
+<meta name="description" content="Forgiveness releases the hidden weight of resentment and allows peace, healing, and freedom to return again.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+line-height:1.8;
+color:#f1e6d8;
+margin:0;
+}
+
+.reflection{
+margin:60px 0;
+}
+
+.reflection-block{
+margin-bottom:32px;
+padding-left:24px;
+border-left:1px solid rgba(255,255,255,0.08);
+}
+
+.reflection-block h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.8rem;
+font-weight:500;
+margin-bottom:12px;
+color:#f2e6d8;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.2rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Healing & Wholeness
+</div>
+
+<h1>
+Letting Go for Good
+</h1>
+
+<p class="subtitle">
+Colossians 3:13
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/healingandwholeness.html" class="back-link">
+← Return to Healing & Wholeness
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“Forgive as the Lord forgave you.”
+</p>
+
+</div>
+
+<section>
+
+<h2 class="section-title">
+The Weight of Holding On
+</h2>
+
+<p>
+Some pain settles deeply within the heart and quietly reshapes the way people think, trust, rest, and love.
+</p>
+
+<p>
+What first feels protective eventually becomes exhausting.
+</p>
+
+<p>
+Grudges grow heavy over time.
+</p>
+
+<p>
+Resentment lingers through conversations, memories, prayers, and moments that should have carried peace.
+</p>
+
+<blockquote>
+Unforgiveness often hurts the wounded heart longer than the person who caused the wound originally.
+</blockquote>
+
+<p>
+God never ignores pain or pretends betrayal did not happen.
+</p>
+
+<p>
+Jesus Himself experienced rejection, mockery, abandonment, and suffering fully.
+</p>
+
+<p>
+Though forgiveness still flowed from Him even while wounds remained fresh.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Forgiveness Is Freedom
+</h2>
+
+<p>
+Forgiveness does not erase memory.
+</p>
+
+<p>
+Forgiveness does not excuse harmful behavior.
+</p>
+
+<p>
+Forgiveness does not remove wisdom or healthy boundaries.
+</p>
+
+<p>
+Forgiveness releases the hold pain continues carrying over identity, peace, and future direction.
+</p>
+
+<blockquote>
+Forgiveness says: “This pain will no longer control my heart.”
+</blockquote>
+
+<p>
+Freedom begins quietly.
+</p>
+
+<p>
+Sometimes healing starts with nothing more than willingness.
+</p>
+
+<p>
+One surrendered prayer.
+</p>
+
+<p>
+One honest conversation with God.
+</p>
+
+<p>
+One decision refusing bitterness another place to live.
+</p>
+
+</section>
+
+<section class="reflection">
+
+<div class="reflection-block">
+
+<h3>
+Peace Matters
+</h3>
+
+<p>
+God desires peace for your heart far more than endless cycles of resentment and emotional exhaustion.
+</p>
+
+</div>
+
+<div class="reflection-block">
+
+<h3>
+Healing Takes Courage
+</h3>
+
+<p>
+Forgiveness requires honesty, surrender, trust, and courage shaped through grace rather than pride.
+</p>
+
+</div>
+
+<div class="reflection-block">
+
+<h3>
+God Holds Justice
+</h3>
+
+<p>
+Releasing bitterness does not mean abandoning justice.
+</p>
+
+<p>
+It means trusting God with what your heart was never meant to carry endlessly alone.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Choose Freedom Again
+</h2>
+
+<p>
+Healing rarely happens instantly.
+</p>
+
+<p>
+Some wounds reopen unexpectedly.
+</p>
+
+<p>
+Certain names still ache.
+</p>
+
+<p>
+Though every step toward forgiveness loosens chains resentment quietly built over time.
+</p>
+
+<blockquote>
+God restores peace gradually within hearts willing to release what pain keeps trying to preserve.
+</blockquote>
+
+<p>
+Today may become another step toward freedom.
+</p>
+
+<p>
+Not perfection.
+</p>
+
+<p>
+Freedom.
+</p>
+
+</section>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, You fully see the hurt, disappointment, betrayal, and heaviness still living within parts of my heart. Teach me how to release what no longer deserves control over my peace, identity, and future. Help me forgive through Your strength rather than my own limited ability. Guard my heart from bitterness and lead me gently toward healing shaped through grace, wisdom, truth, and freedom. Thank You for carrying burdens I was never meant to hold forever alone. In Jesus’ name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/whenthefiredoesntreachthem.html">
+← When The Fire Doesn’t Reach Them
+</a>
+
+<a href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/unlockingthedoorsoftheheart.html">
+Unlocking the Doors of the Heart →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
