@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forgetting After Forgiveness | Whispers in the Pew</title>
+
+<meta name="description" content="Learning to release the hold of past pain through grace and healing.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article strong{
+color:#f4e8d9;
+font-weight:600;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+line-height:1.7;
+color:#f1e6d8;
+margin:0;
+}
+
+.story{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.025);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.story h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:10px;
+}
+
+.story h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.7rem;
+font-weight:400;
+margin-bottom:28px;
+color:#d9c5ac;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.3rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.story,
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Forgiveness & Healing
+</div>
+
+<h1>
+Forgetting After Forgiveness
+</h1>
+
+<p class="subtitle">
+Hebrews 8:12
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="../forgivenessandhealing.html" class="back-link">
+← Return to Forgiveness & Healing
+</a>
+
+<article class="article">
+
+
+  
+<div class="scripture">
+
+<p>
+“For I will be merciful and gracious toward their sins, and I will remember their deeds of unrighteousness no more.”
+<br><br>
+Hebrews 8:12 AMPC
+</p>
+
+</div>
+
+<p>
+Forgiveness is never easy, and forgetting can feel even harder. We may reach the place where we choose to forgive, yet memories have a way of returning without invitation. A familiar voice, a certain place, or an unexpected reminder can reopen wounds we believed had already healed.
+</p>
+
+<p>
+When those memories return, many believers quietly wonder, <em>Have I really forgiven if I still remember?</em>
+</p>
+
+<h2 class="section-title">
+Forgiveness Is a Decision
+</h2>
+
+<p>
+Forgiveness is a choice of obedience. It is deciding to release another person from the debt we believe they owe us. It does not excuse what happened, nor does it pretend the pain was insignificant. Instead, forgiveness places justice into God's hands and frees our own hearts from carrying the burden.
+</p>
+
+<p>
+That decision may happen in a moment, but healing often continues long afterward. God patiently walks with us through that process.
+</p>
+
+<h2 class="section-title">
+Forgetting Is Release
+</h2>
+
+<p>
+When Scripture says God remembers our sins no more, it does not mean an all knowing God suddenly loses information. Rather, He chooses not to hold our sins against us once they have been forgiven.
+</p>
+
+<p>
+In much the same way, forgetting is not pretending the past never happened. It is choosing not to continually reopen old wounds or allow yesterday's pain to determine today's peace.
+</p>
+
+<blockquote>
+Healing begins when we stop reliving what God has already invited us to release.
+</blockquote>
+
+<h2 class="section-title">
+Choosing Freedom
+</h2>
+
+<p>
+Every time you refuse to replay an offense, you are strengthening your freedom. Every time you choose grace instead of bitterness, you become more like Christ.
+</p>
+
+<p>
+The memory may remain, but it no longer has permission to control your emotions, steal your joy, or shape your identity. God's grace becomes greater than your deepest hurt.
+</p>
+
+<p>
+Walking in freedom does not mean denying the past. It means refusing to let the past keep walking with you.
+</p>
+
+<section class="story">
+
+<h2>
+Story Time
+</h2>
+
+<h3>
+The Journal in the Closet
+</h3>
+
+<p>
+Joey sat quietly in his new apartment, surrounded by half unpacked boxes. The room smelled of fresh paint and unfamiliar beginnings. As he sorted through one box marked "Keep," he found an old leather journal buried beneath a stack of books.
+</p>
+
+<p>
+His hands hesitated before opening it. These pages had carried him through the darkest season of his marriage after discovering his husband's affair. Every page held prayers, tears, questions, and the painful journey of learning to trust God again.
+</p>
+
+<p>
+One entry caught his attention.
+</p>
+
+<p>
+"I don't want this pain to make me bitter. Lord, teach me to forgive, not because he deserves it, but because I need You to heal me."
+</p>
+
+<p>
+Joey smiled softly. God had answered that prayer. Forgiveness had come. Counseling, countless conversations with God, and time had slowly restored what bitterness tried to destroy.
+</p>
+
+<p>
+Yet as he continued reading, the memories flooded back. His chest tightened. The conversations. The broken promises. The long nights of wondering why.
+</p>
+
+<p>
+For a moment he questioned everything.
+</p>
+
+<p>
+"If these memories still hurt, have I truly forgiven?"
+</p>
+
+<p>
+Almost immediately, Hebrews 8:12 came to his heart.
+</p>
+
+<p>
+"I will remember their sins no more."
+</p>
+
+<p>
+God had never forgotten humanity's sins. He simply refused to keep holding forgiven people hostage to them.
+</p>
+
+<p>
+Perhaps that was Joey's next lesson as well.
+</p>
+
+<p>
+Joey gently closed the journal and held it against his chest for a moment. Then he whispered, "Lord, I still remember, but I don't want to keep reliving it. Teach me to release what You have already helped me forgive."
+</p>
+
+<p>
+He carefully placed the journal back into the box. He didn't need to destroy it, and he didn't need to read it every day. It had become a testimony instead of a prison.
+</p>
+
+<p>
+As he poured a cup of coffee and turned on worship music, peace slowly filled the room. The memories had not disappeared, but they had lost their power. Grace had become louder than grief.
+</p>
+
+<p>
+Joey realized that forgetting was never about erasing the past. It was about refusing to give yesterday's wounds authority over today's life.
+</p>
+
+<h2 class="section-title">
+Take a Moment to Reflect
+</h2>
+
+<p>
+Ask yourself these questions before the Lord.
+</p>
+
+<p>
+• Am I continually dwelling on the offense, or am I placing it into God's hands?<br><br>
+
+• Am I protecting my peace more than my pride?<br><br>
+
+• Can I remember what happened without allowing it to reopen the wound?<br><br>
+
+• Is God inviting me to release something today that I have continued carrying?
+</p>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, You know every memory that still lingers and every wound that has not completely healed. Thank You for forgiving me completely and choosing not to hold my sins against me. Help me extend that same grace to others. Teach me to release what You have already forgiven, to walk in freedom instead of bitterness, and to trust You with every painful memory. Let Your peace become greater than my past, and let my heart always reflect the mercy You have shown me. In Jesus' name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="../devotions/previousdevotion.html">
+← Previous Devotion
+</a>
+
+<a href="../devotions/nextdevotion.html">
+Next Devotion →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
