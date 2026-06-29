@@ -1,76 +1,368 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>One Voice, One Heart | Whispers in the Pew</title>
+
 <meta name="description" content="Living with integrity through words and heart aligned with Christ.">
-<link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
 <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,.84),rgba(15,13,11,.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center,rgba(255,255,255,.04),transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:.3s;
+}
+
+.back-link:hover{
+color:#fff;
+transform:translateX(-2px);
+}
+
+.article{
+background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+border:1px solid rgba(255,255,255,.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right,transparent,rgba(255,255,255,.18),transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+line-height:1.7;
+color:#f1e6d8;
+margin:0;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,.16);
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.navigation a{
+font-size:.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:.3s;
+}
+
+.navigation a:hover{
+color:#fff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.3rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div id="header"></div>
+<section class="hero">
 
-<section class="hero-small" style="background:
-  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
-  url('../assets/images/appalachian-hero.jpg');">
-  <div class="hero-inner">
-    <h1 class="h1">One Voice, One Heart</h1>
-    <p class="tagline">Psalm 19:14</p>
-  </div>
+<div class="hero-content">
+
+<div class="eyebrow">
+Integrity
+</div>
+
+<h1>
+One Voice, One Heart
+</h1>
+
+<p class="subtitle">
+Psalm 19:14
+</p>
+
+</div>
+
 </section>
 
-<main class="container">
-  <div class="grid">
+<section class="content">
 
-    <article class="panel prose">
+<div class="content-inner">
 
-      <p><b>Scripture:</b></p>
+<a href="../christianliving.html" class="back-link">
+← Return to Christian Living
+</a>
 
-      <p>
-        “Let the words of my mouth and the meditation of my heart be acceptable in Your sight, O Lord, my [firm, impenetrable] Rock and my Redeemer.” Psalm 19:14
-      </p>
+<article class="article">
 
-      <p><b>Reflection:</b></p>
+<div class="scripture">
 
-      <p>
-        Words have a powerful impact. They can build, break, reveal, and sometimes hide. As followers of Christ, our words are not just sounds, they are seeds. They plant something in every heart that hears them, including our own.
-      </p>
+<p>
+“Let the words of my mouth and the meditation of my heart be acceptable in Your sight, O Lord, my firm, impenetrable Rock and my Redeemer.”
+</p>
 
-      <p>
-        It’s easy to speak differently around church people, and another way around close friends or coworkers. It’s tempting to blend in, to match the tone of the crowd. God doesn’t call us to speak differently in different rooms, He calls us to speak from a heart that’s centered in Him, no matter where we are.
-      </p>
+</div>
 
-      <p>
-        This isn’t about being fake or trying to sound “holy.” It’s about being authentic, letting what comes from our mouths be a true reflection of Christ in us.
-      </p>
+<h2 class="section-title">
+Words Reveal the Heart
+</h2>
 
-      <p>
-        If profanity or gossip or sharp tones have crept into your speech, it doesn’t mean God’s given up on you. It means He’s inviting you to grow. To surrender even your tongue to His transformation.
-      </p>
+<p>
+Words have incredible power. They can encourage or discourage, heal or wound, reveal truth or conceal it. Every conversation plants something in the heart of the listener. Jesus taught that what comes out of our mouths flows from what is already within us. Our speech often becomes a mirror of our spiritual condition.
+</p>
 
-      <p>
-        You don’t have to pretend in one group and relax in another. God is not asking you to be a perfect speaker. He’s asking you to speak from a pure heart, one voice, in all places.
-      </p>
+<p>
+As followers of Christ, our words should consistently reflect His grace and truth. Whether we are speaking to family, coworkers, strangers, or fellow believers, our speech should point people toward Him.
+</p>
 
-      <p><b>Prayer:</b></p>
+<h2 class="section-title">
+The Same Everywhere
+</h2>
 
-      <p>
-        Lord, I want to be the same person in private as I am in public. I want my words to reflect the grace, truth, and love You’ve given me. Cleanse my heart so that what flows from my mouth honors You. Teach me when to speak, when to stay silent, and how to build up instead of blending in. I want to live with integrity; one voice, one heart, fully Yours. In Jesus’ name, amen.
-      </p>
+<p>
+It is easy to adjust our language depending on who surrounds us. We may sound different at church than we do at work or with friends. Yet God is not looking for different versions of us. He desires hearts that remain faithful in every setting.
+</p>
 
-    </article>
+<p>
+Integrity means our private conversations and our public conversations come from the same surrendered heart. Authentic faith does not perform for an audience. It remains genuine wherever we are.
+</p>
 
-  </div>
-</main>
+<blockquote>
+A heart surrendered to Christ produces a voice that honors Him wherever it is heard.
+</blockquote>
+
+<h2 class="section-title">
+Growing in Grace
+</h2>
+
+<p>
+If gossip, harsh words, complaining, or profanity have become familiar companions, God has not abandoned you. Instead, He lovingly calls you into transformation. As He changes the heart, He also changes the tongue.
+</p>
+
+<p>
+Every conversation becomes another opportunity to reflect Christ. One voice. One heart. One Savior.
+</p>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, let my words always reflect the work You are doing in my heart. Remove anything that dishonors You and replace it with grace, wisdom, compassion, and truth. Help me to live with integrity so my private life and public life both point to You. Let my speech encourage others and glorify Your holy name. In Jesus' name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="../devotions/previousdevotion.html">
+← Previous Devotion
+</a>
+
+<a href="../devotions/nextdevotion.html">
+Next Devotion →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
 
 <div id="footer"></div>
 
-<script src="/whispers-in-the-pew/script.js"></script>
+<script src="../script.js"></script>
+
 </body>
 </html>
+```
