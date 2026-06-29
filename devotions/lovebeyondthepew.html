@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love Beyond the Pew | Whispers in the Pew</title>
+
+<meta name="description" content="A devotion on authentic love as the true mark of discipleship beyond church attendance.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article strong{
+color:#f4e8d9;
+font-weight:600;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+line-height:1.7;
+color:#f1e6d8;
+margin:0 0 20px;
+}
+
+.scripture p:last-child{
+margin-bottom:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.3rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Christian Living
+</div>
+
+<h1>
+Love Beyond the Pew
+</h1>
+
+<p class="subtitle">
+John 13:35
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="../christianliving.html" class="back-link">
+← Return to Christian Living
+</a>
+
+<article class="article">
+
+
+<div class="scripture">
+
+<p>
+“By this shall all men know that you are My disciples, if you love one another [if you keep on showing love among yourselves].”
+<br><br>
+John 13:35 AMPC
+</p>
+
+</div>
+
+<p>
+Many people faithfully attend church every Sunday, know the words to every worship song, and can quote Scripture from memory. Yet Jesus never said these things would be the defining evidence that we belong to Him.
+</p>
+
+<p>
+The unmistakable mark of a disciple is love. Not occasional kindness or outward politeness, but a heart that consistently reflects the compassion, mercy, and grace of Christ.
+</p>
+
+<h2 class="section-title">
+Love Is the Evidence
+</h2>
+
+<p>
+Church attendance is valuable, worship is essential, and studying God's Word is necessary. But none of these replace a heart transformed by love. Genuine love reaches beyond the church pew into everyday life. It forgives when offended, serves without recognition, and chooses mercy when resentment feels easier.
+</p>
+
+<p>
+Jesus loved people others ignored. He welcomed the broken, touched the untouchable, and extended grace to those society had rejected. His followers are called to do the same.
+</p>
+
+<h2 class="section-title">
+Religion Without Compassion
+</h2>
+
+<p>
+It is possible to appear spiritually mature while allowing our hearts to grow cold. Jesus warned about those who honored God with their lips while their hearts remained far from Him. Outward religion without inward love is an empty display.
+</p>
+
+<p>
+The Holy Spirit continually shapes believers into the image of Christ, producing love that reaches beyond preferences, personalities, disagreements, and offenses. Mature faith is measured not merely by knowledge but by Christlike character.
+</p>
+
+<blockquote>
+The greatest testimony of a transformed life is not how much Scripture we know, but how deeply we love.
+</blockquote>
+
+<h2 class="section-title">
+Beyond the Pew
+</h2>
+
+<p>
+The true test of love happens long after the worship service ends. It is seen in how we treat our families, our neighbors, our coworkers, and even those who have hurt us. Love that reflects Jesus is patient, humble, forgiving, truthful, and full of mercy.
+</p>
+
+<p>
+When God's love fills our hearts, people begin to see Jesus not only in what we say, but in how we live.
+</p>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, let my life be known more for love than for appearances. Search my heart and remove every trace of bitterness, pride, prejudice, and selfishness. Teach me to love as You have loved me, extending grace even when it is difficult. May my words, actions, and attitudes reveal the heart of Jesus both inside and outside the church. Let my love become a living testimony of Your transforming power. In Jesus' name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="../devotions/previousdevotion.html">
+← Previous Devotion
+</a>
+
+<a href="../devotions/nextdevotion.html">
+Next Devotion →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
