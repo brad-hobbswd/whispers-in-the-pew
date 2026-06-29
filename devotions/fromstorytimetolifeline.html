@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>From Storytime to Lifeline | Whispers in the Pew</title>
+
+<meta name="description" content="A devotion on how childhood Bible stories become lifelines in adult seasons of life.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0d0b;
+color:#f5f1ea;
+font-family:'Inter',sans-serif;
+line-height:1.95;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:170px 24px 130px;
+text-align:center;
+position:relative;
+background:
+linear-gradient(rgba(15,13,11,0.84), rgba(15,13,11,0.95)),
+url('../assets/images/appalachian-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:860px;
+margin:auto;
+}
+
+.eyebrow{
+font-size:0.78rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#bca88f;
+margin-bottom:22px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.8rem,10vw,6.6rem);
+font-weight:500;
+line-height:0.95;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:1.05rem;
+font-weight:300;
+color:#d8d0c5;
+letter-spacing:1px;
+}
+
+.content{
+padding:110px 24px;
+background:#16120f;
+}
+
+.content-inner{
+max-width:900px;
+margin:auto;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:70px;
+transition:0.3s ease;
+}
+
+.back-link:hover{
+color:#ffffff;
+transform:translateX(-2px);
+}
+
+.article{
+background:
+linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:60px;
+position:relative;
+overflow:hidden;
+}
+
+.article::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.article p{
+font-size:1.04rem;
+color:#d6cdc0;
+margin-bottom:28px;
+}
+
+.article strong{
+color:#f4e8d9;
+font-weight:600;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin:55px 0 18px;
+color:#f2e6d8;
+}
+
+blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:1.6rem;
+font-style:italic;
+line-height:1.8;
+color:#efe4d5;
+margin:50px 0;
+padding-left:30px;
+border-left:1px solid rgba(255,255,255,0.16);
+}
+
+.scripture{
+margin:55px 0;
+padding:34px;
+border-radius:24px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.scripture p{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+line-height:1.7;
+color:#f1e6d8;
+margin:0;
+}
+
+.prayer{
+margin-top:70px;
+padding:40px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.prayer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+margin-bottom:24px;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-top:70px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.navigation a{
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#cbb79d;
+transition:0.3s ease;
+}
+
+.navigation a:hover{
+color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:140px 20px 100px;
+}
+
+.content{
+padding:90px 20px;
+}
+
+.article{
+padding:38px;
+}
+
+blockquote{
+font-size:1.35rem;
+}
+
+.scripture p{
+font-size:1.3rem;
+}
+
+.navigation{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.prayer{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Growing in Faith
+</div>
+
+<h1>
+From Storytime to Lifeline
+</h1>
+
+<p class="subtitle">
+2 Timothy 3:15
+</p>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<div class="content-inner">
+
+<a href="../growinginfaith.html" class="back-link">
+← Return to Growing in Faith
+</a>
+
+<article class="article">
+
+<div class="scripture">
+
+<p>
+“And how from your childhood you have had a knowledge of and been acquainted with the sacred writings which are able to instruct you and give you the understanding for salvation which comes through faith in Christ Jesus.”
+<br><br>
+2 Timothy 3:15 AMPC
+</p>
+
+</div>
+
+<p>
+Many of us first encountered the Bible through colorful storybooks, felt board lessons, or Sunday school classrooms. We learned about Noah's ark, David and Goliath, Daniel in the lions' den, Jonah and the great fish, and countless other stories that captured our imagination.
+</p>
+
+<p>
+At the time, they seemed like simple lessons meant for children. Yet as life unfolds, we begin to discover they were never merely stories. They were preparing our hearts for seasons we had not yet lived.
+</p>
+
+<h2 class="section-title">
+The Stories Grow with Us
+</h2>
+
+<p>
+God's Word never changes, but we do. The same passage that once amazed us as children begins speaking with greater depth as adults. What once sounded like an exciting adventure becomes a source of wisdom, comfort, and strength during life's greatest challenges.
+</p>
+
+<p>
+David's victory over Goliath reminds us to trust God when the obstacles before us seem impossible. Noah's obedience teaches us to remain faithful even when the world mocks our convictions. Jonah's story reminds us that God's mercy reaches us even after we have run in the opposite direction.
+</p>
+
+<h2 class="section-title">
+When Life Becomes the Lesson
+</h2>
+
+<p>
+As children, we admired the heroes of Scripture. As adults, we often discover ourselves living through circumstances remarkably similar to theirs. We encounter our own giants, storms, waiting seasons, betrayals, disappointments, and wilderness experiences.
+</p>
+
+<p>
+Suddenly those familiar Bible stories become lifelines. They remind us that the same God who sustained His people throughout Scripture remains faithful today.
+</p>
+
+<blockquote>
+The stories we once heard as children often become the promises we cling to as adults.
+</blockquote>
+
+<h2 class="section-title">
+The Word Never Grows Old
+</h2>
+
+<p>
+God's Word is alive. It continues speaking to every generation because its Author never changes. Whether you first learned these stories decades ago or only recently opened your Bible, the Holy Spirit still uses them to encourage, convict, strengthen, and guide His people.
+</p>
+
+<p>
+Every season of life reveals another layer of God's faithfulness. What began as storytime becomes a lifelong testimony of His unchanging grace.
+</p>
+
+<section class="prayer">
+
+<h2>
+Prayer
+</h2>
+
+<p>
+Lord, thank You for planting Your Word in my heart from an early age and for continuing to teach me through it today. Help me never to overlook the familiar passages of Scripture, but to see them with fresh eyes as You continue shaping my faith. Remind me that the God who was faithful to Noah, David, Daniel, Esther, and every servant throughout Your Word is the same God walking beside me today. May Your truth remain my anchor through every season of life. In Jesus' name, amen.
+</p>
+
+</section>
+
+<div class="navigation">
+
+<a href="../devotions/previousdevotion.html">
+← Previous Devotion
+</a>
+
+<a href="../devotions/nextdevotion.html">
+Next Devotion →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
