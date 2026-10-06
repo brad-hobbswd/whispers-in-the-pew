@@ -331,6 +331,29 @@ text-align:center;
 }
 }
 </style>
+<style>
+/* Visual devotion cards for Courage & Calling */
+.devotion-card{
+  min-height:260px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:
+    linear-gradient(180deg,rgba(10,8,6,.18) 0%,rgba(10,8,6,.72) 58%,rgba(10,8,6,.94) 100%),
+    url('assets/images/appalachian-hero.jpg') center/cover no-repeat;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 14px 35px rgba(0,0,0,.22);
+}
+.devotion-card::before{height:100%;background:linear-gradient(to bottom,transparent 45%,rgba(255,255,255,.12));}
+.devotion-card h3,.devotion-card .devotion-meta,.devotion-card .read-link{position:relative;z-index:1;}
+.devotion-card .devotion-meta{color:#ead7bd;text-shadow:0 1px 3px rgba(0,0,0,.7);}
+.devotion-card h3{color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.75);}
+.devotion-card .read-link{color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.75);}
+.devotion-card:hover{transform:translateY(-7px) scale(1.01);background:
+    linear-gradient(180deg,rgba(10,8,6,.12) 0%,rgba(10,8,6,.68) 58%,rgba(10,8,6,.94) 100%),
+    url('assets/images/appalachian-hero.jpg') center/cover no-repeat;}
+</style>
+
 
 </head>
 
