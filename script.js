@@ -4,61 +4,74 @@ fetch('/whispers-in-the-pew/partials/footer.html')
 document.getElementById('footer').innerHTML = data;
 });
 
-const courageAndCalling = [
-  ["Stones in Your Pockets","StonesInYourPockets.html"],
-  ["Ordered Steps, Unshakable Grace","OrderedStepsUnshakableGrace.html"],
-  ["Courage in the Face of Crisis","CourageInTheFaceOfCrisis.html"],
-  ["The Heart of a Child","TheHeartOfAChild.html"],
-  ["Holiness: A Gift, not a Burden","HolinessAGiftNotABurden.html"],
-  ["Catching the Outsider—The Jesus Way","CatchingTheOutsider.html"],
-  ["The Blessed Life – Walking in the Beatitudes","TheBlessedLife.html"],
-  ["Faithful, Not Forceful","FaithfulNotForceful.html"],
-  ["Stand Up and Be Counted","StandUpAndBeCounted.html"],
-  ["Boldness in Christ — No Fear in the Fire","BoldnessInChrist.html"],
-  ["Addiction Prevention — Standing Strong in Christ","AddictionPrevention.html"],
-  ["Passing the Torch with Purpose","PassingTheTorch.html"],
-  ["Fit for the Kingdom","FitForTheKingdom.html"],
-  ["Finding Strength Through Surrender","FindingStrengthThroughSurrender.html"],
-  ["Radically Living for Jesus","RadicallyLivingForJesus.html"],
-  ["An Addict of Jesus","AnAddictOfJesus.html"],
-  ["Stand on the Rock — Even When You Slip","StandOnTheRock.html"],
-  ["Unbreakable Bond","UnbreakableBond.html"],
-  ["United for the Kingdom","UnitedForTheKingdom.html"],
-  ["Your Mess Doesn’t Cancel Your Message","YourMessDoesntCancelYourMessage.html"],
-  ["Faith at Work – Being a Light in the Marketplace","faithatworkbeingalightinthemarketplace.html"],
-  ["Living with Purpose to Share the Good News","livingwithpurposetosharethegoodnews.html"],
-  ["You Should've Killed Me When You Had the Chance","youshouldvekilledmewhenyouhadthechance.html"],
-  ["Stir Your Gift with Anticipation and Obedience","stiryourgiftwithanticipationandobedience.html"]
+const devotionSections = [
+  {
+    name: "Faith & Trust",
+    page: "faithandtrust.html",
+    devotions: ["theroadiknow.html","trustingtheprocesspart1.html","trustingtheprocesspart2.html","mindovermatterpart1.html","mindovermatterpart2.html","faithoverfear.html","whenfearmeetsfaith.html","faithnotjustrules.html","faithandpowerreachingforjesus.html","when-their-faith-feels-distant.html","faithandhopeanchoredandreaching.html","trustbeyondunderstanding.html","toobigtosink.html","youdonthavetobeg.html","godcanandgodwill.html","continuingintheword.html","whenthefoolishbecomefavored.html","nevertoofargone.html","whenfearkeepsyouingodstillcomesclose.html","stillnessbeforethestorm.html","graceintherush.html","seeingisbelieving.html","stopfindingthecloud.html","faith-that-became-mine.html"]
+  },
+  {
+    name: "Healing & Wholeness",
+    page: "healingandwholeness.html",
+    devotions: ["thestrengthtobebroken.html","breakmetomakeme.html","becomingwhole.html","whenlovebreakswhatitshouldprotect.html","nowthatimbrokenwhatcomesnext.html","embracingafreshstart.html","wheniforgetimnew.html","healingtheheart.html","risingfromthedeep.html","godshealingword.html","thehealingsalt.html","fromseparationtoredemption.html.html","fullyknownfullyloved.html","forwhenyourestillstuck.html","whenhealedpeopleentertheroom.html","whenthefiredoesntreachthem.html","lettinggoforgood.html","unlockingthedoorsoftheheart.html","fillpeoplewithjesusnotjustpews.html","whenyourerunningonempty.html.html","MercyMeetsMeHere.html"]
+  },
+  {
+    name: "Courage & Calling",
+    page: "courageandcalling.html",
+    devotions: ["StonesInYourPockets.html","OrderedStepsUnshakableGrace.html","CourageInTheFaceOfCrisis.html","TheHeartOfAChild.html","HolinessAGiftNotABurden.html","CatchingTheOutsider.html","TheBlessedLife.html","FaithfulNotForceful.html","StandUpAndBeCounted.html","BoldnessInChrist.html","AddictionPrevention.html","PassingTheTorch.html","FitForTheKingdom.html","FindingStrengthThroughSurrender.html","RadicallyLivingForJesus.html","AnAddictOfJesus.html","StandOnTheRock.html","UnbreakableBond.html","UnitedForTheKingdom.html","YourMessDoesntCancelYourMessage.html","faithatworkbeingalightinthemarketplace.html","livingwithpurposetosharethegoodnews.html","youshouldvekilledmewhenyouhadthechance.html","stiryourgiftwithanticipationandobedience.html"]
+  },
+  {
+    name: "Forgiveness & Redemption",
+    page: "forgivenessandredemption.html",
+    devotions: ["thedifferenceisintheturn.html","thepowertoturn.html","likeadogreturningtoitsvomit.html","forgivenessdoesntalwaysmeanaccess.html.html","thetruththatsetsyoufree.html","thegodwhoseesandstillsaves.html","nopermissiontoprosper.html","poisonormedicine.html","yourtestimonyissomeonesmedicine.html","hecameforyou.html","whenleaderslieandyouknowit.html","forgettingafterforgiveness.html","nottoforgiveyourself.html"]
+  },
+  {
+    name: "Spiritual Growth & Discipleship",
+    page: "spiritualgrowthanddiscipleship.html",
+    devotions: ["theplaceoftheheart.html","setapartforhim.html","livingtruthfullybeforegodandothers.html","ifyouarewilling.html","truthbehindcloseddoors.html","whentheanswerdoesntcome.html","poweroveryourtongue.html","dontamenalie.html","powertools.html","fromstorytimetolifeline.html","dontworryaboutanythingprayabouteverything.html","trainedforheaven.html","thespiritandhisgifts.html","convictionleadstolife.html","WhyItMattersSpiritualGifts.html"]
+  },
+  {
+    name: "Heart & Character",
+    page: "heartandcharacter.html",
+    devotions: ["thesubtledangerofpride.html","confrontationwithoutpride.html.html","searedorsharpened.html","lovebeyondthepew.html","closeinappearancefarinheart.html","loveandreverenceinthehouseofprayer.html","givingfromtheheart.html","youfeltrightbutridiculedaswell.html","onevoiceoneheart.html","TearOpenYourHeart.html","TwoTongues.html"]
+  }
 ];
 
 function addDevotionNavigation(){
   const file = window.location.pathname.split("/").pop();
-  const index = courageAndCalling.findIndex(item => item[1].toLowerCase() === file.toLowerCase());
-  if(index === -1 || document.querySelector(".devotion-reading-navigation")) return;
 
-  const nav = document.createElement("nav");
-  nav.className = "devotion-reading-navigation";
-  nav.setAttribute("aria-label","Devotion navigation");
+  for(const section of devotionSections){
+    const index = section.devotions.findIndex(item => item.toLowerCase() === file.toLowerCase());
+    if(index === -1) continue;
 
-  const previous = index > 0
-    ? `<a href="/whispers-in-the-pew/devotions/${courageAndCalling[index-1][1]}">← Previous<br><span>${courageAndCalling[index-1][0]}</span></a>`
-    : `<span class="disabled">← Previous<br><span>Beginning of Section</span></span>`;
+    // Some newer devotion pages already contain their own navigation.
+    if(document.querySelector(".devotion-reading-navigation") || document.querySelector(".navigation")) return;
 
-  const next = index < courageAndCalling.length - 1
-    ? `<a href="/whispers-in-the-pew/devotions/${courageAndCalling[index+1][1]}">Next →<br><span>${courageAndCalling[index+1][0]}</span></a>`
-    : `<span class="disabled">Next →<br><span>End of Section</span></span>`;
+    const nav = document.createElement("nav");
+    nav.className = "devotion-reading-navigation";
+    nav.setAttribute("aria-label","Devotion navigation");
 
-  nav.innerHTML = `
-    <div class="devotion-reading-inner">
-      <div class="devotion-reading-side">${previous}</div>
-      <a class="devotion-reading-center" href="/whispers-in-the-pew/courageandcalling.html">Section 3<br><span>Courage &amp; Calling</span></a>
-      <div class="devotion-reading-side devotion-reading-next">${next}</div>
-    </div>
-  `;
+    const previous = index > 0
+      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index-1]}">← Previous Devotion</a>`
+      : `<span class="disabled">← Previous Devotion</span>`;
 
-  const footer = document.getElementById("footer");
-  if(footer) footer.parentNode.insertBefore(nav, footer);
-  else document.body.appendChild(nav);
+    const next = index < section.devotions.length - 1
+      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index+1]}">Next Devotion →</a>`
+      : `<span class="disabled">Next Devotion →</span>`;
+
+    nav.innerHTML = `
+      <div class="devotion-reading-inner">
+        <div class="devotion-reading-side">${previous}</div>
+        <a class="devotion-reading-center" href="/whispers-in-the-pew/${section.page}">Section<br><span>${section.name}</span></a>
+        <div class="devotion-reading-side devotion-reading-next">${next}</div>
+      </div>
+    `;
+
+    const footer = document.getElementById("footer");
+    if(footer) footer.parentNode.insertBefore(nav, footer);
+    else document.body.appendChild(nav);
+    return;
+  }
 }
 
 addDevotionNavigation();
