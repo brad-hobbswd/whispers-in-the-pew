@@ -122,7 +122,34 @@ function addDevotionNavigationStyles(){
   document.head.appendChild(style);
 }
 
-function addDevotionNavigation(){
+async function getDevotionTitle(filename){
+  const currentFile = window.location.pathname.split("/").pop();
+
+  if(filename.toLowerCase() === currentFile.toLowerCase()){
+    const currentTitle = document.title.replace(/\\s*\\|\\s*Whispers in the Pew\\s*$/i,"").trim();
+    if(currentTitle) return currentTitle;
+  }
+
+  try{
+    const response = await fetch("/whispers-in-the-pew/devotions/" + encodeURIComponent(filename));
+    if(response.ok){
+      const html = await response.text();
+      const doc = new DOMParser().parseFromString(html,"text/html");
+      const title = (doc.title || "").replace(/\\s*\\|\\s*Whispers in the Pew\\s*$/i,"").trim();
+      if(title) return title;
+    }
+  }catch(error){
+    console.warn("Unable to load devotion title:", filename, error);
+  }
+
+  return filename
+    .replace(/\\.html(?:\\.html)?$/i,"")
+    .replace(/[-_]+/g," ")
+    .replace(/([a-z])([A-Z])/g,"$1 $2")
+    .replace(/\\b\\w/g,letter => letter.toUpperCase());
+}
+
+async function addDevotionNavigation(){
   addDevotionNavigationStyles();
   const file = window.location.pathname.split("/").pop();
 
@@ -130,20 +157,29 @@ function addDevotionNavigation(){
     const index = section.devotions.findIndex(item => item.toLowerCase() === file.toLowerCase());
     if(index === -1) continue;
 
-    // Replace any older page-specific navigation with one authoritative navigation.
     document.querySelectorAll(".navigation, .devotion-reading-navigation").forEach(element => element.remove());
+
+    const previousTitle = index > 0
+      ? await getDevotionTitle(section.devotions[index-1])
+      : "Beginning of Section";
+
+    const currentTitle = await getDevotionTitle(section.devotions[index]);
+
+    const nextTitle = index < section.devotions.length - 1
+      ? await getDevotionTitle(section.devotions[index+1])
+      : "End of Section";
+
+    const previous = index > 0
+      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index-1]}">← Previous Devotion<br><span>${previousTitle}</span></a>`
+      : `<span class="disabled">← Previous Devotion<br><span>${previousTitle}</span></span>`;
+
+    const next = index < section.devotions.length - 1
+      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index+1]}">Next Devotion →<br><span>${nextTitle}</span></a>`
+      : `<span class="disabled">Next Devotion →<br><span>${nextTitle}</span></span>`;
 
     const nav = document.createElement("nav");
     nav.className = "devotion-reading-navigation";
     nav.setAttribute("aria-label","Devotion navigation");
-
-    const previous = index > 0
-      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index-1]}">← Previous Devotion<br><span>${section.devotions[index-1]}</span></a>`
-      : `<span class="disabled">← Previous Devotion<br><span>Beginning of Section</span></span>`;
-
-    const next = index < section.devotions.length - 1
-      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index+1]}">Next Devotion →<br><span>${section.devotions[index+1]}</span></a>`
-      : `<span class="disabled">Next Devotion →<br><span>End of Section</span></span>`;
 
     nav.innerHTML = `
       <div class="devotion-reading-inner">
@@ -156,8 +192,8 @@ function addDevotionNavigation(){
     const footer = document.getElementById("footer");
     if(footer) footer.parentNode.insertBefore(nav, footer);
     else document.body.appendChild(nav);
+
     return;
   }
 }
-
 addDevotionNavigation();
