@@ -197,3 +197,48 @@ async function addDevotionNavigation(){
   }
 }
 addDevotionNavigation();
+
+const authorResourcePages = [
+  { file:"dedication.html", title:"Dedication" },
+  { file:"publications.html", title:"Publication Details" },
+  { file:"prayer-room.html", title:"Prayer Room" },
+  { file:"preface.html", title:"Preface" },
+  { file:"Acknowledgements.html", title:"Acknowledgements", path:"devotions" },
+  { file:"HowToUseTheBook.html", title:"How to Use the Book", path:"devotions" },
+  { file:"Resource.html", title:"Resources", path:"devotions" },
+  { file:"ClosingThoughts.html", title:"Closing Thoughts", path:"devotions" }
+];
+
+function addAuthorResourceNavigation(){
+  const file = window.location.pathname.split("/").pop().toLowerCase();
+  const index = authorResourcePages.findIndex(page => page.file.toLowerCase() === file);
+  if(index === -1) return;
+
+  document.querySelectorAll(".navigation, .author-resource-navigation").forEach(element => element.remove());
+
+  const previous = index > 0
+    ? `<a href="/whispers-in-the-pew/${authorResourcePages[index-1].path ? authorResourcePages[index-1].path + "/" : ""}${authorResourcePages[index-1].file}">← Previous Resource<br><span>${authorResourcePages[index-1].title}</span></a>`
+    : `<span class="disabled">← Previous Resource<br><span>Beginning of Author Resources</span></span>`;
+
+  const next = index < authorResourcePages.length - 1
+    ? `<a href="/whispers-in-the-pew/${authorResourcePages[index+1].path ? authorResourcePages[index+1].path + "/" : ""}${authorResourcePages[index+1].file}">Next Resource →<br><span>${authorResourcePages[index+1].title}</span></a>`
+    : `<span class="disabled">Next Resource →<br><span>End of Author Resources</span></span>`;
+
+  const nav = document.createElement("nav");
+  nav.className = "author-resource-navigation";
+  nav.setAttribute("aria-label","Author Resources navigation");
+
+  nav.innerHTML = `
+    <div class="devotion-reading-inner">
+      <div class="devotion-reading-side">${previous}</div>
+      <a class="devotion-reading-center" href="/whispers-in-the-pew/abouttheauthor.html">Author Resources<br><span>Bradley Hobbs</span></a>
+      <div class="devotion-reading-side devotion-reading-next">${next}</div>
+    </div>
+  `;
+
+  const footer = document.getElementById("footer");
+  if(footer) footer.parentNode.insertBefore(nav, footer);
+  else document.body.appendChild(nav);
+}
+
+addAuthorResourceNavigation();
