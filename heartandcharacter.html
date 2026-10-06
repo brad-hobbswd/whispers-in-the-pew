@@ -281,6 +281,55 @@ align-items:flex-start;
 
 </style>
 
+
+<style>
+.section-navigation{
+margin-top:100px;
+padding-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+.section-nav-back{
+display:inline-flex;
+align-items:center;
+font-size:0.88rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#c8b49a;
+margin-bottom:28px;
+}
+.section-nav-links{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+.section-nav-links a{
+display:inline-flex;
+align-items:center;
+padding:12px 16px;
+border:1px solid rgba(255,255,255,0.10);
+border-radius:999px;
+font-size:0.78rem;
+letter-spacing:1px;
+color:#d8c9b7;
+transition:0.25s ease;
+}
+.section-nav-links a:hover{
+border-color:rgba(255,255,255,0.25);
+color:#fff;
+transform:translateY(-1px);
+}
+@media(max-width:768px){
+.section-nav-links{
+flex-direction:column;
+align-items:stretch;
+}
+.section-nav-links a{
+justify-content:center;
+text-align:center;
+}
+}
+</style>
+
 </head>
 <body>
 
@@ -412,16 +461,17 @@ Read Reflection <span>→</span>
 
 </div>
 
-<div class="bottom-navigation">
 
-<a href="spiritualgrowthanddiscipleship.html">
-← Spiritual Growth & Discipleship
-</a>
-
-<a href="contents.html">
-All Sections →
-</a>
-
+<div class="section-navigation">
+<a href="contents.html" class="section-nav-back">← All Sections</a>
+<div class="section-nav-links">
+<a href="faithandtrust.html">Faith & Trust</a>
+<a href="healingandwholeness.html">Healing & Wholeness</a>
+<a href="courageandcalling.html">Courage & Calling</a>
+<a href="forgivenessandredemption.html">Forgiveness & Redemption</a>
+<a href="spiritualgrowthanddiscipleship.html">Spiritual Growth & Discipleship</a>
+<a href="heartandcharacter.html">Heart & Character</a>
+</div>
 </div>
 
 </div>
