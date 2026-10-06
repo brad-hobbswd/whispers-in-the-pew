@@ -44,20 +44,20 @@ function addDevotionNavigation(){
     const index = section.devotions.findIndex(item => item.toLowerCase() === file.toLowerCase());
     if(index === -1) continue;
 
-    // Some newer devotion pages already contain their own navigation.
-    if(document.querySelector(".devotion-reading-navigation") || document.querySelector(".navigation")) return;
+    // Replace any older page-specific navigation with one authoritative navigation.
+    document.querySelectorAll(".navigation, .devotion-reading-navigation").forEach(element => element.remove());
 
     const nav = document.createElement("nav");
     nav.className = "devotion-reading-navigation";
     nav.setAttribute("aria-label","Devotion navigation");
 
     const previous = index > 0
-      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index-1]}">← Previous Devotion</a>`
-      : `<span class="disabled">← Previous Devotion</span>`;
+      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index-1]}">← Previous Devotion<br><span>${section.devotions[index-1]}</span></a>`
+      : `<span class="disabled">← Previous Devotion<br><span>Beginning of Section</span></span>`;
 
     const next = index < section.devotions.length - 1
-      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index+1]}">Next Devotion →</a>`
-      : `<span class="disabled">Next Devotion →</span>`;
+      ? `<a href="/whispers-in-the-pew/devotions/${section.devotions[index+1]}">Next Devotion →<br><span>${section.devotions[index+1]}</span></a>`
+      : `<span class="disabled">Next Devotion →<br><span>End of Section</span></span>`;
 
     nav.innerHTML = `
       <div class="devotion-reading-inner">
