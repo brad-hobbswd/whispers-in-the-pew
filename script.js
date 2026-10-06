@@ -225,7 +225,7 @@ function addAuthorResourceNavigation(){
     : `<span class="disabled">Next Resource →<br><span>End of Author Resources</span></span>`;
 
   const nav = document.createElement("nav");
-  nav.className = "author-resource-navigation";
+  nav.className = "devotion-reading-navigation author-resource-navigation";
   nav.setAttribute("aria-label","Author Resources navigation");
 
   nav.innerHTML = `
